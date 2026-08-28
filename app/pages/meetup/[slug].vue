@@ -46,6 +46,14 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
             <dt class="font-mono text-[0.68rem] text-fg-dim">onde</dt>
             <dd class="mt-1 font-mono font-bold">{{ m.local ?? 'a definir' }}</dd>
             <dd class="font-mono text-sm text-fg-muted">{{ m.cidade }}</dd>
+            <dd v-if="m.mapa" class="mt-1">
+              <a
+                :href="m.mapa"
+                target="_blank"
+                rel="noopener"
+                class="font-mono text-sm text-primary underline underline-offset-4"
+              >ver no mapa ↗</a>
+            </dd>
           </div>
           <div class="bg-bg p-5">
             <dt class="font-mono text-[0.68rem] text-fg-dim">quanto</dt>
@@ -75,7 +83,7 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
           </ol>
 
           <div v-if="!m.palestrantes.length" class="mt-8 border border-dashed border-line p-5">
-            <p class="font-mono text-sm font-bold text-accent">Palestrantes: em definição</p>
+            <p class="font-mono text-sm font-bold text-accent">Palestras em confirmação</p>
             <p class="mt-2 text-sm text-fg-muted">
               A chamada está aberta. Quer falar? Marca "quero palestrar" aqui do lado.
             </p>

@@ -1,7 +1,7 @@
 /**
  * Dados do próximo encontro.
  * Campos ainda não definidos ficam como `null` — a UI trata isso e mostra
- * "a definir" em vez de inventar local/horário.
+ * "a definir" em vez de inventar informação.
  */
 export interface Meetup {
   slug: string
@@ -15,7 +15,7 @@ export interface Meetup {
   /** null = ainda não definido */
   horario: string | null
   local: string | null
-  endereco: string | null
+  mapa: string | null
   cidade: string
   vagas: number | null
   agenda: { hora: string | null; titulo: string; detalhe: string }[]
@@ -24,28 +24,28 @@ export interface Meetup {
 
 export const proximoMeetup: Meetup = {
   slug: '2026-09-24',
-  numero: '#01',
-  titulo: 'O DEV-PP está de volta',
+  numero: '#32',
+  titulo: 'Encontro de setembro',
   chamada:
-    'Cinco anos parados. Um encontro pra recomeçar: código, carreira e a galera da região na mesma sala de novo.',
+    'Uma noite de palestra, papo técnico e networking com a galera que escreve código na região.',
   data: '2026-09-24',
   dataExtenso: '24 de setembro de 2026',
   diaSemana: 'quinta-feira',
-  horario: null,
-  local: null,
-  endereco: null,
+  horario: 'a partir das 18h',
+  local: 'Fundação Inova Prudente',
+  mapa: 'https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Inova+Prudente/@-22.1339797,-51.4500853,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f394b3df5d51:0xac050e5ae9c9ef!8m2!3d-22.1339847!4d-51.4475104!16s%2Fg%2F11c7140bpb!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D',
   cidade: 'Presidente Prudente — SP',
   vagas: null,
   agenda: [
     {
-      hora: null,
+      hora: '18h',
       titulo: 'Credenciamento e cafezinho',
       detalhe: 'Chega cedo — metade do meetup acontece antes da primeira palestra.',
     },
     {
       hora: null,
-      titulo: 'Abertura: o que é o DEV-PP e por que voltamos',
-      detalhe: 'De onde a comunidade veio, o que mudou em cinco anos e pra onde a gente vai.',
+      titulo: 'Abertura',
+      detalhe: 'O que é o DEV-PP, o que a comunidade anda fazendo e os avisos da noite.',
     },
     {
       hora: null,

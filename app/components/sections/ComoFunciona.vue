@@ -7,8 +7,8 @@ const passos = [
   },
   {
     cmd: 'aguardar',
-    titulo: 'A gente confirma os detalhes',
-    texto: 'Local, horário e grade caem no seu e-mail assim que fecharem — antes de ir pro Instagram.',
+    titulo: 'A grade cai no seu e-mail',
+    texto: 'Palestras confirmadas e avisos de última hora chegam pra você antes de ir pro Instagram.',
   },
   {
     cmd: 'aparecer',
@@ -17,8 +17,8 @@ const passos = [
   },
   {
     cmd: 'repetir',
-    titulo: 'E vira rotina',
-    texto: 'O objetivo não é um evento: é a comunidade rodando de novo, encontro atrás de encontro.',
+    titulo: 'E de novo no próximo',
+    texto: 'O DEV-PP não é um evento avulso: é encontro atrás de encontro, com a mesma galera crescendo junto.',
   },
 ]
 </script>
@@ -27,9 +27,9 @@ const passos = [
   <section class="border-b border-line-soft bg-bg-deep">
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
       <UiSectionHead
-        comando="man participar"
+        comando="devpp --help"
         titulo="Como participar"
-        descricao="Não tem burocracia nenhuma. É de propósito."
+        descricao="Não tem burocracia nenhuma: é só chegar. Mas você pode garantir a sua vaga se inscrevendo."
       />
 
       <ol class="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">

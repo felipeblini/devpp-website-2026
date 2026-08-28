@@ -13,13 +13,17 @@ const ano = new Date().getFullYear()
     <div class="mx-auto max-w-6xl px-5 py-14">
       <div class="flex flex-col gap-10 sm:flex-row sm:justify-between">
         <div>
-          <img
-            src="/img/devpp-logo.png"
-            alt="DEV-PP"
-            width="366"
-            height="80"
-            class="h-7 w-auto [image-rendering:pixelated]"
-          >
+          <p class="flex items-center gap-2">
+            <span aria-hidden="true" class="font-mono text-lg font-bold text-primary">$</span>
+            <img
+              src="/img/devpp-logo.png"
+              alt="DEV-PP"
+              width="366"
+              height="80"
+              class="h-7 w-auto [image-rendering:pixelated]"
+            >
+            <span aria-hidden="true" class="caret" />
+          </p>
           <p class="mt-4 max-w-xs font-mono text-sm text-fg-muted">
             Comunidade de desenvolvedores de Presidente Prudente e região.
             Desde 2019.

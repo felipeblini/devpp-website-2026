@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const numeros = [
-  { valor: '2019', rotulo: 'primeiro meetup' },
-  { valor: '5 anos', rotulo: 'de hiato (2021→2026)' },
+  { valor: '2019', rotulo: 'desde o primeiro meetup' },
+  { valor: '#32', rotulo: 'o próximo encontro' },
   { valor: 'R$ 0', rotulo: 'pra participar, sempre' },
 ]
 </script>
@@ -53,7 +53,6 @@ const numeros = [
               “Se você desenvolve, quer aprender junto ou só tem interesse na área e quer
               ajudar a construir uma comunidade forte na nossa cidade — vem.”
             </p>
-            <p class="mt-3 font-mono text-xs text-fg-dim">// do site original, 2019</p>
           </div>
         </div>
       </div>

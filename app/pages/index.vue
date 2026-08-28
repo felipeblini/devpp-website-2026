@@ -4,10 +4,10 @@ const { public: { siteUrl } } = useRuntimeConfig()
 useSeoMeta({
   title: 'DEV-PP — comunidade de desenvolvedores de Presidente Prudente',
   description:
-    'A comunidade dev de Presidente Prudente e região voltou. Meetup gratuito dia 24 de setembro de 2026: palestras da comunidade, papo técnico e networking. Inscrição aberta.',
-  ogTitle: 'DEV-PP — a comunidade dev de Presidente Prudente voltou a rodar',
+    'Comunidade de desenvolvedores de Presidente Prudente e região. Meetup gratuito dia 24 de setembro de 2026, às 18h, no Inova Prudente: palestras da comunidade, papo técnico e networking.',
+  ogTitle: 'DEV-PP — a comunidade dev de Presidente Prudente',
   ogDescription:
-    'Meetup gratuito em 24/09/2026. Palestras da comunidade, papo técnico e networking em Presidente Prudente. Inscrição aberta.',
+    'Meetup gratuito em 24/09/2026, às 18h, no Inova Prudente. Palestras da comunidade, papo técnico e networking. Inscrição aberta.',
   ogType: 'website',
   ogUrl: siteUrl,
   ogLocale: 'pt_BR',
@@ -23,13 +23,13 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Event',
-        'name': 'DEV-PP #01 — a comunidade está de volta',
-        'startDate': '2026-09-24',
+        'name': 'DEV-PP #32 — encontro de setembro',
+        'startDate': '2026-09-24T18:00:00-03:00',
         'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
         'eventStatus': 'https://schema.org/EventScheduled',
         'location': {
           '@type': 'Place',
-          'name': 'A definir',
+          'name': 'Fundação Inova Prudente',
           'address': {
             '@type': 'PostalAddress',
             'addressLocality': 'Presidente Prudente',

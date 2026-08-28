@@ -5,7 +5,7 @@
         <div class="lg:col-span-7">
           <UiSectionHead
             comando="cat parceiros.txt"
-            titulo="Quer apoiar a retomada?"
+            titulo="Quer apoiar a comunidade?"
           />
           <p class="mt-5 max-w-xl text-fg-muted">
             Meetup gratuito ainda tem custo: espaço, cafezinho, projetor, às vezes um
@@ -13,8 +13,8 @@
             disso aparece pra comunidade inteira — e ainda encontra gente boa de perto.
           </p>
           <p class="mt-4 font-mono text-sm text-fg-dim">
-            // entre 2019 e 2021 quem segurou essa onda foi a galera daqui mesmo:
-            coworkings, empresas locais e o GDG Prudente.
+            // quem sempre segurou essa onda foi a galera daqui mesmo: coworkings,
+            empresas locais e o GDG Prudente.
           </p>
         </div>
         <div class="lg:col-span-5">

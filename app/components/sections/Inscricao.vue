@@ -10,12 +10,12 @@
       <div class="min-w-0 lg:col-span-6 lg:pt-4">
         <p class="pixel text-[0.62rem] text-primary">$ devpp inscrever</p>
         <h2 class="mt-4 text-[2rem] sm:text-4xl lg:text-[2.7rem] leading-[1.08]">
-          Cinco anos depois,<br>
-          <span class="text-primary glow">a sala abre dia 24.</span>
+          Dia 24, às 18h,<br>
+          <span class="text-primary glow">no Inova Prudente.</span>
         </h2>
         <p class="mt-6 max-w-md text-lg text-fg-muted">
-          Deixa nome e e-mail. É só isso. A gente te avisa quando local e horário
-          fecharem, e você aparece pra recomeçar essa história com a gente.
+          Deixa nome e e-mail. É só isso — e a gente te manda a grade e os avisos
+          antes de todo mundo. Entrar é de graça, e sempre vai ser.
         </p>
 
         <ul class="mt-8 space-y-2.5 font-mono text-sm text-fg-muted">

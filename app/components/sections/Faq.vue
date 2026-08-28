@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const perguntas = [
   {
-    q: 'É pago mesmo? Tem pegadinha?',
-    a: 'Não é pago e não tem pegadinha. O DEV-PP é sem fins lucrativos: ninguém ganha dinheiro com isso, não existe ingresso, upsell nem curso no fim. Quando tem patrocínio, ele paga café e espaço — nunca a sua entrada.',
+    q: 'Preciso me inscrever pra ir?',
+    a: 'Não é obrigatório — pode só aparecer. Mas quem se inscreve garante a vaga, recebe a grade fechada e fica sabendo de qualquer mudança de última hora.',
   },
   {
     q: 'Sou estudante / iniciante. Vou entender alguma coisa?',
@@ -19,10 +19,6 @@ const perguntas = [
   {
     q: 'Vou receber spam depois?',
     a: 'Não. O e-mail serve pra avisar de local, horário e dos próximos encontros. Sem venda, sem lista repassada pra terceiro, e dá pra sair quando quiser.',
-  },
-  {
-    q: 'Por que vocês ficaram cinco anos sumidos?',
-    a: 'A pandemia parou os encontros presenciais em 2021 e a retomada foi ficando pra depois. Em 2026 a gente decidiu que já deu — e o encontro de 24 de setembro é o recomeço.',
   },
 ]
 </script>

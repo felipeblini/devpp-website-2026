@@ -3,8 +3,7 @@ import { proximoMeetup } from '#shared/meetup'
 
 const linhas = [
   { chave: 'comunidade', valor: 'ONLINE', tom: 'primary' },
-  { chave: 'fundada em', valor: '2019', tom: 'muted' },
-  { chave: 'hiato', valor: '2021 → 2026', tom: 'muted' },
+  { chave: 'desde', valor: '2019', tom: 'muted' },
   { chave: 'próximo encontro', valor: '24/09/2026', tom: 'accent' },
   { chave: 'inscrição', valor: 'ABERTA', tom: 'primary' },
 ] as const
@@ -29,27 +28,28 @@ const tons: Record<string, string> = {
       <div class="min-w-0 lg:col-span-7">
         <p class="pixel inline-flex items-center gap-2 border border-line px-3 py-1.5 text-[0.6rem] text-accent">
           <span class="inline-block size-1.5 bg-accent" />
-          {{ proximoMeetup.numero }} da retomada · {{ proximoMeetup.dataExtenso }}
+          meetup {{ proximoMeetup.numero }} · {{ proximoMeetup.dataExtenso }} · 18h
         </p>
 
         <h1 class="mt-6 text-[2rem] leading-[1.08] sm:text-5xl sm:leading-[1.06] lg:text-[3.2rem]">
           A comunidade dev de<br class="hidden sm:inline">
           Presidente Prudente<br class="hidden sm:inline">
-          <span class="text-primary glow">voltou a rodar.</span>
+          <span class="text-primary glow">se encontra aqui.</span>
         </h1>
 
         <p class="mt-6 max-w-xl text-lg text-fg-muted">
-          O DEV-PP é o encontro presencial de quem escreve código na região —
-          palestra, papo técnico e networking de verdade. Ficamos cinco anos parados.
-          O primeiro meetup da volta é <strong class="font-semibold text-fg">24 de setembro</strong>.
+          O DEV-PP junta quem escreve código na região pra trocar conhecimento, palestrar
+          e fazer networking de verdade. Meetup gratuito, organizado pela própria
+          comunidade. O próximo é <strong class="font-semibold text-fg">24 de setembro, às
+            18h, no Inova Prudente</strong>.
         </p>
 
         <div class="mt-9 flex flex-wrap gap-3">
-          <AppButton href="#inscricao">
-            garantir minha vaga →
+          <AppButton href="#sobre" variante="linha">
+            o que é o DEV-PP →
           </AppButton>
-          <AppButton href="#palestrar" variante="linha">
-            quero palestrar
+          <AppButton href="#meetup" variante="linha">
+            o próximo encontro
           </AppButton>
         </div>
 
@@ -83,7 +83,7 @@ const tons: Record<string, string> = {
         </UiTerminalWindow>
 
         <p class="mt-3 font-mono text-[0.7rem] text-fg-dim">
-          // 2019–2021: meetups gratuitos, palestras da comunidade, vagas locais.
+          // meetups gratuitos, palestras da comunidade e vagas da região.
         </p>
       </div>
     </div>

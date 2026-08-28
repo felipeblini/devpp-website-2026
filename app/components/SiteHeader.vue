@@ -14,7 +14,12 @@ const links = [
     class="sticky top-0 z-50 border-b border-line-soft bg-bg-deep/85 backdrop-blur-sm"
   >
     <div class="mx-auto flex max-w-6xl items-center gap-6 px-5 py-3">
-      <NuxtLink to="/" class="shrink-0" aria-label="DEV-PP — página inicial">
+      <NuxtLink
+        to="/"
+        class="flex shrink-0 items-center gap-1.5"
+        aria-label="DEV-PP — página inicial"
+      >
+        <span aria-hidden="true" class="font-mono text-base font-bold text-primary">$</span>
         <img
           src="/img/devpp-logo.png"
           alt="DEV-PP"
@@ -22,6 +27,7 @@ const links = [
           height="80"
           class="h-6 w-auto [image-rendering:pixelated]"
         >
+        <span aria-hidden="true" class="caret" />
       </NuxtLink>
 
       <nav class="hidden flex-1 items-center gap-5 font-mono text-[0.8rem] text-fg-muted md:flex">

@@ -5,11 +5,11 @@
         <div class="lg:col-span-6">
           <UiSectionHead
             comando="devpp cfp --open"
-            titulo="A chamada de palestras está aberta"
+            titulo="A chamada de palestras está sempre aberta"
           />
           <div class="mt-6 space-y-4 text-fg-muted">
             <p>
-              A grade do dia 24 é da comunidade — e ainda tem espaço. Se você resolveu
+              A grade é sempre da comunidade — e sempre tem espaço. Se você resolveu
               um problema estranho no trabalho, montou algo que ninguém pediu, apanhou
               de um deploy ou estuda um assunto que ninguém da região comenta:
               <strong class="font-semibold text-fg">isso já é uma palestra.</strong>

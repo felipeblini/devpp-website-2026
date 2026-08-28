@@ -37,6 +37,14 @@ import { proximoMeetup as m } from '#shared/meetup'
                     {{ m.local ?? 'a definir' }}
                   </dd>
                   <dd class="text-fg-dim">{{ m.cidade }}</dd>
+                  <dd v-if="m.mapa" class="mt-1">
+                    <a
+                      :href="m.mapa"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-primary underline underline-offset-4"
+                    >ver no mapa ↗</a>
+                  </dd>
                 </div>
                 <div>
                   <dt class="text-[0.7rem] text-fg-dim">entrada</dt>
@@ -48,7 +56,7 @@ import { proximoMeetup as m } from '#shared/meetup'
                 garantir minha vaga
               </AppButton>
               <p class="mt-3 text-center font-mono text-[0.68rem] text-fg-dim">
-                a gente avisa por e-mail quando o local fechar
+                entrada livre — inscrever garante a sua vaga
               </p>
               <NuxtLink
                 :to="`/meetup/${m.slug}`"
@@ -80,14 +88,13 @@ import { proximoMeetup as m } from '#shared/meetup'
             </li>
           </ol>
 
-          <div class="mt-8 border border-dashed border-line p-6">
+          <div v-if="!m.palestrantes.length" class="mt-8 border border-dashed border-line p-6">
             <p class="font-mono text-sm font-bold text-accent">
-              Grade em construção
+              Palestras em confirmação
             </p>
             <p class="mt-2 text-sm text-fg-muted">
-              Palestrantes, horário e local ainda estão sendo fechados — faltam poucas
-              semanas e a gente publica aqui assim que confirmar. Quem se inscrever
-              recebe por e-mail antes de todo mundo.
+              A grade sai daqui a pouco — a chamada de palestras ainda está aberta.
+              Quem se inscreve recebe por e-mail antes de todo mundo.
             </p>
           </div>
         </div>
