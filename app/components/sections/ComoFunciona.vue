@@ -26,11 +26,13 @@ const passos = [
 <template>
   <section class="border-b border-line-soft bg-bg-deep">
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
-      <UiSectionHead
-        comando="devpp --help"
-        titulo="Como participar"
-        descricao="Não tem burocracia nenhuma: é só chegar. Mas você pode garantir a sua vaga se inscrevendo."
-      />
+      <UiSectionHead comando="devpp --help" titulo="Como participar">
+        <template #descricao>
+          Não tem burocracia nenhuma:
+          <strong class="font-semibold text-primary">é só chegar</strong>.
+          Mas você pode garantir a sua vaga se inscrevendo.
+        </template>
+      </UiSectionHead>
 
       <ol class="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
         <li v-for="(p, i) in passos" :key="p.cmd" class="bg-bg p-7">

@@ -1,4 +1,14 @@
+import { readFileSync } from 'node:fs'
 import tailwindcss from '@tailwindcss/vite'
+
+// As páginas de encontro saem do mesmo arquivo que alimenta o site.
+const meetups = JSON.parse(readFileSync('./content/meetups.json', 'utf-8')).meetups as {
+  slug: string
+  status: string
+}[]
+const rotasDeMeetup = meetups
+  .filter(m => m.status === 'confirmado')
+  .map(m => `/meetup/${m.slug}`)
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -32,7 +42,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/meetup/2026-09-24'],
+      routes: rotasDeMeetup,
     },
   },
 

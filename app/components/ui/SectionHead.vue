@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   comando: string
-  titulo: string
+  titulo?: string
   descricao?: string
 }>()
 </script>
@@ -12,10 +12,10 @@ defineProps<{
       <span class="text-fg-dim">$</span> {{ comando }}
     </p>
     <h2 class="mt-3 text-3xl sm:text-4xl">
-      {{ titulo }}
+      <slot name="titulo">{{ titulo }}</slot>
     </h2>
-    <p v-if="descricao" class="mt-4 text-fg-muted">
-      {{ descricao }}
+    <p v-if="descricao || $slots.descricao" class="mt-4 text-fg-muted">
+      <slot name="descricao">{{ descricao }}</slot>
     </p>
   </div>
 </template>

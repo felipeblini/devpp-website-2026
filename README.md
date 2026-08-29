@@ -31,16 +31,33 @@ sem back-end.
 
 ## Mudar os dados do encontro
 
-Tudo num arquivo só: [`shared/meetup.ts`](shared/meetup.ts).
+Fonte única: [`content/meetups.json`](content/meetups.json). Dá pra editar **direto pela
+interface do GitHub** — cada commit publica o site.
 
-Campos ainda indefinidos (`horario`, `local`, `endereco`, `vagas`) são `null` e a
-interface mostra "a definir" sozinha — assim que fechar, é só preencher e publicar.
-`palestrantes` vazio faz aparecer o aviso de grade em construção.
+- `status: "confirmado"` → o encontro aparece no site com data, local e agenda.
+- Qualquer outro status (ou nenhum encontro futuro) → o site entra em **modo
+  `loading...`**: o badge vira `meetup #N loading...`, a seção do encontro convida a
+  ajudar a marcar o próximo e **a seção de inscrição some** (não existe vaga sem data).
+- O número seguinte é calculado sozinho: `maior numero + 1`.
+- Campos `null` (`horario`, `local`, `mapa`) aparecem como "a definir".
+- `palestrantes: []` mostra o aviso de grade em confirmação; preencher gera a lista.
 
-## Formulário de inscrição
+Como as páginas são pré-renderizadas, **editar o JSON exige um novo deploy** (o commit
+já dispara). Em desenvolvimento, reinicie o `pnpm dev` — o Vite não invalida o import
+do JSON sozinho.
 
-O formulário manda um e-mail para `devpporg@gmail.com` (configurável). Sem banco de
-dados: a lista de inscritos vive na caixa de entrada.
+Trocar por um banco depois é barato: só `shared/meetups.ts` lê o arquivo.
+
+## Formulários
+
+São **três**, todos indo pro mesmo endpoint (`POST /api/mensagem`) e virando e-mail
+para `devpporg@gmail.com`. Sem banco: a lista vive na caixa de entrada.
+
+| formulário | quando aparece | pra quê |
+|---|---|---|
+| `FormVaga` | **só com encontro marcado** | inscrição no meetup |
+| `FormPalestra` | **sempre** | proposta de palestra (a chamada não depende de data) |
+| `FormAjuda` | **sempre** | indicar palestrante, oferecer local, apoiar com café/brindes |
 
 Copie `.env.example` para `.env` e escolha **um** dos caminhos:
 

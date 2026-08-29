@@ -1,12 +1,19 @@
 <script setup lang="ts">
+import { proximoMeetup } from '#shared/meetups'
+
 const aberto = ref(false)
 const links = [
   { href: '/#meetup', label: 'próximo meetup' },
   { href: '/#sobre', label: 'sobre' },
   { href: '/#palestrar', label: 'palestrar' },
+  { href: '/#ajudar', label: 'ajudar' },
   { href: '/#vagas', label: 'vagas' },
-  { href: '/#parceiros', label: 'parceiros' },
 ]
+
+// Sem encontro marcado não existe vaga pra garantir — o convite vira palestrar.
+const cta = proximoMeetup
+  ? { href: '/#inscricao', label: 'garantir minha vaga' }
+  : { href: '/#palestrar', label: 'quero palestrar' }
 </script>
 
 <template>
@@ -40,10 +47,10 @@ const links = [
       </nav>
 
       <a
-        href="/#inscricao"
+        :href="cta.href"
         class="ml-auto hidden border border-primary bg-primary px-4 py-2 font-mono text-[0.78rem] font-bold text-primary-fg transition-colors hover:bg-primary-deep md:inline-block"
       >
-        garantir minha vaga
+        {{ cta.label }}
       </a>
 
       <button
@@ -68,10 +75,10 @@ const links = [
           <span class="text-primary">&gt;</span> {{ l.label }}
         </a>
         <a
-          href="/#inscricao"
+          :href="cta.href"
           class="mt-3 mb-2 bg-primary px-4 py-3 text-center font-bold text-primary-fg"
           @click="aberto = false"
-        >garantir minha vaga</a>
+        >{{ cta.label }}</a>
       </nav>
     </div>
   </header>

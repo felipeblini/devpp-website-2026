@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { proximoMeetup as m } from '#shared/meetup'
+import { acharMeetup, partesDaData } from '#shared/meetups'
 
 const route = useRoute()
-if (route.params.slug !== m.slug) {
+const m = acharMeetup(String(route.params.slug))
+if (!m) {
   throw createError({ statusCode: 404, statusMessage: 'Encontro não encontrado', fatal: true })
 }
 
+const data = partesDaData(m.data)
 const { public: { siteUrl } } = useRuntimeConfig()
 const url = `${siteUrl}/meetup/${m.slug}`
 
 useSeoMeta({
-  title: `DEV-PP ${m.numero} — ${m.titulo} · ${m.dataExtenso}`,
-  description: `${m.chamada} Meetup gratuito em Presidente Prudente, ${m.dataExtenso}. Inscrição aberta.`,
-  ogTitle: `DEV-PP ${m.numero} — ${m.dataExtenso}`,
+  title: `DEV-PP #${m.numero} — ${m.titulo} · ${data.extenso}`,
+  description: `${m.chamada} Meetup gratuito em ${m.cidade}, ${data.extenso}.`,
+  ogTitle: `DEV-PP #${m.numero} — ${data.extenso}`,
   ogDescription: m.chamada,
   ogUrl: url,
   ogLocale: 'pt_BR',
@@ -31,7 +33,7 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
         </NuxtLink>
 
         <p class="pixel mt-8 text-[0.62rem] text-accent">
-          meetup {{ m.numero }} · {{ m.diaSemana }}, {{ m.dataExtenso }}
+          meetup #{{ m.numero }} · {{ data.diaSemana }}, {{ data.extenso }}
         </p>
         <h1 class="mt-4 text-4xl sm:text-5xl">{{ m.titulo }}</h1>
         <p class="mt-5 max-w-2xl text-lg text-fg-muted">{{ m.chamada }}</p>
@@ -39,7 +41,7 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
         <dl class="mt-10 grid gap-px border border-line bg-line sm:grid-cols-3">
           <div class="bg-bg p-5">
             <dt class="font-mono text-[0.68rem] text-fg-dim">quando</dt>
-            <dd class="mt-1 font-mono font-bold">24/09/2026</dd>
+            <dd class="mt-1 font-mono font-bold">{{ data.curta }}</dd>
             <dd class="font-mono text-sm text-fg-muted">{{ m.horario ?? 'horário a definir' }}</dd>
           </div>
           <div class="bg-bg p-5">
@@ -66,7 +68,7 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
 
     <section class="border-b border-line-soft bg-bg-deep">
       <div class="mx-auto grid max-w-4xl gap-12 px-5 py-16 lg:grid-cols-2 lg:gap-16">
-        <div>
+        <div class="min-w-0">
           <h2 class="text-2xl">Programação</h2>
           <ol class="mt-6">
             <li
@@ -78,6 +80,7 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
               <div>
                 <p class="font-mono font-bold">{{ item.titulo }}</p>
                 <p class="mt-1 text-sm text-fg-muted">{{ item.detalhe }}</p>
+                <p v-if="item.hora" class="mt-1 font-mono text-xs text-accent">{{ item.hora }}</p>
               </div>
             </li>
           </ol>
@@ -85,18 +88,30 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
           <div v-if="!m.palestrantes.length" class="mt-8 border border-dashed border-line p-5">
             <p class="font-mono text-sm font-bold text-accent">Palestras em confirmação</p>
             <p class="mt-2 text-sm text-fg-muted">
-              A chamada está aberta. Quer falar? Marca "quero palestrar" aqui do lado.
+              A chamada segue aberta — inclusive pra você.
+              <NuxtLink to="/#palestrar" class="text-primary underline underline-offset-4">
+                propor uma palestra
+              </NuxtLink>.
             </p>
           </div>
+
+          <ul v-else class="mt-8 space-y-px border border-line bg-line">
+            <li v-for="pal in m.palestrantes" :key="pal.nome" class="bg-bg p-5">
+              <p class="font-mono font-bold">{{ pal.nome }}</p>
+              <p v-if="pal.origem" class="font-mono text-xs text-fg-dim">{{ pal.origem }}</p>
+              <p class="mt-2 text-sm text-fg-muted">{{ pal.tema }}</p>
+            </li>
+          </ul>
         </div>
 
-        <div>
+        <div class="min-w-0">
           <h2 class="text-2xl">Garantir minha vaga</h2>
           <p class="mt-3 text-fg-muted">
-            Nome e e-mail. A gente avisa quando local e horário fecharem.
+            Nome e e-mail. A entrada é livre, mas quem se inscreve garante a vaga e
+            recebe a grade fechada por e-mail.
           </p>
           <div class="mt-6">
-            <FormInscricao :meetup="m.slug" />
+            <FormVaga :meetup="m.slug" :numero="m.numero" />
           </div>
         </div>
       </div>

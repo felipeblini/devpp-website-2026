@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { proximoMeetup as m } from '#shared/meetup'
+import { proximoMeetup as m, proximoNumero, partesDaData } from '#shared/meetups'
+
+const data = m ? partesDaData(m.data) : null
 </script>
 
 <template>
@@ -8,21 +10,27 @@ import { proximoMeetup as m } from '#shared/meetup'
       <UiSectionHead
         comando="devpp next"
         titulo="O próximo encontro"
-        :descricao="m.chamada"
-      />
+        :descricao="m ? m.chamada : undefined"
+      >
+        <template v-if="!m" #descricao>
+          A data do encontro <strong class="font-semibold text-fg">#{{ proximoNumero }}</strong>
+          ainda não está fechada. Enquanto isso a chamada de palestras segue aberta — e a
+          gente aceita ajuda pra montar o próximo.
+        </template>
+      </UiSectionHead>
 
-      <div class="mt-12 grid gap-8 lg:grid-cols-12">
-        <!-- cartão da data -->
+      <!-- ---------- com encontro marcado ---------- -->
+      <div v-if="m && data" class="mt-12 grid gap-8 lg:grid-cols-12">
         <div class="min-w-0 lg:col-span-4">
           <div class="win sticky top-24">
             <div class="win-bar">
               <span class="win-dot" /><span class="win-dot" /><span class="win-dot" />
-              <span class="ml-2">meetup{{ m.numero }}.ics</span>
+              <span class="ml-2">meetup#{{ m.numero }}.ics</span>
             </div>
             <div class="p-6">
-              <p class="pixel text-[0.6rem] text-fg-dim">{{ m.diaSemana }}</p>
-              <p class="mt-2 font-mono text-6xl font-extrabold leading-none text-accent">24</p>
-              <p class="mt-1 font-mono text-lg font-bold">setembro / 2026</p>
+              <p class="pixel text-[0.6rem] text-fg-dim">{{ data.diaSemana }}</p>
+              <p class="mt-2 font-mono text-6xl font-extrabold leading-none text-accent">{{ data.dia }}</p>
+              <p class="mt-1 font-mono text-lg font-bold">{{ data.mes }} / {{ data.ano }}</p>
 
               <dl class="mt-6 space-y-3 border-t border-line-soft pt-5 font-mono text-sm">
                 <div>
@@ -68,7 +76,6 @@ import { proximoMeetup as m } from '#shared/meetup'
           </div>
         </div>
 
-        <!-- agenda -->
         <div class="min-w-0 lg:col-span-8">
           <h3 class="font-mono text-sm text-fg-dim">// como vai ser a noite</h3>
           <ol class="mt-5">
@@ -96,6 +103,67 @@ import { proximoMeetup as m } from '#shared/meetup'
               A grade sai daqui a pouco — a chamada de palestras ainda está aberta.
               Quem se inscreve recebe por e-mail antes de todo mundo.
             </p>
+          </div>
+
+          <ul v-else class="mt-8 grid gap-px border border-line bg-line sm:grid-cols-2">
+            <li v-for="pal in m.palestrantes" :key="pal.nome" class="bg-bg p-5">
+              <p class="font-mono font-bold">{{ pal.nome }}</p>
+              <p v-if="pal.origem" class="font-mono text-xs text-fg-dim">{{ pal.origem }}</p>
+              <p class="mt-2 text-sm text-fg-muted">{{ pal.tema }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ---------- sem encontro marcado ---------- -->
+      <div v-else class="mt-12 grid gap-8 lg:grid-cols-12">
+        <div class="min-w-0 lg:col-span-5">
+          <UiTerminalWindow :titulo="`meetup#${proximoNumero}.ics`">
+            <div class="p-6">
+              <p class="pixel text-[0.6rem] text-fg-dim">próximo encontro</p>
+              <p class="mt-3 font-mono text-3xl font-extrabold text-accent">
+                <UiCarregando />
+              </p>
+              <dl class="mt-6 space-y-3 border-t border-line-soft pt-5 font-mono text-sm">
+                <div>
+                  <dt class="text-[0.7rem] text-fg-dim">data</dt>
+                  <dd class="text-fg-muted"><UiCarregando texto="a definir" /></dd>
+                </div>
+                <div>
+                  <dt class="text-[0.7rem] text-fg-dim">local</dt>
+                  <dd class="text-fg-muted">a definir</dd>
+                  <dd class="text-fg-dim">Presidente Prudente e região</dd>
+                </div>
+                <div>
+                  <dt class="text-[0.7rem] text-fg-dim">entrada</dt>
+                  <dd class="font-bold text-primary">gratuita, como sempre</dd>
+                </div>
+              </dl>
+              <AppButton href="#ajudar" class="mt-6 w-full">
+                ajudar a marcar o próximo
+              </AppButton>
+            </div>
+          </UiTerminalWindow>
+        </div>
+
+        <div class="min-w-0 lg:col-span-7">
+          <h3 class="font-mono text-sm text-fg-dim">// enquanto a data não sai</h3>
+          <div class="mt-5 space-y-4 text-fg-muted">
+            <p>
+              Encontro do DEV-PP não nasce de cima pra baixo: ele aparece quando tem
+              palestra pra apresentar, um espaço pra receber a galera e alguém disposto a
+              bancar o café. Quando essas três coisas se encontram, a data sai.
+            </p>
+            <p>
+              Se você quer <strong class="font-semibold text-fg">palestrar</strong>,
+              tem <strong class="font-semibold text-fg">um espaço</strong> ou conhece uma
+              <strong class="font-semibold text-fg">empresa que queira apoiar</strong>,
+              é aqui que a fila anda.
+            </p>
+          </div>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <AppButton href="#palestrar" variante="linha">quero palestrar</AppButton>
+            <AppButton href="#ajudar" variante="linha">quero ajudar de outro jeito</AppButton>
           </div>
         </div>
       </div>

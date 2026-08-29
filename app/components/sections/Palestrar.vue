@@ -1,17 +1,25 @@
 <template>
-  <section id="palestrar" class="border-b border-line-soft">
+  <section id="palestrar" class="border-b border-line-soft bg-bg-deep">
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
-      <div class="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-16">
-        <div class="lg:col-span-6">
-          <UiSectionHead
-            comando="devpp cfp --open"
-            titulo="A chamada de palestras está sempre aberta"
-          />
+      <div class="grid gap-10 lg:grid-cols-12 lg:gap-16">
+        <div class="min-w-0 lg:col-span-6">
+          <UiSectionHead comando="devpp cfp --open">
+            <template #titulo>
+              A chamada de palestras está <span class="text-primary glow">sempre aberta</span>
+            </template>
+          </UiSectionHead>
+
           <div class="mt-6 space-y-4 text-fg-muted">
             <p>
-              A grade é sempre da comunidade — e sempre tem espaço. Se você resolveu
-              um problema estranho no trabalho, montou algo que ninguém pediu, apanhou
-              de um deploy ou estuda um assunto que ninguém da região comenta:
+              A grade tem os dois lados: <strong class="font-semibold text-fg">gente da
+                comunidade</strong> e <strong class="font-semibold text-fg">convidados de
+                fora</strong> — nomes de destaque do mercado, de qualquer lugar, que a gente
+              traz pra agregar conhecimento e abrir networking pra galera daqui.
+            </p>
+            <p>
+              E sempre sobra espaço pra você. Se você resolveu um problema estranho no
+              trabalho, montou algo que ninguém pediu, apanhou de um deploy ou estuda um
+              assunto que ninguém da região comenta:
               <strong class="font-semibold text-fg">isso já é uma palestra.</strong>
             </p>
             <p>
@@ -23,32 +31,18 @@
           <ul class="mt-7 space-y-2 font-mono text-sm text-fg-muted">
             <li><span class="text-primary">✓</span> 20 a 40 minutos, ou lightning talk de 10</li>
             <li><span class="text-primary">✓</span> qualquer stack, qualquer nível</li>
-            <li><span class="text-primary">✓</span> presencial, em Presidente Prudente</li>
+            <li><span class="text-primary">✓</span> presencial, em Presidente Prudente e região</li>
+            <li><span class="text-primary">✓</span> a proposta vale mesmo sem data marcada</li>
           </ul>
 
-          <AppButton href="#inscricao" variante="linha" class="mt-8">
-            propor minha palestra →
-          </AppButton>
-          <p class="mt-3 font-mono text-xs text-fg-dim">
-            // é o mesmo formulário: marque “quero palestrar”
+          <p class="mt-7 font-mono text-sm text-fg-dim">
+            // quer indicar outra pessoa em vez de palestrar?
+            <a href="#ajudar" class="text-primary underline underline-offset-4">é logo ali ↓</a>
           </p>
         </div>
 
         <div class="min-w-0 lg:col-span-6">
-          <UiTerminalWindow titulo="proposta.md">
-            <pre class="overflow-x-auto p-6 font-mono text-[0.8rem] leading-relaxed text-fg-muted"><span class="text-fg-dim"># o que a gente precisa saber</span>
-
-<span class="text-primary">titulo</span>:     "Aquilo que quase derrubou a produção"
-<span class="text-primary">formato</span>:    talk | lightning | demo | workshop
-<span class="text-primary">nivel</span>:      iniciante | intermediario | avancado
-<span class="text-primary">resumo</span>:     3 linhas. o que a pessoa leva de novo
-             pra casa depois de te ouvir.
-
-<span class="text-fg-dim"># não precisamos de:</span>
-<span class="text-fg-dim">- curriculo</span>
-<span class="text-fg-dim">- slides prontos</span>
-<span class="text-fg-dim">- experiência anterior em palco</span></pre>
-          </UiTerminalWindow>
+          <FormPalestra />
         </div>
       </div>
     </div>

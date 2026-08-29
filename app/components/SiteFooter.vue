@@ -58,6 +58,9 @@ const ano = new Date().getFullYear()
                 <a href="/#palestrar" class="text-fg-muted transition-colors hover:text-primary">palestrar</a>
               </li>
               <li>
+                <a href="/#ajudar" class="text-fg-muted transition-colors hover:text-primary">ajudar</a>
+              </li>
+              <li>
                 <a href="https://github.com/dev-pp/vagas/issues" target="_blank" rel="noopener" class="text-fg-muted transition-colors hover:text-primary">vagas ↗</a>
               </li>
               <li>

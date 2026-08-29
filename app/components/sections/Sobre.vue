@@ -11,7 +11,11 @@ const numeros = [
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
       <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div class="lg:col-span-7">
-          <UiSectionHead comando="cat sobre.md" titulo="Uma comunidade, não um evento" />
+          <UiSectionHead comando="cat sobre.md">
+            <template #titulo>
+              Uma <span class="text-primary glow">comunidade</span>, não apenas eventos
+            </template>
+          </UiSectionHead>
 
           <div class="mt-7 space-y-5 text-[1.05rem] text-fg-muted">
             <p>
