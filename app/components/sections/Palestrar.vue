@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const preSelecao = usePreSelecaoAjuda()
+</script>
+
 <template>
   <section id="palestrar" class="border-b border-line-soft bg-bg-deep">
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
@@ -5,17 +9,11 @@
         <div class="min-w-0 lg:col-span-6">
           <UiSectionHead comando="devpp cfp --open">
             <template #titulo>
-              A chamada de palestras está <span class="text-primary glow">sempre aberta</span>
+              Call4papers <span class="text-primary glow">sempre aberto</span>
             </template>
           </UiSectionHead>
 
           <div class="mt-6 space-y-4 text-fg-muted">
-            <p>
-              A grade tem os dois lados: <strong class="font-semibold text-fg">gente da
-                comunidade</strong> e <strong class="font-semibold text-fg">convidados de
-                fora</strong> — nomes de destaque do mercado, de qualquer lugar, que a gente
-              traz pra agregar conhecimento e abrir networking pra galera daqui.
-            </p>
             <p>
               E sempre sobra espaço pra você. Se você resolveu um problema estranho no
               trabalho, montou algo que ninguém pediu, apanhou de um deploy ou estuda um
@@ -36,8 +34,12 @@
           </ul>
 
           <p class="mt-7 font-mono text-sm text-fg-dim">
-            // quer indicar outra pessoa em vez de palestrar?
-            <a href="#ajudar" class="text-primary underline underline-offset-4">é logo ali ↓</a>
+            // você tbm pode
+            <a
+              href="#ajudar"
+              class="text-primary underline underline-offset-4"
+              @click="preSelecao = 'palestrante'"
+            >indicar palestrantes</a>
           </p>
         </div>
 

@@ -6,6 +6,7 @@ const links = [
   { href: '/#palestrar', label: 'palestrar' },
   { href: '/#ajudar', label: 'ajudar' },
   { href: '/#vagas', label: 'vagas' },
+  { href: '/#junte-se', label: 'junte-se' },
 ]
 </script>
 

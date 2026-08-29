@@ -59,7 +59,7 @@ function limpar() {
     <CampoTexto
       id="pal-titulo"
       v-model="titulo"
-      rotulo="título (mesmo que provisório)"
+      rotulo="título da palestra"
       placeholder="Aquilo que quase derrubou a produção"
     />
 
@@ -87,9 +87,6 @@ function limpar() {
       A gente lê tudo e responde por e-mail — inclusive quando a resposta é
       “vamos encaixar no próximo”. Se for a sua primeira palestra, avisa: a gente
       ensaia junto.
-    </template>
-    <template #rodape>
-      a chamada fica aberta o ano inteiro, com ou sem encontro marcado
     </template>
   </FormBase>
 </template>

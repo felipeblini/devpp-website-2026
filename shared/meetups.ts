@@ -9,6 +9,8 @@ export interface ItemAgenda {
 export interface Palestrante {
   nome: string
   cargo: string
+  /** URL da foto (avatar). null = mostra as iniciais. */
+  foto: string | null
   bio: string
   palestra: string
   /** null = ainda não encaixado na grade */

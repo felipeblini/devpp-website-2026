@@ -12,9 +12,9 @@ const { public: { siteUrl } } = useRuntimeConfig()
 const url = `${siteUrl}/meetup/${m.slug}`
 
 useSeoMeta({
-  title: `DEV-PP #${m.numero} — ${m.titulo} · ${data.extenso}`,
-  description: `${m.chamada} Meetup gratuito em ${m.cidade}, ${data.extenso}.`,
-  ogTitle: `DEV-PP #${m.numero} — ${data.extenso}`,
+  title: `${m.titulo} — ${data.extenso}`,
+  description: `${m.chamada} Encontro em ${m.cidade}, ${data.extenso}. Entrada livre.`,
+  ogTitle: `${m.titulo} — ${data.extenso}`,
   ogDescription: m.chamada,
   ogUrl: url,
   ogLocale: 'pt_BR',
@@ -33,7 +33,7 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
         </NuxtLink>
 
         <p class="pixel mt-8 text-[0.62rem] text-accent">
-          meetup #{{ m.numero }} · {{ data.diaSemana }}, {{ data.extenso }}
+          {{ data.diaSemana }}, {{ data.extenso }}
         </p>
         <h1 class="mt-4 text-4xl sm:text-5xl">{{ m.titulo }}</h1>
         <p class="mt-5 max-w-2xl text-lg text-fg-muted">{{ m.chamada }}</p>
@@ -64,65 +64,51 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
             </dd>
           </div>
           <div class="bg-bg p-5">
-            <dt class="font-mono text-[0.68rem] text-fg-dim">quanto</dt>
-            <dd class="mt-1 font-mono font-bold text-primary">gratuito</dd>
-            <dd class="font-mono text-sm text-fg-muted">sem ingresso, sem cadastro</dd>
+            <dt class="font-mono text-[0.68rem] text-fg-dim">pra quem</dt>
+            <dd class="mt-1 text-sm text-fg-muted">
+              Qualquer entusiasta de tecnologia, programadores, designers, empresários,
+              estudantes.
+            </dd>
+            <dd class="mt-1 font-mono text-sm font-bold text-primary">
+              Entrada livre… só chegar
+            </dd>
           </div>
         </dl>
       </div>
     </section>
 
     <section class="border-b border-line-soft bg-bg-deep">
-      <div class="mx-auto grid max-w-4xl gap-12 px-5 py-16 lg:grid-cols-2 lg:gap-16">
-        <div class="min-w-0">
-          <h2 class="text-2xl">Programação</h2>
-          <ol class="mt-6">
-            <li
-              v-for="(item, i) in m.agenda"
-              :key="item.titulo"
-              class="grid grid-cols-[auto_1fr] gap-x-4 border-t border-line-soft py-5 first:border-t-0 first:pt-0"
-            >
-              <span class="pixel pt-1 text-[0.6rem] text-primary">{{ String(i + 1).padStart(2, '0') }}</span>
-              <div>
-                <p class="font-mono font-bold">{{ item.titulo }}</p>
-                <p class="mt-1 text-sm text-fg-muted">{{ item.detalhe }}</p>
-                <p v-if="item.hora" class="mt-1 font-mono text-xs text-accent">{{ item.hora }}</p>
-              </div>
-            </li>
-          </ol>
+      <div class="mx-auto max-w-4xl px-5 py-16">
+        <h2 class="text-2xl">Programação</h2>
+        <ol class="mt-6">
+          <li
+            v-for="(item, i) in m.agenda"
+            :key="item.titulo"
+            class="grid grid-cols-[auto_1fr] gap-x-5 border-t border-line-soft py-5 first:border-t-0 first:pt-0"
+          >
+            <span class="pixel pt-1 text-[0.6rem] text-primary">{{ String(i + 1).padStart(2, '0') }}</span>
+            <div>
+              <p class="font-mono text-lg font-bold">{{ item.titulo }}</p>
+              <p class="mt-1 text-fg-muted">{{ item.detalhe }}</p>
+              <p v-if="item.hora" class="mt-1 font-mono text-xs text-accent">{{ item.hora }}</p>
+            </div>
+          </li>
+        </ol>
 
-          <div v-if="!m.palestrantes.length" class="mt-8 border border-dashed border-line p-5">
-            <p class="font-mono text-sm font-bold text-accent">Palestras em confirmação</p>
-            <p class="mt-2 text-sm text-fg-muted">
-              A chamada segue aberta — inclusive pra você.
-              <NuxtLink to="/#palestrar" class="text-primary underline underline-offset-4">
-                propor uma palestra
-              </NuxtLink>.
-            </p>
-          </div>
-
-          <ul v-else class="mt-8 grid gap-px border border-line bg-line">
-            <li v-for="pal in m.palestrantes" :key="pal.nome" class="bg-bg p-5">
-              <p v-if="pal.hora" class="font-mono text-xs font-bold text-accent">{{ pal.hora }}</p>
-              <p class="mt-1 font-mono font-bold">{{ pal.palestra }}</p>
-              <p class="mt-2 font-mono text-sm text-primary">{{ pal.nome }}</p>
-              <p class="font-mono text-xs text-fg-dim">{{ pal.cargo }}</p>
-              <p class="mt-2 text-sm text-fg-muted">{{ pal.bio }}</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="min-w-0">
-          <h2 class="text-2xl">Garantir minha vaga</h2>
-          <p class="mt-3 text-fg-muted">
-            Nome e e-mail. A entrada é livre, mas quem se inscreve garante a vaga e
-            recebe a grade fechada por e-mail.
+        <div v-if="!m.palestrantes.length" class="mt-10 border border-dashed border-line p-6">
+          <p class="font-mono text-sm font-bold text-accent">Palestras em confirmação</p>
+          <p class="mt-2 text-sm text-fg-muted">
+            A chamada segue aberta — inclusive pra você.
+            <NuxtLink to="/#palestrar" class="text-primary underline underline-offset-4">
+              propor uma palestra
+            </NuxtLink>.
           </p>
-          <div class="mt-6">
-            <FormVaga :meetup="m.slug" :numero="m.numero" />
-          </div>
         </div>
+
+        <ListaPalestras v-else class="mt-12" :palestrantes="m.palestrantes" />
       </div>
     </section>
+
+    <SectionsInscricao :meetup="m" />
   </article>
 </template>

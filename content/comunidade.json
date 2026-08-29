@@ -1,0 +1,29 @@
+{
+  "_leia": "Links de entrada na comunidade, usados na seção 'Junte-se a nós'. Deixe url em null pra o cartão sumir do site.",
+  "canais": [
+    {
+      "id": "whatsapp",
+      "nome": "Grupo do WhatsApp",
+      "descricao": "Onde a conversa acontece no dia a dia: dúvida técnica, vaga, aviso de encontro.",
+      "acao": "entrar no grupo",
+      "url": null,
+      "pendente": "COLAR AQUI o link de convite do grupo (WhatsApp > Dados do grupo > Convidar via link)."
+    },
+    {
+      "id": "facebook",
+      "nome": "Grupo do Facebook",
+      "descricao": "O grupo mais antigo da comunidade, de onde saiu boa parte da galera dos primeiros meetups.",
+      "acao": "entrar no grupo",
+      "url": "https://www.facebook.com/groups/770159453169235/",
+      "pendente": null
+    },
+    {
+      "id": "instagram",
+      "nome": "Instagram",
+      "descricao": "Chamada dos encontros, registro das noites e os avisos rápidos.",
+      "acao": "seguir @devpp.com.br",
+      "url": "https://www.instagram.com/devpp.com.br/",
+      "pendente": null
+    }
+  ]
+}

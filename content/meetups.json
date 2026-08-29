@@ -5,7 +5,7 @@
       "numero": 32,
       "slug": "2026-09-24",
       "status": "confirmado",
-      "titulo": "Encontro de setembro",
+      "titulo": "DEVPP #32",
       "chamada": "Uma noite de palestra, papo técnico e networking com a galera que escreve código na região.",
       "data": "2026-09-24",
       "horario": "a partir das 18h",
@@ -39,6 +39,7 @@
         {
           "nome": "Marina Toledo",
           "cargo": "Engenheira de plataforma · Vetorial Sistemas (Prudente)",
+          "foto": "https://mockmind-api.uifaces.co/content/human/125.jpg",
           "bio": "Cuida da infra que segura sete produtos internos. Gosta de Postgres mais do que devia e já migrou o mesmo banco três vezes.",
           "palestra": "O índice que ninguém pediu: como um SELECT derrubou a sexta-feira",
           "hora": "19h"
@@ -46,16 +47,26 @@
         {
           "nome": "Rafael Kimura",
           "cargo": "Desenvolvedor sênior · convidado de São Paulo",
+          "foto": "https://mockmind-api.uifaces.co/content/human/80.jpg",
           "bio": "Passou os últimos anos em times de pagamento e tem opinião forte sobre fila, retry e a mentira do 'processa depois'.",
           "palestra": "Idempotência na marra: o que aprendi cobrando duas vezes do cliente",
           "hora": "19h45"
         },
         {
+          "nome": "Camila Ferraz",
+          "cargo": "Product designer · Ateliê Digital (Marília)",
+          "foto": "https://mockmind-api.uifaces.co/content/human/128.jpg",
+          "bio": "Trabalha colada com time de dev e cansou de receber tela pronta pra 'dar uma melhorada'. Defende protótipo feio e cedo.",
+          "palestra": "Design não é a última etapa: como parar de terceirizar decisão de produto",
+          "hora": "20h15"
+        },
+        {
           "nome": "Bianca Prado",
           "cargo": "Estudante de Ciência da Computação · UNOESTE",
+          "foto": "https://mockmind-api.uifaces.co/content/human/92.jpg",
           "bio": "Primeira palestra da vida. Passou o semestre reescrevendo um projeto da faculdade em Rust só pra entender o borrow checker.",
           "palestra": "Lightning talk: briguei com o borrow checker e perdi (três vezes)",
-          "hora": "20h30"
+          "hora": "20h45"
         }
       ]
     }

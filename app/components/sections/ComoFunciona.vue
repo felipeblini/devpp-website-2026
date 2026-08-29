@@ -36,7 +36,7 @@ const passos = [
 
       <ol class="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
         <li v-for="(p, i) in passos" :key="p.cmd" class="bg-bg p-7">
-          <p class="pixel text-[0.6rem] text-fg-dim">passo {{ String(i + 1).padStart(2, '0') }}</p>
+          <p class="pixel text-[0.6rem] text-fg-dim">## PASSO {{ String(i + 1).padStart(2, '0') }}</p>
           <p class="mt-4 font-mono text-sm text-primary">$ {{ p.cmd }}</p>
           <h3 class="mt-2 text-xl">{{ p.titulo }}</h3>
           <p class="mt-2 text-sm text-fg-muted">{{ p.texto }}</p>

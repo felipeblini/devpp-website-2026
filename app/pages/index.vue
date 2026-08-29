@@ -76,7 +76,7 @@ useHead({
     <SectionsAjudar />
     <SectionsVagas />
     <SectionsFaq />
-    <SectionsInscricao />
+    <SectionsJunteSe />
     <SectionsParceiros />
   </div>
 </template>

@@ -11,6 +11,12 @@ const opcoes = [
   { valor: 'apoio', rotulo: 'apoiar com coffee break ou brindes', ajuda: 'sua empresa ou uma que você indica' },
 ]
 
+// quem chega pelo link "indicar palestrantes" já encontra a opção marcada
+const preSelecao = usePreSelecaoAjuda()
+watch(preSelecao, (valor) => {
+  if (valor && !como.value.includes(valor)) como.value.push(valor)
+}, { immediate: true })
+
 const emailOk = computed(() => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()))
 const valido = computed(
   () => nome.value.trim().length >= 2 && emailOk.value && como.value.length > 0,
@@ -29,6 +35,7 @@ function limpar() {
   email.value = ''
   mensagem.value = ''
   como.value = []
+  preSelecao.value = null
 }
 </script>
 

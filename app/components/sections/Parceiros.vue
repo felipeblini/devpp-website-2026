@@ -5,7 +5,7 @@
         <div class="lg:col-span-7">
           <UiSectionHead
             comando="cat parceiros.txt"
-            titulo="Quer apoiar a comunidade?"
+            titulo="Quer ser um parceiro?"
           />
           <p class="mt-5 max-w-xl text-fg-muted">
             Meetup gratuito ainda tem custo: espaço, cafezinho, projetor, às vezes um
@@ -14,7 +14,13 @@
           </p>
           <p class="mt-4 font-mono text-sm text-fg-dim">
             // quem sempre segurou essa onda foi a galera daqui mesmo: coworkings,
-            empresas locais e o GDG Prudente.
+            empresas, parceiros locais e a
+            <a
+              href="https://inovaprudente.com.br/"
+              target="_blank"
+              rel="noopener"
+              class="text-primary underline underline-offset-4"
+            >Inova Prudente</a>.
           </p>
         </div>
         <div class="lg:col-span-5">

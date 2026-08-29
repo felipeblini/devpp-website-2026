@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { proximoNumero } from '#shared/meetups'
-
 const vias = [
   {
     cmd: 'palestrante',
@@ -10,12 +8,13 @@ const vias = [
   {
     cmd: 'local',
     titulo: 'Arruma onde a gente cabe',
-    texto: 'Não somos casados com nenhum endereço: já rolou em universidade, dentro de empresa, coworking e café. Se tem espaço pra umas dezenas de pessoas e um projetor, serve.',
+    texto: 'Não somos casados com nenhum endereço: já rolou em universidade, dentro de empresa, coworking e até cafés. Se tem espaço pra umas dezenas de pessoas e um projetor, serve.',
   },
   {
     cmd: 'apoio',
     titulo: 'Banca o café ou manda brinde',
-    texto: 'Coffee break e brindes de sorteio no fim do encontro saem de empresas da região. Custa pouco e aparece pra comunidade inteira.',
+    texto: 'Coffee break e brindes de sorteio no fim do encontro saem de empresas da região. Custa pouco e a',
+    destaque: 'sua marca aparece pra comunidade inteira',
   },
 ]
 </script>
@@ -25,7 +24,7 @@ const vias = [
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
       <UiSectionHead comando="devpp contribuir">
         <template #titulo>
-          Ajude a construir o meetup <span class="text-primary">#{{ proximoNumero }}</span>
+          Ajude-nos a construir <span class="text-primary">os próximos</span>
         </template>
         <template #descricao>
           Encontro não cai do céu. Ele acontece quando três coisas se juntam:
@@ -50,7 +49,9 @@ const vias = [
             <div>
               <p class="font-mono text-sm text-primary">$ {{ v.cmd }}</p>
               <p class="mt-1 font-mono text-lg font-bold">{{ v.titulo }}</p>
-              <p class="mt-1 text-fg-muted">{{ v.texto }}</p>
+              <p class="mt-1 text-fg-muted">
+                {{ v.texto }}<template v-if="v.destaque">{{ ' ' }}<strong class="font-semibold text-primary">{{ v.destaque }}</strong>.</template>
+              </p>
             </div>
           </li>
         </ol>

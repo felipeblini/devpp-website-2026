@@ -9,7 +9,7 @@ const data = m ? partesDaData(m.data) : null
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
       <UiSectionHead
         comando="devpp next"
-        titulo="O próximo encontro"
+        :titulo="m ? m.titulo : 'O próximo encontro'"
         :descricao="m ? m.chamada : undefined"
       >
         <template v-if="!m" #descricao>
@@ -62,17 +62,17 @@ const data = m ? partesDaData(m.data) : null
                 </div>
               </dl>
 
-              <AppButton href="#inscricao" class="mt-6 w-full">
+              <AppButton :to="`/meetup/${m.slug}#inscricao`" class="mt-6 w-full">
                 garantir minha vaga
               </AppButton>
               <p class="mt-3 text-center font-mono text-[0.68rem] text-fg-dim">
-                entrada livre — inscrever garante a sua vaga
+                entrada livre — se inscrever garante a sua vaga
               </p>
               <NuxtLink
                 :to="`/meetup/${m.slug}`"
                 class="mt-4 block text-center font-mono text-xs text-fg-muted underline underline-offset-4 hover:text-primary"
               >
-                página completa do encontro →
+                mais detalhes
               </NuxtLink>
             </div>
           </div>
@@ -107,26 +107,7 @@ const data = m ? partesDaData(m.data) : null
             </p>
           </div>
 
-          <div v-else class="mt-10">
-            <h3 class="font-mono text-sm text-fg-dim">// quem vai falar</h3>
-            <ul class="mt-5 grid gap-px border border-line bg-line">
-              <li
-                v-for="pal in m.palestrantes"
-                :key="pal.nome"
-                class="grid gap-x-6 bg-bg p-6 sm:grid-cols-[5rem_1fr]"
-              >
-                <p class="font-mono text-sm font-bold text-accent">
-                  {{ pal.hora ?? '—' }}
-                </p>
-                <div class="mt-2 sm:mt-0">
-                  <p class="font-mono text-lg font-bold">{{ pal.palestra }}</p>
-                  <p class="mt-2 font-mono text-sm text-primary">{{ pal.nome }}</p>
-                  <p class="font-mono text-xs text-fg-dim">{{ pal.cargo }}</p>
-                  <p class="mt-2 text-sm text-fg-muted">{{ pal.bio }}</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <ListaPalestras v-else class="mt-10" :palestrantes="m.palestrantes" />
         </div>
       </div>
 

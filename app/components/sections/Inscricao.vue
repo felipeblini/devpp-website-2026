@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import { proximoMeetup as m, proximoNumero, partesDaData } from '#shared/meetups'
+import type { Meetup } from '#shared/meetups'
+import { proximoMeetup, partesDaData } from '#shared/meetups'
 
-const data = m ? partesDaData(m.data) : null
+// Vive na página do encontro; sem prop, cai no próximo encontro confirmado.
+const props = defineProps<{ meetup?: Meetup | null }>()
+
+const m = computed(() => props.meetup ?? proximoMeetup)
+const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
 </script>
 
 <!-- Só existe quando há encontro marcado: inscrição sem data não significa nada. -->
@@ -40,7 +45,7 @@ const data = m ? partesDaData(m.data) : null
       </div>
 
       <div class="min-w-0 lg:col-span-6">
-        <FormVaga :meetup="m.slug" :numero="proximoNumero" />
+        <FormVaga :meetup="m.slug" :numero="m.numero" />
       </div>
     </div>
   </section>
