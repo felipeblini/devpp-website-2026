@@ -22,10 +22,6 @@ const perguntas: { q: string; a: string[] }[] = [
     ],
   },
   {
-    q: 'Isso é IA ou é de verdade?',
-    a: ['Sim.'],
-  },
-  {
     q: 'Preciso morar em Presidente Prudente?',
     a: [
       'Não. A comunidade é de Prudente e região — sempre veio gente das cidades do entorno. Se você topa a viagem, você é bem-vindo.',
@@ -41,13 +37,17 @@ const perguntas: { q: string; a: string[] }[] = [
     q: 'E se eu chegar atrasado, não conhecer a stack e não souber o que falar?',
     a: ['Tá fazendo muita pergunta. Cola logo no rolê.'],
   },
+  {
+    q: 'Isso é IA ou é de verdade?',
+    a: ['Sim.'],
+  },
 ]
 </script>
 
 <template>
   <section id="faq" class="border-b border-line-soft">
     <div class="mx-auto max-w-3xl px-5 py-20 lg:py-24">
-      <UiSectionHead comando="devpp faq" titulo="Antes que você pergunte" />
+      <UiSectionHead comando="devpp --faq" titulo="Antes que você pergunte" />
 
       <div class="mt-10 border-t border-line-soft">
         <details

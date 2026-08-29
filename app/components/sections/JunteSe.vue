@@ -17,7 +17,7 @@ const canais = dados.canais as Canal[]
 <template>
   <section id="junte-se" class="border-b border-line-soft bg-bg-deep">
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
-      <UiSectionHead comando="devpp join">
+      <UiSectionHead comando="devpp --join">
         <template #titulo>
           <span class="text-primary glow">Junte-se</span> a nós
         </template>

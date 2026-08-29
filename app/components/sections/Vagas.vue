@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
       <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
-          <UiSectionHead comando="grep -r 'vaga' ./prudente" titulo="Procurando trampo?" />
+          <UiSectionHead comando="grep -r 'vaga' ./prudente-e-regiao" titulo="Procurando trampo?" />
 
           <div class="mt-5 space-y-4 text-fg-muted">
             <p>
