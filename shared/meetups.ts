@@ -8,9 +8,11 @@ export interface ItemAgenda {
 
 export interface Palestrante {
   nome: string
-  tema: string
-  origem?: string
-  bio?: string
+  cargo: string
+  bio: string
+  palestra: string
+  /** null = ainda não encaixado na grade */
+  hora: string | null
 }
 
 export interface Meetup {

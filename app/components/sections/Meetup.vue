@@ -107,13 +107,26 @@ const data = m ? partesDaData(m.data) : null
             </p>
           </div>
 
-          <ul v-else class="mt-8 grid gap-px border border-line bg-line sm:grid-cols-2">
-            <li v-for="pal in m.palestrantes" :key="pal.nome" class="bg-bg p-5">
-              <p class="font-mono font-bold">{{ pal.nome }}</p>
-              <p v-if="pal.origem" class="font-mono text-xs text-fg-dim">{{ pal.origem }}</p>
-              <p class="mt-2 text-sm text-fg-muted">{{ pal.tema }}</p>
-            </li>
-          </ul>
+          <div v-else class="mt-10">
+            <h3 class="font-mono text-sm text-fg-dim">// quem vai falar</h3>
+            <ul class="mt-5 grid gap-px border border-line bg-line">
+              <li
+                v-for="pal in m.palestrantes"
+                :key="pal.nome"
+                class="grid gap-x-6 bg-bg p-6 sm:grid-cols-[5rem_1fr]"
+              >
+                <p class="font-mono text-sm font-bold text-accent">
+                  {{ pal.hora ?? '—' }}
+                </p>
+                <div class="mt-2 sm:mt-0">
+                  <p class="font-mono text-lg font-bold">{{ pal.palestra }}</p>
+                  <p class="mt-2 font-mono text-sm text-primary">{{ pal.nome }}</p>
+                  <p class="font-mono text-xs text-fg-dim">{{ pal.cargo }}</p>
+                  <p class="mt-2 text-sm text-fg-muted">{{ pal.bio }}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

@@ -101,11 +101,13 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
             </p>
           </div>
 
-          <ul v-else class="mt-8 space-y-px border border-line bg-line">
+          <ul v-else class="mt-8 grid gap-px border border-line bg-line">
             <li v-for="pal in m.palestrantes" :key="pal.nome" class="bg-bg p-5">
-              <p class="font-mono font-bold">{{ pal.nome }}</p>
-              <p v-if="pal.origem" class="font-mono text-xs text-fg-dim">{{ pal.origem }}</p>
-              <p class="mt-2 text-sm text-fg-muted">{{ pal.tema }}</p>
+              <p v-if="pal.hora" class="font-mono text-xs font-bold text-accent">{{ pal.hora }}</p>
+              <p class="mt-1 font-mono font-bold">{{ pal.palestra }}</p>
+              <p class="mt-2 font-mono text-sm text-primary">{{ pal.nome }}</p>
+              <p class="font-mono text-xs text-fg-dim">{{ pal.cargo }}</p>
+              <p class="mt-2 text-sm text-fg-muted">{{ pal.bio }}</p>
             </li>
           </ul>
         </div>
