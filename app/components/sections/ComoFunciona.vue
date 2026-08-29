@@ -6,7 +6,7 @@ const passos = [
     texto: 'Siga-nos nas redes sociais, entre em nossas comunidades e canais.',
     saida: '✓ você agora faz parte da comunidade',
     tom: 'ok',
-    args: ' --canal whatsapp',
+    args: ' --canal whatsapp|facebook|instagram',
   },
   {
     cmd: 'aguardar',
