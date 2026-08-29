@@ -31,7 +31,8 @@ const vias = [
           Encontro não cai do céu. Ele acontece quando três coisas se juntam:
           <strong class="font-semibold text-fg">gente pra palestrar</strong>,
           <strong class="font-semibold text-fg">um lugar pra receber</strong> e
-          <strong class="font-semibold text-fg">alguém que banca o café</strong>.
+          <strong class="font-semibold text-fg">alguém que banca o café e brindes pra
+            galera</strong>.
           Qualquer uma das três já destrava.
         </template>
       </UiSectionHead>

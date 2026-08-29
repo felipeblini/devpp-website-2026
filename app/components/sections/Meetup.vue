@@ -167,7 +167,8 @@ const data = m ? partesDaData(m.data) : null
             <p>
               Encontro do DEV-PP não nasce de cima pra baixo: ele aparece quando tem
               palestra pra apresentar, um espaço pra receber a galera e alguém disposto a
-              bancar o café. Quando essas três coisas se encontram, a data sai.
+              bancar o café e os brindes pra galera. Quando essas três coisas se
+              encontram, a data sai.
             </p>
             <p>
               Se você quer <strong class="font-semibold text-fg">palestrar</strong>,
