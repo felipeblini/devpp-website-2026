@@ -11,5 +11,6 @@ export default defineNuxtPlugin(() => {
   console.log('%cdev@pp:~$ %cdevpp entrar', verde, claro)
   console.log('%c→ comunidade de devs de Presidente Prudente e região', claro)
   console.log('%c→ https://devpp.com.br', claro)
+  console.log('%c# o código deste site é aberto: github.com/felipeblini/devpp-website-2026', fraco)
   console.log('%c# chegou até aqui? então vc tem perfil de palestrante: devpp.com.br/#palestrar', fraco)
 })
