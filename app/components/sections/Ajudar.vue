@@ -22,7 +22,7 @@ const vias = [
 <template>
   <section id="ajudar" class="border-b border-line-soft">
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
-      <UiSectionHead comando="devpp --ghost">
+      <UiSectionHead comando="devpp --contribute">
         <template #titulo>
           Ajude-nos a construir <span class="text-primary">os próximos</span>
         </template>
