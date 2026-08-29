@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { proximoMeetup as m, proximoNumero, partesDaData } from '#shared/meetups'
+import { proximoMeetup as m, proximoNumero, partesDaData, meetupsAnteriores } from '#shared/meetups'
 
 const data = m ? partesDaData(m.data) : null
 </script>
@@ -164,6 +164,12 @@ const data = m ? partesDaData(m.data) : null
           </div>
         </div>
       </div>
+
+      <CarrosselMeetups
+        v-if="meetupsAnteriores.length"
+        class="mt-20"
+        :meetups="meetupsAnteriores"
+      />
     </div>
   </section>
 </template>

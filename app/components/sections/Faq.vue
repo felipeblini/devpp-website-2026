@@ -45,7 +45,7 @@ const perguntas: { q: string; a: string[] }[] = [
 </script>
 
 <template>
-  <section class="border-b border-line-soft">
+  <section id="faq" class="border-b border-line-soft">
     <div class="mx-auto max-w-3xl px-5 py-20 lg:py-24">
       <UiSectionHead comando="devpp faq" titulo="Antes que você pergunte" />
 

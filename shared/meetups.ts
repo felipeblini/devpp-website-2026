@@ -52,6 +52,11 @@ export const proximoNumero: number = proximoMeetup
   ? proximoMeetup.numero
   : Math.max(0, ...todos.map(m => m.numero)) + 1
 
+/** Edições já realizadas, da mais recente para a mais antiga. */
+export const meetupsAnteriores: Meetup[] = todos
+  .filter(m => m.status === 'confirmado' && m.data < hoje)
+  .reverse()
+
 /** Todos os encontros com página própria (usado no prerender). */
 export const meetupsComPagina: Meetup[] = todos.filter(m => m.status === 'confirmado')
 

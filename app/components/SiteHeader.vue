@@ -1,11 +1,14 @@
 <script setup lang="ts">
 const aberto = ref(false)
 const links = [
-  { href: '/#meetup', label: 'próximo meetup' },
+  { href: '/#meetup', label: 'meetup' },
   { href: '/#sobre', label: 'sobre' },
+  { href: '/#participar', label: 'participar' },
   { href: '/#palestrar', label: 'palestrar' },
   { href: '/#ajudar', label: 'ajudar' },
   { href: '/#vagas', label: 'vagas' },
+  { href: '/#faq', label: 'FAQ' },
+  { href: '/#parceiros', label: 'parcerias' },
 ]
 </script>
 
@@ -30,7 +33,7 @@ const links = [
         <span aria-hidden="true" class="caret" />
       </NuxtLink>
 
-      <nav class="hidden flex-1 items-center gap-5 font-mono text-[0.8rem] text-fg-muted md:flex">
+      <nav class="hidden flex-1 items-center gap-4 font-mono text-[0.78rem] text-fg-muted lg:flex">
         <a
           v-for="l in links"
           :key="l.href"
@@ -41,13 +44,13 @@ const links = [
 
       <a
         href="/#junte-se"
-        class="ml-auto hidden border border-primary bg-primary px-4 py-2 font-mono text-[0.78rem] font-bold text-primary-fg transition-colors hover:bg-primary-deep md:inline-block"
+        class="ml-auto hidden border border-primary bg-primary px-4 py-2 font-mono text-[0.78rem] font-bold text-primary-fg transition-colors hover:bg-primary-deep lg:inline-block"
       >
         junte-se a nós
       </a>
 
       <button
-        class="ml-auto border border-line px-3 py-2 font-mono text-xs text-fg-muted md:hidden"
+        class="ml-auto border border-line px-3 py-2 font-mono text-xs text-fg-muted lg:hidden"
         :aria-expanded="aberto"
         aria-controls="menu-mobile"
         @click="aberto = !aberto"
@@ -56,7 +59,7 @@ const links = [
       </button>
     </div>
 
-    <div v-if="aberto" id="menu-mobile" class="border-t border-line-soft md:hidden">
+    <div v-if="aberto" id="menu-mobile" class="border-t border-line-soft lg:hidden">
       <nav class="mx-auto flex max-w-6xl flex-col px-5 py-2 pb-4 font-mono text-sm">
         <a
           v-for="l in links"

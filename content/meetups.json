@@ -72,5 +72,31 @@
       ]
     }
   ],
-  "_aviso_dados_ficticios": "ATENCAO: a lista \"palestrantes\" do meetup 32 esta preenchida com PESSOAS INVENTADAS, so pra visualizar o layout. Apagar ou substituir pelos nomes reais antes de publicar o site."
+  "_aviso_dados_ficticios": "ATENCAO: a lista \"palestrantes\" do meetup 32 esta preenchida com PESSOAS INVENTADAS, so pra visualizar o layout. Apagar ou substituir pelos nomes reais antes de publicar o site.",
+  "_como_adicionar_edicao_anterior": "Copie o objeto de _exemplo_meetup_anterior para dentro de \"meetups\", ajuste os campos e comite. Encontro com status confirmado e data no passado sai automaticamente no carrossel \"edicoes anteriores\" da home, do mais recente para o mais antigo, e ganha pagina propria em /meetup/<slug>.",
+  "_exemplo_meetup_anterior": {
+    "numero": 31,
+    "slug": "2021-08-12",
+    "status": "confirmado",
+    "titulo": "DEVPP #31",
+    "chamada": "Uma linha sobre o que rolou nesse encontro.",
+    "data": "2021-08-12",
+    "horario": "a partir das 19h",
+    "horarioCurto": "19h",
+    "local": "Nome do local",
+    "localSite": null,
+    "mapa": null,
+    "cidade": "Presidente Prudente — SP",
+    "agenda": [],
+    "palestrantes": [
+      {
+        "nome": "Nome da pessoa",
+        "cargo": "Cargo · Empresa",
+        "foto": null,
+        "bio": "Uma ou duas linhas.",
+        "palestra": "Título da palestra",
+        "hora": "19h30"
+      }
+    ]
+  }
 }

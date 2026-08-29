@@ -59,7 +59,7 @@ const numero = (i: number) => String(i + 1).padStart(2, '0')
 </script>
 
 <template>
-  <section class="border-b border-line-soft bg-bg-deep">
+  <section id="participar" class="border-b border-line-soft bg-bg-deep">
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
       <UiSectionHead comando="devpp --help" titulo="Como participar">
         <template #descricao>
