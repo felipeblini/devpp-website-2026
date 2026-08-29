@@ -57,7 +57,6 @@ const numero = (i: number) => String(i + 1).padStart(2, '0')
         <template #descricao>
           Não tem burocracia nenhuma:
           <strong class="font-semibold text-primary">é só chegar</strong>.
-          Mas você pode garantir a sua vaga se inscrevendo.
         </template>
       </UiSectionHead>
 
