@@ -84,9 +84,9 @@ function limpar() {
     />
 
     <template #sucesso>
-      A gente lê tudo e responde por e-mail — inclusive quando a resposta é
-      “vamos encaixar no próximo”. Se for a sua primeira palestra, avisa: a gente
-      ensaia junto.
+      Prometemos ler inteira — diferente daquele PR de 400 linhas. A gente responde
+      por e-mail, inclusive quando a resposta é “vamos encaixar no próximo”. Se for
+      a sua primeira palestra, avisa: a gente ensaia junto.
     </template>
   </FormBase>
 </template>

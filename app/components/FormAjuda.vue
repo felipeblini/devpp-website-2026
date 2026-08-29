@@ -95,8 +95,8 @@ function limpar() {
     />
 
     <template #sucesso>
-      A organização entra em contato pelo e-mail que você deixou. Ajuda de verdade é
-      isso: encontro do DEV-PP existe porque alguém ofereceu palestra, espaço ou café.
+      A organização entra em contato pelo e-mail que você deixou — sem SLA, mas com
+      carinho. Encontro do DEV-PP existe porque alguém ofereceu palestra, espaço ou café.
     </template>
     <template #rodape>
       sem compromisso — dá pra recuar depois sem problema nenhum
