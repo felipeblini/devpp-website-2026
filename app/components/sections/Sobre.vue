@@ -25,7 +25,7 @@ const numeros = [
               fortalecer o ecossistema de tecnologia daqui.
             </p>
             <p>
-              Na prática são meetups gratuitos: palestras, demos, workshops, grupos de
+              Na prática são meetups: palestras, demos, workshops, grupos de
               estudo e bate-papo. Sempre com uma confraternização no fim, porque metade
               das boas ideias sai depois da última palestra.
             </p>

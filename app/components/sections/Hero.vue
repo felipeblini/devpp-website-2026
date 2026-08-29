@@ -23,7 +23,7 @@ const tons: Record<string, string> = {
         <p class="pixel inline-flex items-center gap-2 border border-line px-3 py-1.5 text-[0.6rem] text-accent">
           <span class="inline-block size-1.5 bg-accent" />
           <span v-if="proximoMeetup && data">
-            meetup #{{ proximoNumero }} · {{ data.extenso }} · {{ proximoMeetup.horarioCurto ?? 'horário a definir' }}
+            meetup #{{ proximoNumero }} · {{ data.extenso }}<template v-if="proximoMeetup.horarioCurto"> · {{ proximoMeetup.horarioCurto }}</template><template v-else> · <UiCarregando texto="horário a definir" /></template>
           </span>
           <span v-else>
             meetup #{{ proximoNumero }} <UiCarregando />
@@ -113,7 +113,7 @@ const tons: Record<string, string> = {
         </UiTerminalWindow>
 
         <p class="mt-3 font-mono text-[0.7rem] text-fg-dim">
-          // meetups gratuitos, palestras da comunidade e vagas da região.
+          // meetups, palestras da comunidade e vagas da região.
         </p>
       </div>
     </div>

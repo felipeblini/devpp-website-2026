@@ -36,13 +36,15 @@ const data = m ? partesDaData(m.data) : null
                 <div>
                   <dt class="text-[0.7rem] text-fg-dim">horário</dt>
                   <dd :class="m.horario ? 'text-fg' : 'text-fg-muted'">
-                    {{ m.horario ?? 'a definir' }}
+                    <span v-if="m.horario">{{ m.horario }}</span>
+                    <UiCarregando v-else texto="a definir" />
                   </dd>
                 </div>
                 <div>
                   <dt class="text-[0.7rem] text-fg-dim">local</dt>
                   <dd :class="m.local ? 'text-fg' : 'text-fg-muted'">
-                    {{ m.local ?? 'a definir' }}
+                    <span v-if="m.local">{{ m.local }}</span>
+                    <UiCarregando v-else texto="a definir" />
                   </dd>
                   <dd class="text-fg-dim">{{ m.cidade }}</dd>
                   <dd v-if="m.mapa" class="mt-1">
@@ -131,7 +133,7 @@ const data = m ? partesDaData(m.data) : null
                 </div>
                 <div>
                   <dt class="text-[0.7rem] text-fg-dim">local</dt>
-                  <dd class="text-fg-muted">a definir</dd>
+                  <dd class="text-fg-muted"><UiCarregando texto="a definir" /></dd>
                   <dd class="text-fg-dim">Presidente Prudente e região</dd>
                 </div>
                 <div>

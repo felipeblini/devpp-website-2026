@@ -22,7 +22,10 @@ const data = m ? partesDaData(m.data) : null
         <p class="pixel text-[0.62rem] text-primary">$ devpp inscrever</p>
         <h2 class="mt-4 text-[2rem] leading-[1.08] sm:text-4xl lg:text-[2.7rem]">
           Dia {{ Number(data.dia) }}<template v-if="m.horarioCurto">, às {{ m.horarioCurto }}</template>,<br>
-          <span class="text-primary glow">no {{ m.local ?? 'local a definir' }}.</span>
+          <span class="text-primary glow">
+            <template v-if="m.local">no {{ m.local }}.</template>
+            <template v-else><UiCarregando texto="local a definir" />.</template>
+          </span>
         </h2>
         <p class="mt-6 max-w-md text-lg text-fg-muted">
           Deixa nome e e-mail. É só isso — e a gente te manda a grade e os avisos

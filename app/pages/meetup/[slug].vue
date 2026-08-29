@@ -42,11 +42,17 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
           <div class="bg-bg p-5">
             <dt class="font-mono text-[0.68rem] text-fg-dim">quando</dt>
             <dd class="mt-1 font-mono font-bold">{{ data.curta }}</dd>
-            <dd class="font-mono text-sm text-fg-muted">{{ m.horario ?? 'horário a definir' }}</dd>
+            <dd class="font-mono text-sm text-fg-muted">
+              <span v-if="m.horario">{{ m.horario }}</span>
+              <UiCarregando v-else texto="horário a definir" />
+            </dd>
           </div>
           <div class="bg-bg p-5">
             <dt class="font-mono text-[0.68rem] text-fg-dim">onde</dt>
-            <dd class="mt-1 font-mono font-bold">{{ m.local ?? 'a definir' }}</dd>
+            <dd class="mt-1 font-mono font-bold">
+              <span v-if="m.local">{{ m.local }}</span>
+              <UiCarregando v-else texto="a definir" />
+            </dd>
             <dd class="font-mono text-sm text-fg-muted">{{ m.cidade }}</dd>
             <dd v-if="m.mapa" class="mt-1">
               <a
