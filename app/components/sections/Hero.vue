@@ -38,15 +38,7 @@ const tons: Record<string, string> = {
 
         <p class="mt-6 max-w-xl text-lg text-fg-muted">
           O DEV-PP junta quem escreve código na região pra trocar conhecimento, palestrar
-          e fazer networking de verdade. Meetup gratuito, organizado pela própria
-          comunidade.
-          <template v-if="proximoMeetup && data">
-            O próximo é <strong class="font-semibold text-fg">{{ Number(data.dia) }} de {{ data.mes }}<template v-if="proximoMeetup.horarioCurto">, às {{ proximoMeetup.horarioCurto }}</template><template v-if="proximoMeetup.local">, no {{ proximoMeetup.local }}</template></strong>.
-          </template>
-          <template v-else>
-            A data do próximo ainda está sendo fechada —
-            <strong class="font-semibold text-fg">e você pode ajudar a construir ele</strong>.
-          </template>
+          e fazer networking de verdade — em meetups organizados pela própria comunidade.
         </p>
 
         <div class="mt-9 flex flex-wrap gap-3">
