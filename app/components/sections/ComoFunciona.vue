@@ -33,6 +33,14 @@ const passos = [
     args: ' --local',
   },
   {
+    cmd: 'colaborar',
+    titulo: 'Colabore',
+    texto: 'Palestre, indique alguém, ofereça um espaço ou banque o café. É assim que o próximo encontro nasce.',
+    saida: '✓ obrigado! a organização entra em contato',
+    tom: 'ok',
+    args: ' --palestra --local --apoio',
+  },
+  {
     cmd: 'repetir',
     titulo: 'E de novo no próximo',
     texto: 'O DEV-PP não é um evento avulso: acontece sempre (ou quase sempre), com a mesma galera crescendo junto.',
@@ -60,11 +68,11 @@ const numero = (i: number) => String(i + 1).padStart(2, '0')
         </template>
       </UiSectionHead>
 
-      <ol class="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
-        <li v-for="(p, i) in passos" :key="p.cmd" class="bg-bg p-6">
+      <ol class="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <li v-for="(p, i) in passos" :key="p.cmd" class="bg-bg p-7">
           <p class="font-mono text-[0.72rem] text-fg-dim">// PASSO {{ numero(i) }}</p>
           <p class="mt-4 font-mono text-sm text-primary">$ {{ p.cmd }}</p>
-          <h3 class="mt-2 text-lg leading-tight">{{ p.titulo }}</h3>
+          <h3 class="mt-2 text-xl leading-tight">{{ p.titulo }}</h3>
           <p class="mt-2 text-sm text-fg-muted">{{ p.texto }}</p>
         </li>
       </ol>
