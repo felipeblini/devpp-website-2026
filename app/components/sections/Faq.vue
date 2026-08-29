@@ -44,7 +44,7 @@ const perguntas: { q: string; a: string[] }[] = [
   {
     q: 'Por que "Comunidade de desenvolvedores" e não "de Pessoas Desenvolvedoras"?',
     a: [
-      'Cabe todo mundo do mesmo jeito. Tem coisa mais importante pra vc se preocupar, tipo aquele merge na main que tá te esperando há 3 dias.',
+      '"Desenvolvedores" é mais curto e cabe todo mundo do mesmo jeito. E tem coisa mais importante pra vc se preocupar, tipo aquele merge na main que tá te esperando há 3 dias.',
     ],
   },
 ]
