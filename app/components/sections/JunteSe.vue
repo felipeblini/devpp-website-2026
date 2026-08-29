@@ -10,13 +10,8 @@ interface Canal {
   pendente: string | null
 }
 
-// Canal sem link ainda não entra no site — melhor faltar do que levar a lugar nenhum.
-const canais = (dados.canais as Canal[]).filter(c => c.url)
-
-// A grade acompanha a quantidade de canais — senão sobra célula vazia.
-const colunas = computed(() =>
-  canais.length >= 3 ? 'sm:grid-cols-3' : canais.length === 2 ? 'sm:grid-cols-2' : '',
-)
+// Canal sem link entra como pendente: aparece, mas sem prometer destino.
+const canais = dados.canais as Canal[]
 </script>
 
 <template>
@@ -27,24 +22,34 @@ const colunas = computed(() =>
           <span class="text-primary glow">Junte-se</span> a nós
         </template>
         <template #descricao>
-          O encontro é uma noite por mês. A comunidade é o ano inteiro — e ela vive
-          nesses canais.
+          Os meetups acontecem qnd dá (os organizadores tbm trabalham rs), mas a
+          comunidade não para — e ela vive nesses canais.
         </template>
       </UiSectionHead>
 
-      <ul class="mt-12 grid gap-px border border-line bg-line" :class="colunas">
+      <ul class="mt-12 grid gap-px border border-line bg-line sm:grid-cols-3">
         <li v-for="c in canais" :key="c.id" class="flex flex-col bg-bg p-7">
           <p class="pixel text-[0.6rem] text-fg-dim">{{ c.id }}</p>
-          <h3 class="mt-4 font-mono text-xl font-bold">{{ c.nome }}</h3>
+          <h3 class="mt-4 font-mono text-xl font-bold" :class="!c.url && 'text-fg-muted'">
+            {{ c.nome }}
+          </h3>
           <p class="mt-2 flex-1 text-sm text-fg-muted">{{ c.descricao }}</p>
+
           <a
-            :href="c.url!"
+            v-if="c.url"
+            :href="c.url"
             target="_blank"
             rel="noopener"
             class="mt-6 inline-flex min-h-11 items-center justify-center border border-line px-4 py-3 font-mono text-sm font-bold transition-colors hover:border-primary hover:text-primary"
           >
             {{ c.acao }} ↗
           </a>
+          <p
+            v-else
+            class="mt-6 inline-flex min-h-11 items-center justify-center border border-dashed border-line px-4 py-3 font-mono text-sm text-fg-dim"
+          >
+            <UiCarregando texto="link em breve" />
+          </p>
         </li>
       </ul>
     </div>

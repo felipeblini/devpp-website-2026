@@ -6,7 +6,6 @@ const links = [
   { href: '/#palestrar', label: 'palestrar' },
   { href: '/#ajudar', label: 'ajudar' },
   { href: '/#vagas', label: 'vagas' },
-  { href: '/#junte-se', label: 'junte-se' },
 ]
 </script>
 
@@ -31,7 +30,7 @@ const links = [
         <span aria-hidden="true" class="caret" />
       </NuxtLink>
 
-      <nav class="hidden items-center gap-5 font-mono text-[0.8rem] text-fg-muted md:flex">
+      <nav class="hidden flex-1 items-center gap-5 font-mono text-[0.8rem] text-fg-muted md:flex">
         <a
           v-for="l in links"
           :key="l.href"
@@ -39,6 +38,13 @@ const links = [
           class="transition-colors hover:text-primary"
         >{{ l.label }}</a>
       </nav>
+
+      <a
+        href="/#junte-se"
+        class="ml-auto hidden border border-primary bg-primary px-4 py-2 font-mono text-[0.78rem] font-bold text-primary-fg transition-colors hover:bg-primary-deep md:inline-block"
+      >
+        junte-se a nós
+      </a>
 
       <button
         class="ml-auto border border-line px-3 py-2 font-mono text-xs text-fg-muted md:hidden"
@@ -61,6 +67,11 @@ const links = [
         >
           <span class="text-primary">&gt;</span> {{ l.label }}
         </a>
+        <a
+          href="/#junte-se"
+          class="mt-3 mb-2 bg-primary px-4 py-3 text-center font-bold text-primary-fg"
+          @click="aberto = false"
+        >junte-se a nós</a>
       </nav>
     </div>
   </header>
