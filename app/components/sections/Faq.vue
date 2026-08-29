@@ -22,7 +22,7 @@ const perguntas: { q: string; a: string[] }[] = [
     ],
   },
   {
-    q: 'O meetup é pra quem tá começando ou pra quem já é sênior?',
+    q: 'Isso é IA ou é de verdade?',
     a: ['Sim.'],
   },
   {
