@@ -28,7 +28,7 @@ const passos = [
     cmd: 'aparecer',
     titulo: 'Você aparece no dia',
     texto: 'Chega, pega o cafezinho, conversa com a galera (na linguagem que vc quiser), senta com quem você só conhecia através de bits na tela do seu celular.',
-    saida: '✓ Bem-vindo, fique à vontade',
+    saida: '✓ Bem-vindo, fique à vontade, não julgue seu colega só pq ele programa em COBOL',
     tom: 'ok',
     args: ' --local',
   },
