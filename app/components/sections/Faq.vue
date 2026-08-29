@@ -1,5 +1,10 @@
 <script setup lang="ts">
 /** Cada resposta é uma lista de parágrafos. */
+/** Trechos entre asteriscos saem em itálico. Índice ímpar = ênfase. */
+function trechos(texto: string) {
+  return texto.split(/\*(.+?)\*/g)
+}
+
 const perguntas: { q: string; a: string[] }[] = [
   {
     q: 'Preciso me inscrever pra ir?',
@@ -44,7 +49,7 @@ const perguntas: { q: string; a: string[] }[] = [
   {
     q: 'Por que "Comunidade de desenvolvedores" e não "de Pessoas Desenvolvedoras"?',
     a: [
-      '"Desenvolvedores" é mais curto e cabe todo mundo do mesmo jeito. E tem coisa mais importante pra vc se preocupar, tipo aquele merge na main que tá te esperando há 3 dias.',
+      '"Desenvolvedores" é mais curto e cabe todo mundo do mesmo jeito. E tem coisa mais importante pra vc se preocupar, tipo aquele merge na *main* que tá te esperando há 3 dias.',
     ],
   },
 ]
@@ -69,7 +74,10 @@ const perguntas: { q: string; a: string[] }[] = [
           </summary>
           <div class="pb-6 pl-8">
             <p v-for="(paragrafo, i) in p.a" :key="i" class="mt-3 text-fg-muted first:mt-0">
-              {{ paragrafo }}
+              <template v-for="(trecho, j) in trechos(paragrafo)" :key="j">
+                <em v-if="j % 2">{{ trecho }}</em>
+                <template v-else>{{ trecho }}</template>
+              </template>
             </p>
           </div>
         </details>
