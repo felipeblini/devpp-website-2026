@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import { proximoMeetup as m, proximoNumero, partesDaData, meetupsAnteriores } from '#shared/meetups'
+import { proximoMeetup as m, partesDaData, meetupsAnteriores } from '#shared/meetups'
 
 const data = m ? partesDaData(m.data) : null
 </script>
 
 <template>
-  <section id="meetup" class="border-b border-line-soft bg-bg-deep">
+  <section
+    v-if="m || meetupsAnteriores.length"
+    id="meetup"
+    class="border-b border-line-soft bg-bg-deep"
+  >
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
       <UiSectionHead
-        comando="devpp next"
-        :titulo="m ? m.titulo : 'O próximo encontro'"
-        :descricao="m ? m.chamada : undefined"
-      >
-        <template v-if="!m" #descricao>
-          A data do encontro <strong class="font-semibold text-fg">#{{ proximoNumero }}</strong>
-          ainda não está fechada. Enquanto isso a chamada de palestras segue aberta — e a
-          gente aceita ajuda pra montar o próximo.
-        </template>
-      </UiSectionHead>
+        v-if="m"
+        comando="devpp --next"
+        :titulo="m.titulo"
+        :descricao="m.chamada"
+      />
 
       <!-- ---------- com encontro marcado ---------- -->
       <div v-if="m && data" class="mt-12 grid gap-8 lg:grid-cols-12">
@@ -111,63 +110,9 @@ const data = m ? partesDaData(m.data) : null
         </div>
       </div>
 
-      <!-- ---------- sem encontro marcado ---------- -->
-      <div v-else class="mt-12 grid gap-8 lg:grid-cols-12">
-        <div class="min-w-0 lg:col-span-5">
-          <UiTerminalWindow :titulo="`meetup#${proximoNumero}.ics`">
-            <div class="p-6">
-              <p class="pixel text-[0.6rem] text-fg-dim">próximo encontro</p>
-              <p class="mt-3 font-mono text-3xl font-extrabold text-accent">
-                <UiCarregando />
-              </p>
-              <dl class="mt-6 space-y-3 border-t border-line-soft pt-5 font-mono text-sm">
-                <div>
-                  <dt class="text-[0.7rem] text-fg-dim">data</dt>
-                  <dd class="text-fg-muted"><UiCarregando texto="a definir" /></dd>
-                </div>
-                <div>
-                  <dt class="text-[0.7rem] text-fg-dim">local</dt>
-                  <dd class="text-fg-muted"><UiCarregando texto="a definir" /></dd>
-                  <dd class="text-fg-dim">Presidente Prudente e região</dd>
-                </div>
-                <div>
-                  <dt class="text-[0.7rem] text-fg-dim">entrada</dt>
-                  <dd class="font-bold text-primary">gratuita, como sempre</dd>
-                </div>
-              </dl>
-              <AppButton href="#ajudar" class="mt-6 w-full">
-                ajudar a marcar o próximo
-              </AppButton>
-            </div>
-          </UiTerminalWindow>
-        </div>
-
-        <div class="min-w-0 lg:col-span-7">
-          <h3 class="font-mono text-sm text-fg-dim">// enquanto a data não sai</h3>
-          <div class="mt-5 space-y-4 text-fg-muted">
-            <p>
-              Encontro do DEV-PP não nasce de cima pra baixo: ele aparece quando tem
-              palestra pra apresentar, um espaço pra receber a galera e alguém disposto a
-              bancar o café e os brindes pra galera. Quando essas três coisas se
-              encontram, a data sai.
-            </p>
-            <p>
-              Se você quer <strong class="font-semibold text-fg">palestrar</strong>,
-              tem <strong class="font-semibold text-fg">um espaço</strong> ou conhece uma
-              <strong class="font-semibold text-fg">empresa que queira apoiar</strong>,
-              é aqui que a fila anda.
-            </p>
-          </div>
-          <div class="mt-7 flex flex-wrap gap-3">
-            <AppButton href="#palestrar" variante="linha">quero palestrar</AppButton>
-            <AppButton href="#ajudar" variante="linha">quero ajudar de outro jeito</AppButton>
-          </div>
-        </div>
-      </div>
-
       <CarrosselMeetups
         v-if="meetupsAnteriores.length"
-        class="mt-20"
+        :class="m && 'mt-20'"
         :meetups="meetupsAnteriores"
       />
     </div>

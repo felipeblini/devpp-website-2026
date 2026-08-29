@@ -18,7 +18,9 @@ function rolar(direcao: 1 | -1) {
 <template>
   <div>
     <div class="flex items-end justify-between gap-4">
-      <h3 class="font-mono text-sm text-fg-dim">// edições anteriores</h3>
+      <h3 class="font-mono text-[0.78rem] text-fg-muted">
+        <UiPrompt />{{ ' ' }}devpp meetups --list
+      </h3>
 
       <div class="flex gap-2">
         <button
