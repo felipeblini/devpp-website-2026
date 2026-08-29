@@ -21,6 +21,19 @@ const passos = [
     texto: 'O DEV-PP não é um evento avulso: é encontro atrás de encontro, com a mesma galera crescendo junto.',
   },
 ]
+
+// A "CLI" é piada — a última linha entrega isso, pra ninguém sair procurando o pacote.
+const sessao = [
+  { cmd: 'devpp inscrever --meetup 32', saida: '✓ nome e e-mail salvos. levou 15 segundos.', tom: 'ok' },
+  { cmd: 'devpp agenda --watch', saida: '… esperando a grade fechar (a gente te avisa por e-mail)', tom: 'espera' },
+  { cmd: 'devpp aparecer --local "inova prudente"', saida: '✓ 24/09, 18h. leva sede.', tom: 'ok' },
+  { cmd: 'devpp repetir', saida: '∞ tem sempre um próximo', tom: 'espera' },
+]
+
+const tons: Record<string, string> = {
+  ok: 'text-primary',
+  espera: 'text-fg-dim',
+}
 </script>
 
 <template>
@@ -42,6 +55,25 @@ const passos = [
           <p class="mt-2 text-sm text-fg-muted">{{ p.texto }}</p>
         </li>
       </ol>
+
+      <div class="mt-14 max-w-3xl">
+        <p class="font-mono text-sm text-fg-dim">// Se vc preferir, use a nossa CLI</p>
+
+        <UiTerminalWindow class="mt-4" titulo="dev@pp: ~">
+          <div class="overflow-x-auto p-6 font-mono text-[0.82rem] leading-relaxed">
+            <div v-for="linha in sessao" :key="linha.cmd" class="mb-3 last:mb-0">
+              <p class="whitespace-nowrap">
+                <UiPrompt />{{ ' ' }}<span class="text-fg">{{ linha.cmd }}</span>
+              </p>
+              <p class="whitespace-nowrap" :class="tons[linha.tom]">{{ linha.saida }}</p>
+            </div>
+
+            <p class="mt-5 whitespace-nowrap">
+              <UiPrompt />{{ ' ' }}<span class="text-fg-dim"># brincadeira: a CLI não existe. o formulário existe ↑</span>
+            </p>
+          </div>
+        </UiTerminalWindow>
+      </div>
     </div>
   </section>
 </template>
