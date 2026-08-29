@@ -24,7 +24,9 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
 
     <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-12 lg:gap-16 lg:py-24">
       <div class="min-w-0 lg:col-span-6 lg:pt-4">
-        <p class="pixel text-[0.62rem] text-primary">$ devpp inscrever</p>
+        <p class="font-mono text-[0.72rem] text-fg-muted">
+          <UiPrompt />{{ ' ' }}devpp inscrever
+        </p>
         <h2 class="mt-4 text-[2rem] leading-[1.08] sm:text-4xl">
           Garanta a sua <span class="text-primary glow">vaga</span>
         </h2>

@@ -46,8 +46,8 @@ function reiniciar() {
   <UiTerminalWindow :titulo="arquivo">
     <div class="p-6 sm:p-8">
       <div v-if="estado === 'ok'" class="font-mono">
-        <p class="text-primary">
-          <span class="text-fg-dim">$</span> {{ comando }} --ok
+        <p class="text-fg-muted">
+          <UiPrompt />{{ ' ' }}{{ comando }} --ok
         </p>
         <p class="mt-4 text-2xl font-extrabold">{{ tituloSucesso }}</p>
         <div class="mt-3 text-sm text-fg-muted">
@@ -62,8 +62,8 @@ function reiniciar() {
       </div>
 
       <form v-else class="space-y-5" novalidate @submit.prevent="enviar">
-        <p class="font-mono text-sm text-fg-dim">
-          <span class="text-primary">$</span> {{ comando }}
+        <p class="font-mono text-sm text-fg-muted">
+          <UiPrompt />{{ ' ' }}{{ comando }}
         </p>
 
         <slot />

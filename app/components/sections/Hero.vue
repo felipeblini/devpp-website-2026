@@ -56,10 +56,10 @@ const tons: Record<string, string> = {
       </div>
 
       <div class="min-w-0 lg:col-span-5 lg:pt-8">
-        <UiTerminalWindow titulo="devpp@prudente: ~/comunidade" scanlines>
+        <UiTerminalWindow titulo="dev@pp: ~/comunidade" scanlines>
           <div class="p-5 font-mono text-[0.82rem] leading-relaxed">
-            <p class="text-fg-dim">
-              <span class="text-primary">$</span> devpp status
+            <p class="text-fg-muted">
+              <UiPrompt caminho="~/comunidade" />{{ ' ' }}devpp status
             </p>
             <dl class="mt-3 space-y-1.5">
               <div
@@ -98,8 +98,8 @@ const tons: Record<string, string> = {
                 <dd class="shrink-0 font-bold text-primary">ABERTA</dd>
               </div>
             </dl>
-            <p class="mt-4 text-fg-dim caret opacity-0 [animation:fade-in_.4s_ease-out_forwards]" style="animation-delay: 800ms">
-              <span class="text-primary">$</span>
+            <p class="mt-4 caret opacity-0 [animation:fade-in_.4s_ease-out_forwards]" style="animation-delay: 800ms">
+              <UiPrompt caminho="~/comunidade" />
             </p>
           </div>
         </UiTerminalWindow>

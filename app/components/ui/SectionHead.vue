@@ -8,8 +8,8 @@ defineProps<{
 
 <template>
   <div class="max-w-2xl">
-    <p class="pixel text-[0.62rem] tracking-wide text-primary">
-      <span class="text-fg-dim">$</span> {{ comando }}
+    <p class="font-mono text-[0.72rem] tracking-wide text-fg-muted">
+      <UiPrompt />{{ ' ' }}{{ comando }}
     </p>
     <h2 class="mt-3 text-3xl sm:text-4xl">
       <slot name="titulo">{{ titulo }}</slot>

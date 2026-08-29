@@ -69,10 +69,10 @@ const data = m ? partesDaData(m.data) : null
                 entrada livre — se inscreva e garanta sua vaga
               </p>
               <p class="mt-4 text-center font-mono text-xs">
-                <span aria-hidden="true" class="text-primary">$</span>{{ ' ' }}<NuxtLink
+                <UiPrompt />{{ ' ' }}<NuxtLink
                   :to="`/meetup/${m.slug}`"
-                  class="text-fg-muted underline underline-offset-4 transition-colors hover:text-primary"
-                >cat /detalhes.json</NuxtLink>
+                  class="underline underline-offset-4 transition-colors hover:text-primary"
+                >cat detalhes.json</NuxtLink>
               </p>
             </div>
           </div>

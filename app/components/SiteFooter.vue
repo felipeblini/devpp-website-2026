@@ -72,7 +72,7 @@ const ano = new Date().getFullYear()
       </div>
 
       <p class="mt-12 border-t border-line-soft pt-6 font-mono text-xs text-fg-dim">
-        <span class="text-primary">$</span> echo "feito pela comunidade, pra comunidade" &nbsp;·&nbsp; DEV-PP {{ ano }}
+        <UiPrompt />{{ ' ' }}echo "feito pela comunidade, pra comunidade" &nbsp;·&nbsp; DEV-PP {{ ano }}
       </p>
     </div>
   </footer>
