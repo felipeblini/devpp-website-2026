@@ -95,17 +95,13 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
           </li>
         </ol>
 
-        <div v-if="!m.palestrantes.length" class="mt-10 border border-dashed border-line p-6">
-          <p class="font-mono text-sm font-bold text-accent">Palestras em confirmação</p>
-          <p class="mt-2 text-sm text-fg-muted">
-            A chamada segue aberta — inclusive pra você.
-            <NuxtLink to="/#palestrar" class="text-primary underline underline-offset-4">
-              propor uma palestra
-            </NuxtLink>.
-          </p>
-        </div>
+        <ListaPalestras
+          v-if="m.palestrantes.length"
+          class="mt-12"
+          :palestrantes="m.palestrantes"
+        />
 
-        <ListaPalestras v-else class="mt-12" :palestrantes="m.palestrantes" />
+        <AvisoChamada class="mt-10" :meetup="m" link="/#palestrar" />
       </div>
     </section>
 

@@ -31,6 +31,8 @@ export interface Meetup {
   localSite: string | null
   mapa: string | null
   cidade: string
+  /** Total de vagas de palestra do encontro. null = não controlado. */
+  vagasDePalestra: number | null
   agenda: ItemAgenda[]
   palestrantes: Palestrante[]
 }
@@ -59,6 +61,12 @@ export const meetupsAnteriores: Meetup[] = todos
 
 /** Todos os encontros com página própria (usado no prerender). */
 export const meetupsComPagina: Meetup[] = todos.filter(m => m.status === 'confirmado')
+
+/** Quantas vagas de palestra ainda estão abertas. null = o encontro não controla isso. */
+export function vagasDePalestraAbertas(m: Meetup): number | null {
+  if (m.vagasDePalestra == null) return null
+  return Math.max(0, m.vagasDePalestra - m.palestrantes.length)
+}
 
 export function acharMeetup(slug: string): Meetup | undefined {
   return todos.find(m => m.slug === slug)
