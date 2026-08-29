@@ -38,7 +38,7 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
               <path d="M3 10h18M8 3v4M16 3v4" />
             </svg>
             <div>
-              <dt class="font-mono text-[0.68rem] text-fg-dim">dia</dt>
+              <dt class="sr-only">dia</dt>
               <dd class="font-mono text-lg font-bold">
                 {{ data.diaSemana }}, {{ data.curta }}
               </dd>
@@ -51,7 +51,7 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
               <path d="M12 7v5l3.5 2" />
             </svg>
             <div>
-              <dt class="font-mono text-[0.68rem] text-fg-dim">hora</dt>
+              <dt class="sr-only">hora</dt>
               <dd class="font-mono text-lg font-bold">
                 <span v-if="m.horario">{{ m.horario }}</span>
                 <UiCarregando v-else texto="a definir" />
@@ -65,7 +65,7 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
               <circle cx="12" cy="10" r="2.5" />
             </svg>
             <div class="min-w-0">
-              <dt class="font-mono text-[0.68rem] text-fg-dim">local</dt>
+              <dt class="sr-only">local</dt>
               <dd class="font-mono text-lg font-bold">
                 <a
                   v-if="m.local && m.localSite"
@@ -91,8 +91,8 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
         </dl>
 
         <p class="mt-8 max-w-md text-fg-muted">
-          Deixa nome e e-mail. É só isso — e a gente te manda a grade e os avisos
-          antes de todo mundo. Entrar é de graça, e sempre vai ser.
+          A entrada é livre — a inscrição serve pra gente saber quantos esperar e
+          reservar a sua vaga. Nome e e-mail, e só.
         </p>
       </div>
 

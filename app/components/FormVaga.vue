@@ -46,12 +46,12 @@ function limpar() {
       type="email"
       autocomplete="email"
       placeholder="voce@dominio.com"
-      ajuda="só pra mandar a grade, avisos do encontro e os próximos meetups."
+      ajuda="só pra confirmar a vaga e avisar se algo mudar de última hora."
     />
 
     <template #sucesso>
       Sua vaga no <strong class="text-fg">meetup #{{ numero }}</strong> está garantida.
-      A grade fechada e qualquer mudança de última hora chegam no seu e-mail.
+      Se mudar alguma coisa de última hora, a gente te avisa por e-mail.
     </template>
     <template #rodape>
       a gente não repassa seu e-mail pra ninguém
