@@ -66,14 +66,14 @@ const data = m ? partesDaData(m.data) : null
                 garantir minha vaga
               </AppButton>
               <p class="mt-3 text-center font-mono text-[0.68rem] text-fg-dim">
-                entrada livre — se inscrever garante a sua vaga
+                entrada livre — se inscreva e garanta sua vaga
               </p>
-              <NuxtLink
-                :to="`/meetup/${m.slug}`"
-                class="mt-4 block text-center font-mono text-xs text-fg-muted underline underline-offset-4 hover:text-primary"
-              >
-                mais detalhes
-              </NuxtLink>
+              <p class="mt-4 text-center font-mono text-xs">
+                <span aria-hidden="true" class="text-primary">$</span>{{ ' ' }}<NuxtLink
+                  :to="`/meetup/${m.slug}`"
+                  class="text-fg-muted underline underline-offset-4 transition-colors hover:text-primary"
+                >cat /detalhes.json</NuxtLink>
+              </p>
             </div>
           </div>
         </div>
