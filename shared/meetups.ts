@@ -27,6 +27,8 @@ export interface Meetup {
   horario: string | null
   horarioCurto: string | null
   local: string | null
+  /** site do local; null = nome sem link */
+  localSite: string | null
   mapa: string | null
   cidade: string
   agenda: ItemAgenda[]

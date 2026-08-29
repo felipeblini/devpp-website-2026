@@ -1,5 +1,5 @@
 {
-  "_leia": "Fonte de verdade dos encontros. Dá pra editar direto pela interface do GitHub — cada commit publica o site. status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'.",
+  "_leia": "Fonte de verdade dos encontros. Dá pra editar direto pela interface do GitHub — cada commit publica o site. status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro.",
   "meetups": [
     {
       "numero": 32,
@@ -11,6 +11,7 @@
       "horario": "a partir das 18h",
       "horarioCurto": "18h",
       "local": "Fundação Inova Prudente",
+      "localSite": "https://inovaprudente.com.br/",
       "mapa": "https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Inova+Prudente/@-22.1339797,-51.4500853,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f394b3df5d51:0xac050e5ae9c9ef!8m2!3d-22.1339847!4d-51.4475104!16s%2Fg%2F11c7140bpb!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "agenda": [

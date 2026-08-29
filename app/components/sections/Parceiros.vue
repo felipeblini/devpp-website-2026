@@ -3,24 +3,22 @@
     <div class="mx-auto max-w-6xl px-5 py-16">
       <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
         <div class="lg:col-span-7">
-          <UiSectionHead
-            comando="cat parceiros.txt"
-            titulo="Quer ser um parceiro?"
-          />
+          <UiSectionHead comando="cat parceiros.txt">
+            <template #titulo>
+              Quer ser um <span class="text-primary glow">parceiro</span>?
+            </template>
+          </UiSectionHead>
           <p class="mt-5 max-w-xl text-fg-muted">
-            Meetup gratuito ainda tem custo: espaço, cafezinho, projetor, às vezes um
-            deslocamento de palestrante. Empresa da região que quiser bancar um pedaço
-            disso aparece pra comunidade inteira — e ainda encontra gente boa de perto.
+            Os meetups são gratuitos, e isso tem custo: espaço, cafezinho, cerveja,
+            projetor, às vezes um deslocamento e hospedagem de palestrante… Empresas da
+            região que quiserem bancar um pedaço disso serão muito bem-vindas — e em
+            troca ganham um enorme agradecimento no fim do meetup, a marca aparece pra
+            comunidade inteira, vira referência para os devs e ainda encontra gente boa
+            de perto.
           </p>
           <p class="mt-4 font-mono text-sm text-fg-dim">
             // quem sempre segurou essa onda foi a galera daqui mesmo: coworkings,
-            empresas, parceiros locais e a
-            <a
-              href="https://inovaprudente.com.br/"
-              target="_blank"
-              rel="noopener"
-              class="text-primary underline underline-offset-4"
-            >Inova Prudente</a>.
+            empresas, investimento próprio e parceiros locais.
           </p>
         </div>
         <div class="lg:col-span-5">

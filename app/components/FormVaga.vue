@@ -54,7 +54,7 @@ function limpar() {
       A grade fechada e qualquer mudança de última hora chegam no seu e-mail.
     </template>
     <template #rodape>
-      gratuito · sem cadastro · a gente não repassa seu e-mail pra ninguém
+      a gente não repassa seu e-mail pra ninguém
     </template>
   </FormBase>
 </template>

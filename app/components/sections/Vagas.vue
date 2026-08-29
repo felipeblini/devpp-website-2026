@@ -7,8 +7,8 @@
 
           <div class="mt-5 space-y-4 text-fg-muted">
             <p>
-              Uma das coisas mais úteis que a comunidade sempre fez foi circular vaga de
-              TI daqui.
+              Uma das coisas mais úteis que a comunidade sempre fez foi divulgar vaga de
+              TI daqui e da região.
             </p>
             <p>
               Acompanha o board — e apareça nos meetups. Boa parte das contratações da
@@ -28,14 +28,14 @@
         <div class="self-start border border-line p-6">
           <h3 class="font-mono text-lg font-bold">Tem vaga aberta na sua empresa?</h3>
           <p class="mt-2 text-sm text-fg-muted">
-            <a
+Crie uma <a
               href="https://github.com/dev-pp/vagas/issues/new"
               target="_blank"
               rel="noopener"
               class="text-primary underline underline-offset-4"
-            >Crie uma nova issue no nosso board de vagas</a>
-            ou manda pra gente que a gente divulga no meetup, nas redes, nos nossos
-            grupos e pra a lista de e-mails — de graça, como sempre foi.
+            >nova issue</a> no nosso board de vagas ou manda pra gente que a gente
+            divulga no meetup, nas redes, nos nossos grupos e pra a lista de e-mails —
+            de graça, como sempre foi.
           </p>
           <a
             href="mailto:devpporg@gmail.com?subject=Vaga%20para%20divulgar%20no%20DEV-PP"
