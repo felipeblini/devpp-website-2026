@@ -19,7 +19,7 @@ const passos = [
   {
     cmd: 'chamar',
     titulo: 'Chame a galera',
-    texto: 'Marca aquele colega que vive dizendo que quer ir. Meetup bom é meetup cheio.',
+    texto: 'Chame seu pai, sua avó, seu cachorro, sua tia, seu chefe… ou seu colega dev chupa bit que tá em casa sem tomar banho há 3 semanas. Meetup bom é meetup cheio.',
     saida: '✓ convite enviado pra quem você marcou',
     tom: 'ok',
     args: ' --todos',
@@ -27,7 +27,7 @@ const passos = [
   {
     cmd: 'aparecer',
     titulo: 'Você aparece no dia',
-    texto: 'Chega, pega o cafezinho, conversa com a galera, senta com quem você só conhecia no Whatsapp.',
+    texto: 'Chega, pega o cafezinho, conversa com a galera (na linguagem que vc quiser), senta com quem você só conhecia através de bits na tela do seu celular.',
     saida: '✓ Bem-vindo, fique à vontade',
     tom: 'ok',
     args: ' --local',
