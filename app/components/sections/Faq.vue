@@ -34,18 +34,18 @@ const perguntas: { q: string; a: string[] }[] = [
     ],
   },
   {
-    q: 'Por que "Comunidade de desenvolvedores" e não "de Pessoas Desenvolvedoras"?',
-    a: [
-      'Cabe todo mundo do mesmo jeito. Agora para de frescura e vai fazer aquele merge que tá te esperando há 3 dias.',
-    ],
-  },
-  {
     q: 'E se eu chegar atrasado, não conhecer a stack e não souber o que falar?',
     a: ['Tá fazendo muita pergunta. Cola logo no rolê.'],
   },
   {
     q: 'Isso é IA ou é de verdade?',
     a: ['Sim.'],
+  },
+  {
+    q: 'Por que "Comunidade de desenvolvedores" e não "de Pessoas Desenvolvedoras"?',
+    a: [
+      'Cabe todo mundo do mesmo jeito. Tem coisa mais importante pra vc se preocupar, tipo aquele merge na main que tá te esperando há 3 dias.',
+    ],
   },
 ]
 </script>
