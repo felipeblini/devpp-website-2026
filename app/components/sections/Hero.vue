@@ -31,9 +31,7 @@ const tons: Record<string, string> = {
         </p>
 
         <h1 class="mt-6 text-[2rem] leading-[1.08] sm:text-5xl sm:leading-[1.06] lg:text-[3.2rem]">
-          A comunidade dev de<br class="hidden sm:inline">
-          <span class="text-primary glow">Presidente Prudente<br class="hidden sm:inline">
-            e região</span>
+          A comunidade dev de<br class="hidden sm:inline">{{ ' ' }}<span class="text-primary glow">Presidente Prudente<br class="hidden sm:inline"> e região</span>
         </h1>
 
         <p class="mt-6 max-w-xl text-lg text-fg-muted">
@@ -56,7 +54,7 @@ const tons: Record<string, string> = {
       </div>
 
       <div class="min-w-0 lg:col-span-5 lg:pt-8">
-        <UiTerminalWindow titulo="dev@pp: ~/comunidade" scanlines>
+        <UiTerminalWindow estilo="mac" titulo="dev@pp — zsh — ~/comunidade" scanlines>
           <div class="p-5 font-mono text-[0.82rem] leading-relaxed">
             <p class="text-fg-muted">
               <UiPrompt caminho="~/comunidade" />{{ ' ' }}devpp status
