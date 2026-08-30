@@ -92,8 +92,8 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
 
         <p class="mt-8 max-w-md text-fg-muted">
           A entrada é livre — a inscrição serve pra gente saber quantos esperar,
-          reservar a sua vaga e o seu nome entra na lista de sorteios de brindes do fim
-          do meetup. Nome e e-mail, e só.
+          reservar a sua vaga, e os sorteios de brindes acontecem só pra quem tem o
+          nome na lista de inscritos. Nome e e-mail, e só.
         </p>
       </div>
 
