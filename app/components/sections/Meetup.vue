@@ -7,7 +7,7 @@ const data = m ? partesDaData(m.data) : null
 <template>
   <section
     v-if="m || meetupsAnteriores.length"
-    id="meetup"
+    id="meetups"
     class="border-b border-line-soft bg-bg-deep"
   >
     <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">

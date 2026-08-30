@@ -64,7 +64,7 @@ useSeoMeta({
 
         <p class="mt-6 text-center font-mono text-sm text-fg-dim">
           // ou vai direto pro
-          <a href="/#meetup" class="text-primary underline underline-offset-4">próximo encontro</a>
+          <a href="/#meetups" class="text-primary underline underline-offset-4">próximo encontro</a>
         </p>
       </div>
     </main>

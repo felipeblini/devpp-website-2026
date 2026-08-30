@@ -4,7 +4,7 @@
  * Herdam a cor e o tamanho da fonte de quem os usa.
  */
 defineProps<{
-  nome: 'codigo' | 'merge' | 'microfone' | 'commit' | 'pull-request'
+  nome: 'codigo' | 'merge' | 'microfone' | 'commit' | 'pull-request' | 'seta-esquerda'
 }>()
 </script>
 
@@ -42,6 +42,11 @@ defineProps<{
       <circle cx="12" cy="12" r="3" />
       <path d="M3 12h6" />
       <path d="M15 12h6" />
+    </template>
+
+    <template v-else-if="nome === 'seta-esquerda'">
+      <path d="M21 12H4" />
+      <path d="m10 19-7-7 7-7" />
     </template>
 
     <template v-else-if="nome === 'pull-request'">

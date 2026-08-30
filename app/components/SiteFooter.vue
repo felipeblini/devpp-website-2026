@@ -52,7 +52,7 @@ const ano = new Date().getFullYear()
             <p class="pixel text-[0.6rem] text-fg-dim">comunidade</p>
             <ul class="mt-4 space-y-2 font-mono text-sm">
               <li>
-                <a href="/#meetup" class="text-fg-muted transition-colors hover:text-primary">próximo meetup</a>
+                <a href="/#meetups" class="text-fg-muted transition-colors hover:text-primary">próximo meetup</a>
               </li>
               <li>
                 <a href="/#palestrar" class="text-fg-muted transition-colors hover:text-primary">palestrar</a>

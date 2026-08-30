@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const aberto = ref(false)
 const links = [
-  { href: '/#meetup', label: 'meetups' },
+  { href: '/#meetups', label: 'meetups' },
   { href: '/#sobre', label: 'sobre' },
   { href: '/#participar', label: 'participar' },
   { href: '/#palestrar', label: 'palestrar' },
@@ -39,7 +39,7 @@ const links = [
           :key="l.href"
           :href="l.href"
           class="transition-colors hover:text-primary"
-        >_{{ l.label }}</a>
+        >#{{ l.label }}</a>
       </nav>
 
       <a
@@ -69,7 +69,7 @@ const links = [
           class="border-b border-line-soft py-3 text-fg-muted"
           @click="aberto = false"
         >
-          <span class="text-primary">_</span>{{ l.label }}
+          <span class="text-primary">#</span>{{ l.label }}
         </a>
         <a
           href="/#junte-se"
