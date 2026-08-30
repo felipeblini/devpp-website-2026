@@ -4,12 +4,12 @@
  * Herdam a cor e o tamanho da fonte de quem os usa.
  */
 const props = defineProps<{
-  nome: 'codigo' | 'merge' | 'microfone' | 'commit' | 'pull-request' | 'seta-esquerda'
+  nome: 'codigo' | 'merge' | 'microfone' | 'commit' | 'pull-request' | 'seta-esquerda' | 'seta-direita'
 }>()
 
 // A seta usa uma caixa mais larga pra esticar só a perna: a altura é a mesma,
 // então a ponta continua do tamanho dos outros ícones.
-const seta = computed(() => props.nome === 'seta-esquerda')
+const seta = computed(() => props.nome === 'seta-esquerda' || props.nome === 'seta-direita')
 const caixa = computed(() => (seta.value ? '0 0 40 24' : '0 0 24 24'))
 const tamanho = computed(() => (seta.value ? 'h-[1.15em] w-auto' : 'size-[1.15em]'))
 </script>
@@ -53,6 +53,11 @@ const tamanho = computed(() => (seta.value ? 'h-[1.15em] w-auto' : 'size-[1.15em
     <template v-else-if="nome === 'seta-esquerda'">
       <path d="M38 12H4" />
       <path d="m10 19-7-7 7-7" />
+    </template>
+
+    <template v-else-if="nome === 'seta-direita'">
+      <path d="M2 12h34" />
+      <path d="m30 19 7-7-7-7" />
     </template>
 
     <template v-else-if="nome === 'pull-request'">

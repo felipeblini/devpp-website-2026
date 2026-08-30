@@ -72,7 +72,10 @@ const data = m ? partesDaData(m.data) : null
                 <UiPrompt />{{ ' ' }}<NuxtLink
                   :to="`/meetup/${m.slug}`"
                   class="underline underline-offset-4 transition-colors hover:text-primary"
-                >cat detalhes.json</NuxtLink>
+                >cat detalhes.json</NuxtLink>{{ ' ' }}<UiIcone
+                  nome="seta-direita"
+                  class="inline-block align-[-0.15em] text-fg-dim"
+                />
               </p>
             </div>
           </div>
