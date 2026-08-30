@@ -44,8 +44,23 @@ const links = [
 
       <a
         href="/#junte-se"
-        class="ml-auto hidden border border-primary bg-primary px-4 py-2 font-mono text-[0.78rem] font-bold text-primary-fg transition-colors hover:bg-primary-deep lg:inline-block"
+        class="ml-auto hidden items-center gap-2 border border-primary bg-primary px-4 py-2 font-mono text-[0.78rem] font-bold tracking-wide text-primary-fg uppercase transition-colors hover:bg-primary-deep lg:inline-flex"
       >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-[1.15em] shrink-0"
+          aria-hidden="true"
+        >
+          <circle cx="18" cy="18" r="3" />
+          <circle cx="6" cy="6" r="3" />
+          <path d="M6 21V9a9 9 0 0 0 9 9" />
+        </svg>
         junte-se a nós
       </a>
 
@@ -72,9 +87,26 @@ const links = [
         </a>
         <a
           href="/#junte-se"
-          class="mt-3 mb-2 bg-primary px-4 py-3 text-center font-bold text-primary-fg"
+          class="mt-3 mb-2 flex items-center justify-center gap-2 bg-primary px-4 py-3 font-bold tracking-wide text-primary-fg uppercase"
           @click="aberto = false"
-        >junte-se a nós</a>
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-[1.15em] shrink-0"
+            aria-hidden="true"
+          >
+            <circle cx="18" cy="18" r="3" />
+            <circle cx="6" cy="6" r="3" />
+            <path d="M6 21V9a9 9 0 0 0 9 9" />
+          </svg>
+          junte-se a nós
+        </a>
       </nav>
     </div>
   </header>
