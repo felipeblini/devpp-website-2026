@@ -11,7 +11,7 @@ const props = defineProps<{
 // então a ponta continua do tamanho dos outros ícones.
 const seta = computed(() => props.nome === 'seta-esquerda' || props.nome === 'seta-direita')
 const caixa = computed(() => (seta.value ? '0 0 40 24' : '0 0 24 24'))
-const tamanho = computed(() => (seta.value ? 'h-[1.15em] w-auto' : 'size-[1.15em]'))
+const tamanho = computed(() => (seta.value ? 'h-[0.9em] w-auto align-middle' : 'size-[1.15em]'))
 </script>
 
 <template>
