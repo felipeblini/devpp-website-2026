@@ -43,7 +43,22 @@ const tons: Record<string, string> = {
           <AppButton href="#sobre" variante="linha">
             o que é o DEV-PP →
           </AppButton>
-          <AppButton href="#palestrar" variante="linha">
+          <AppButton href="#palestrar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-[1.15em] shrink-0"
+              aria-hidden="true"
+            >
+              <path d="m18 16 4-4-4-4" />
+              <path d="m6 8-4 4 4 4" />
+              <path d="m14.5 4-5 16" />
+            </svg>
             quero palestrar
           </AppButton>
         </div>

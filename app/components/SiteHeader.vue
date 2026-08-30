@@ -39,7 +39,7 @@ const links = [
           :key="l.href"
           :href="l.href"
           class="transition-colors hover:text-primary"
-        >{{ l.label }}</a>
+        >_{{ l.label }}</a>
       </nav>
 
       <a
@@ -68,7 +68,7 @@ const links = [
           class="border-b border-line-soft py-3 text-fg-muted"
           @click="aberto = false"
         >
-          <span class="text-primary">&gt;</span> {{ l.label }}
+          <span class="text-primary">_</span>{{ l.label }}
         </a>
         <a
           href="/#junte-se"
