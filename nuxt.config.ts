@@ -49,8 +49,8 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       { name: 'Silkscreen', provider: 'google', weights: [400, 700] },
+      { name: 'Share Tech Mono', provider: 'google', weights: [400] },
       { name: 'JetBrains Mono', provider: 'google', weights: [400, 500, 700, 800] },
-      { name: 'Inter', provider: 'google', weights: [400, 500, 600] },
     ],
   },
 
