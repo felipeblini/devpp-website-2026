@@ -30,9 +30,9 @@ const numeros = [
               das boas ideias sai depois da última palestra.
             </p>
             <p>
-              Não tem ingresso, não tem venda, não tem pegadinha. É estudante, é júnior,
-              é sênior, é quem trabalha com produto, design ou infra — todo mundo que
-              tem interesse na área cabe aqui.
+              Não tem ingresso e não tem venda. É estudante, é júnior, é sênior, é quem
+              trabalha com produto, design ou infra — todo mundo que tem interesse na
+              área.
             </p>
           </div>
 

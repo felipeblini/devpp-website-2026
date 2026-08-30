@@ -10,6 +10,7 @@ const perguntas: { q: string; a: string[] }[] = [
     q: 'Preciso me inscrever pra ir?',
     a: [
       'Não. É só chegar. Se inscrever só garante a sua vaga caso o local seja muito pequeno e não caiba todo mundo — nesse caso damos preferência pra quem se inscreveu.',
+      'E tem um detalhe: o sorteio de brindes do fim do encontro é só pra quem está inscrito.',
     ],
   },
   {

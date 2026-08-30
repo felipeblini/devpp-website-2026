@@ -91,8 +91,9 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
         </dl>
 
         <p class="mt-8 max-w-md text-fg-muted">
-          A entrada é livre — a inscrição serve pra gente saber quantos esperar e
-          reservar a sua vaga. Nome e e-mail, e só.
+          A entrada é livre — a inscrição serve pra gente saber quantos esperar,
+          reservar a sua vaga e te colocar no sorteio de brindes do fim do encontro.
+          Nome e e-mail, e só.
         </p>
       </div>
 
