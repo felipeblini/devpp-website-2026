@@ -73,6 +73,7 @@ function reiniciar() {
         </div>
 
         <AppButton type="submit" :disabled="!valido || estado === 'enviando'" class="w-full">
+          <slot name="icone" />
           {{ estado === 'enviando' ? 'enviando…' : rotulo }}
         </AppButton>
 

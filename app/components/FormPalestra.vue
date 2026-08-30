@@ -83,6 +83,10 @@ function limpar() {
       ajuda="não precisa estar pronto — a gente ajuda a lapidar."
     />
 
+    <template #icone>
+      <UiIcone nome="microfone" />
+    </template>
+
     <template #sucesso>
       Prometemos ler inteira — diferente daquele PR de 400 linhas. A gente responde
       por e-mail, inclusive quando a resposta é “vamos encaixar no próximo”. Se for

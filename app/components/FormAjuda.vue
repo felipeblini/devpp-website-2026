@@ -94,6 +94,10 @@ function limpar() {
       placeholder="quem, onde, o quê — do jeito que der."
     />
 
+    <template #icone>
+      <UiIcone nome="pull-request" />
+    </template>
+
     <template #sucesso>
       A organização entra em contato pelo e-mail que você deixou — sem SLA, mas com
       carinho. Encontro do DEV-PP existe porque alguém ofereceu palestra, espaço ou café.

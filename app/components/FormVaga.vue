@@ -49,6 +49,10 @@ function limpar() {
       ajuda="só pra confirmar a vaga e avisar se algo mudar de última hora."
     />
 
+    <template #icone>
+      <UiIcone nome="vaga" />
+    </template>
+
     <template #sucesso>
       Sua vaga no <strong class="text-fg">meetup #{{ numero }}</strong> está garantida.
       Agora é só não dar merge na sexta e aparecer. Se mudar alguma coisa de última
