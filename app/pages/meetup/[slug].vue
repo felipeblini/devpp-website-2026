@@ -28,9 +28,12 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
   <article>
     <section class="border-b border-line-soft">
       <div class="mx-auto max-w-4xl px-5 py-16 lg:py-20">
-        <NuxtLink to="/" class="font-mono text-sm text-fg-dim hover:text-primary">
-          ← cd ..
-        </NuxtLink>
+        <p class="font-mono text-sm">
+          <UiPrompt />{{ ' ' }}<NuxtLink
+            to="/"
+            class="text-fg-muted underline underline-offset-4 transition-colors hover:text-primary"
+          >cd ..</NuxtLink>
+        </p>
 
         <p class="pixel mt-8 text-[0.62rem] text-accent">
           {{ data.diaSemana }}, {{ data.extenso }}

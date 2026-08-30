@@ -54,10 +54,9 @@ function limpar() {
     </template>
 
     <template #sucesso>
-      Sua vaga no <strong class="text-fg">meetup #{{ numero }}</strong> está garantida
-      — e você já entrou no sorteio de brindes do fim do encontro. Agora é só não dar
-      merge na sexta e aparecer. Se mudar alguma coisa de última hora, a gente te avisa
-      por e-mail.
+      Sua vaga no <strong class="text-fg">meetup #{{ numero }}</strong> está garantida.
+      Agora é só não dar merge na sexta e aparecer. Se mudar alguma coisa de última
+      hora, a gente te avisa por e-mail.
     </template>
     <template #rodape>
       a gente não repassa seu e-mail pra ninguém

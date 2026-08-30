@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const aberto = ref(false)
 const links = [
-  { href: '/#meetup', label: 'meetup' },
+  { href: '/#meetup', label: 'meetups' },
   { href: '/#sobre', label: 'sobre' },
   { href: '/#participar', label: 'participar' },
   { href: '/#palestrar', label: 'palestrar' },
