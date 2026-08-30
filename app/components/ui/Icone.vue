@@ -3,21 +3,27 @@
  * Ícones (lucide) desenhados inline — sem biblioteca, sem requisição extra.
  * Herdam a cor e o tamanho da fonte de quem os usa.
  */
-defineProps<{
+const props = defineProps<{
   nome: 'codigo' | 'merge' | 'microfone' | 'commit' | 'pull-request' | 'seta-esquerda'
 }>()
+
+// A seta usa uma caixa mais larga pra esticar só a perna: a altura é a mesma,
+// então a ponta continua do tamanho dos outros ícones.
+const seta = computed(() => props.nome === 'seta-esquerda')
+const caixa = computed(() => (seta.value ? '0 0 40 24' : '0 0 24 24'))
+const tamanho = computed(() => (seta.value ? 'h-[1.15em] w-auto' : 'size-[1.15em]'))
 </script>
 
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
+    :viewBox="caixa"
     fill="none"
     stroke="currentColor"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="size-[1.15em] shrink-0"
+    :class="[tamanho, 'shrink-0']"
     aria-hidden="true"
   >
     <template v-if="nome === 'codigo'">
@@ -45,7 +51,7 @@ defineProps<{
     </template>
 
     <template v-else-if="nome === 'seta-esquerda'">
-      <path d="M21 12H4" />
+      <path d="M38 12H4" />
       <path d="m10 19-7-7 7-7" />
     </template>
 
