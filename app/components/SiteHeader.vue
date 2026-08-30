@@ -69,7 +69,7 @@ const links = [
           class="border-b border-line-soft py-3 text-fg-muted"
           @click="aberto = false"
         >
-          <span class="text-primary">#</span>{{ l.label }}
+          #{{ l.label }}
         </a>
         <a
           href="/#junte-se"
