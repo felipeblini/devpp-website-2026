@@ -1,5 +1,5 @@
 {
-  "_leia": "Fonte de verdade dos encontros. Dá pra editar direto pela interface do GitHub — cada commit publica o site. status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle.",
+  "_leia": "Fonte de verdade dos encontros. status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle.",
   "meetups": [
     {
       "numero": 32,
@@ -14,7 +14,7 @@
       "localSite": "https://inovaprudente.com.br/",
       "mapa": "https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Inova+Prudente/@-22.1339797,-51.4500853,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f394b3df5d51:0xac050e5ae9c9ef!8m2!3d-22.1339847!4d-51.4475104!16s%2Fg%2F11c7140bpb!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
-      "vagasDePalestra": 5,
+      "vagasDePalestra": 4,
       "agenda": [
         {
           "hora": "18h",
@@ -23,17 +23,17 @@
         },
         {
           "hora": null,
-          "titulo": "Abertura",
+          "titulo": "Abertura 📅",
           "detalhe": "O que é o DEV-PP, o que a comunidade anda fazendo e os avisos da noite."
         },
         {
           "hora": null,
-          "titulo": "Palestras",
+          "titulo": "Palestras 💬",
           "detalhe": "Gente da comunidade e convidados de fora. A chamada segue aberta."
         },
         {
           "hora": null,
-          "titulo": "Networking",
+          "titulo": "Networking 👥",
           "detalhe": "A parte que ninguém pula. Trocar ideia, compartilhar conhecimento, tomar uma cerveja, fazer amizades, indicar vaga, marcar o próximo."
         }
       ],
@@ -71,11 +71,8 @@
           "hora": "20h45"
         }
       ]
-    }
-  ],
-  "_aviso_dados_ficticios": "ATENCAO: a lista \"palestrantes\" do meetup 32 esta preenchida com PESSOAS INVENTADAS, so pra visualizar o layout. Apagar ou substituir pelos nomes reais antes de publicar o site.",
-  "_como_adicionar_edicao_anterior": "Copie o objeto de _exemplo_meetup_anterior para dentro de \"meetups\", ajuste os campos e comite. Encontro com status confirmado e data no passado sai automaticamente no carrossel \"edicoes anteriores\" da home, do mais recente para o mais antigo, e ganha pagina propria em /meetup/<slug>.",
-  "_exemplo_meetup_anterior": {
+    },
+    "meetup": {
     "numero": 31,
     "slug": "2021-08-12",
     "status": "confirmado",
@@ -101,4 +98,5 @@
       }
     ]
   }
+  ],
 }
