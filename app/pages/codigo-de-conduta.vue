@@ -15,7 +15,7 @@ useHead({ link: [{ rel: 'canonical', href: `${siteUrl}/codigo-de-conduta` }] })
   <article class="border-b border-line-soft">
     <div class="mx-auto max-w-3xl px-5 py-16 lg:py-20">
       <p class="font-mono text-sm">
-        <UiPrompt />{{ ' ' }}<NuxtLink
+        <span aria-hidden="true" class="text-fg-dim">←</span>{{ ' ' }}<UiPrompt />{{ ' ' }}<NuxtLink
           to="/"
           class="text-fg-muted underline underline-offset-4 transition-colors hover:text-primary"
         >cd ..</NuxtLink>
