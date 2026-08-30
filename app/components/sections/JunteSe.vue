@@ -40,7 +40,7 @@ const canais = dados.canais as Canal[]
             :href="c.url"
             target="_blank"
             rel="noopener"
-            class="mt-6 inline-flex min-h-11 items-center justify-center border border-line px-4 py-3 font-mono text-sm font-bold transition-colors hover:border-primary hover:text-primary"
+            class="mt-6 inline-flex min-h-11 items-center justify-center border border-line px-4 py-3 font-mono text-sm font-bold tracking-wide uppercase transition-colors hover:border-primary hover:text-primary"
           >
             {{ c.acao }} ↗
           </a>

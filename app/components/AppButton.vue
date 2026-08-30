@@ -11,7 +11,7 @@ withDefaults(
 )
 
 const base =
-  'inline-flex min-h-11 items-center justify-center gap-2 px-5 py-3 font-mono text-sm font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-60'
+  'inline-flex min-h-11 items-center justify-center gap-2 px-5 py-3 font-mono text-sm font-bold tracking-wide uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-60'
 const estilos = {
   primaria: 'border border-primary bg-primary text-primary-fg hover:bg-primary-deep hover:border-primary-deep',
   linha: 'border border-line text-fg hover:border-primary hover:text-primary',
