@@ -50,7 +50,7 @@ function limpar() {
     />
 
     <template #icone>
-      <UiIcone nome="vaga" />
+      <UiIcone nome="commit" />
     </template>
 
     <template #sucesso>

@@ -62,6 +62,7 @@ const data = m ? partesDaData(m.data) : null
               </dl>
 
               <AppButton :to="`/meetup/${m.slug}#inscricao`" class="mt-6 w-full">
+                <UiIcone nome="commit" />
                 garantir minha vaga
               </AppButton>
               <p class="mt-3 text-center font-mono text-[0.68rem] text-fg-dim">

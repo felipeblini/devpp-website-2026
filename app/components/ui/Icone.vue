@@ -4,7 +4,7 @@
  * Herdam a cor e o tamanho da fonte de quem os usa.
  */
 defineProps<{
-  nome: 'codigo' | 'merge' | 'microfone' | 'vaga' | 'pull-request'
+  nome: 'codigo' | 'merge' | 'microfone' | 'commit' | 'pull-request'
 }>()
 </script>
 
@@ -38,12 +38,10 @@ defineProps<{
       <path d="M12 19v3" />
     </template>
 
-    <template v-else-if="nome === 'vaga'">
-      <path d="M8 2v4" />
-      <path d="M16 2v4" />
-      <rect x="3" y="4" width="18" height="18" rx="2" />
-      <path d="M3 10h18" />
-      <path d="m9 16 2 2 4-4" />
+    <template v-else-if="nome === 'commit'">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M3 12h6" />
+      <path d="M15 12h6" />
     </template>
 
     <template v-else-if="nome === 'pull-request'">
