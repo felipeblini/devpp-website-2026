@@ -72,31 +72,31 @@
         }
       ]
     },
-    "meetup": {
-    "numero": 31,
-    "slug": "2021-08-12",
-    "status": "confirmado",
-    "titulo": "DEVPP #31",
-    "chamada": "Uma linha sobre o que rolou nesse encontro.",
-    "data": "2021-08-12",
-    "horario": "a partir das 19h",
-    "horarioCurto": "19h",
-    "local": "Nome do local",
-    "localSite": null,
-    "mapa": null,
-    "cidade": "Presidente Prudente — SP",
-    "vagasDePalestra": null,
-    "agenda": [],
-    "palestrantes": [
-      {
-        "nome": "Nome da pessoa",
-        "cargo": "Cargo · Empresa",
-        "foto": null,
-        "bio": "Uma ou duas linhas.",
-        "palestra": "Título da palestra",
-        "hora": "19h30"
-      }
-    ]
-  }
-  ],
+    {
+      "numero": 31,
+      "slug": "2021-08-12",
+      "status": "confirmado",
+      "titulo": "DEVPP #31",
+      "chamada": "Uma linha sobre o que rolou nesse encontro.",
+      "data": "2021-08-12",
+      "horario": "a partir das 19h",
+      "horarioCurto": "19h",
+      "local": "Nome do local",
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "agenda": [],
+      "palestrantes": [
+        {
+          "nome": "Nome da pessoa",
+          "cargo": "Cargo · Empresa",
+          "foto": null,
+          "bio": "Uma ou duas linhas.",
+          "palestra": "Título da palestra",
+          "hora": "19h30"
+        }
+      ]
+    }
+  ]
 }
