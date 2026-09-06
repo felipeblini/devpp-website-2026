@@ -45,17 +45,15 @@ const detalhes: LinhaStatus[] = m && data
       />
 
       <!-- ---------- com encontro marcado ---------- -->
-      <div v-if="m && data" class="mt-12 grid gap-8 lg:grid-cols-12 lg:items-start">
-        <div class="min-w-0 lg:col-span-7">
-          <TerminalStatus
-            titulo="dev@pp — zsh — ~"
-            caminho="~"
-            comando="devpp meetups --next"
-            :linhas="detalhes"
-          />
-        </div>
+      <div v-if="m && data" class="mt-12 max-w-2xl">
+        <TerminalStatus
+          titulo="dev@pp — zsh — ~"
+          caminho="~"
+          comando="devpp meetups --next"
+          :linhas="detalhes"
+        />
 
-        <div class="min-w-0 lg:col-span-5 lg:pt-2">
+        <div class="mt-8">
           <AppButton :to="`/meetup/${m.slug}#inscricao`" class="w-full">
             <UiIcone nome="commit" />
             garantir minha vaga
