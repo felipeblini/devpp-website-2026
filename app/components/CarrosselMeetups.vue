@@ -6,6 +6,45 @@ defineProps<{ meetups: Meetup[]; atual?: string }>()
 
 const trilho = ref<HTMLElement | null>(null)
 
+// Arrastar com o mouse rola a lista; um clique de verdade continua abrindo o encontro.
+const arrastando = ref(false)
+let arrastou = false
+let inicioX = 0
+let inicioScroll = 0
+
+function pegar(e: PointerEvent) {
+  const el = trilho.value
+  if (!el || e.pointerType !== 'mouse' || e.button !== 0) return
+  arrastando.value = true
+  arrastou = false
+  inicioX = e.clientX
+  inicioScroll = el.scrollLeft
+  el.setPointerCapture(e.pointerId)
+}
+
+function mover(e: PointerEvent) {
+  const el = trilho.value
+  if (!el || !arrastando.value) return
+  const dx = e.clientX - inicioX
+  if (Math.abs(dx) > 4) arrastou = true
+  el.scrollLeft = inicioScroll - dx
+}
+
+function soltar(e: PointerEvent) {
+  const el = trilho.value
+  if (!el || !arrastando.value) return
+  arrastando.value = false
+  el.releasePointerCapture(e.pointerId)
+}
+
+function bloquearClique(e: MouseEvent) {
+  if (arrastou) {
+    e.preventDefault()
+    e.stopPropagation()
+    arrastou = false
+  }
+}
+
 function rolar(direcao: 1 | -1) {
   const el = trilho.value
   if (!el) return
@@ -44,7 +83,13 @@ function rolar(direcao: 1 | -1) {
 
     <ul
       ref="trilho"
-      class="mt-5 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [scrollbar-width:thin]"
+      class="mt-5 flex gap-4 overflow-x-auto pb-2 select-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      :class="arrastando ? 'cursor-grabbing' : 'cursor-grab snap-x snap-mandatory'"
+      @pointerdown="pegar"
+      @pointermove="mover"
+      @pointerup="soltar"
+      @pointercancel="soltar"
+      @click.capture="bloquearClique"
     >
       <li
         v-for="m in meetups"
@@ -54,6 +99,7 @@ function rolar(direcao: 1 | -1) {
         <NuxtLink
           :to="`/meetup/${m.slug}`"
           class="group flex h-full flex-col border border-line bg-bg p-5 transition-colors hover:border-primary"
+          draggable="false"
         >
           <p class="flex items-center justify-between gap-2 font-mono text-xs text-accent">
             <span v-if="m.data">{{ partesDaData(m.data).curta }}</span>

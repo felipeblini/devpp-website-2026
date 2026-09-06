@@ -45,7 +45,7 @@ const detalhes: LinhaStatus[] = m && data
       />
 
       <!-- ---------- com encontro marcado ---------- -->
-      <div v-if="m && data" class="mt-12 max-w-2xl">
+      <div v-if="m && data" class="mt-12">
         <TerminalStatus
           titulo="dev@pp — zsh — ~"
           caminho="~"
