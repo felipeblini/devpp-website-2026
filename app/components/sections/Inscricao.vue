@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import type { Meetup } from '#shared/meetups'
-import { proximoMeetup, partesDaData } from '#shared/meetups'
+import { proximoMeetup, partesDaData, inscricaoExterna } from '#shared/meetups'
 
 // Vive na página do encontro; sem prop, cai no próximo encontro confirmado.
 const props = defineProps<{ meetup?: Meetup | null }>()
 
 const m = computed(() => props.meetup ?? proximoMeetup)
 const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
+const externa = computed(() => (m.value ? inscricaoExterna(m.value) : null))
 </script>
 
 <!-- Só existe quando há encontro marcado: inscrição sem data não significa nada. -->
@@ -93,12 +94,12 @@ const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
         <p class="mt-8 max-w-md text-fg-muted">
           A entrada é livre — a inscrição serve pra gente saber quantos esperar,
           reservar a sua vaga, e os sorteios de brindes acontecem só pra quem tem o
-          nome na lista de inscritos. Nome e e-mail, e só.
+          nome na lista de inscritos.<template v-if="!externa"> Nome e e-mail, e só.</template>
         </p>
       </div>
 
       <div class="min-w-0 lg:col-span-6">
-        <FormVaga :meetup="m.slug" :numero="m.numero" />
+        <FormVaga :meetup="m" />
       </div>
     </div>
   </section>

@@ -19,6 +19,11 @@ export interface Palestrante {
   hora: string | null
 }
 
+export interface Inscricoes {
+  provedor: string
+  url: string | null
+}
+
 export interface Meetup {
   numero: number
   slug: string
@@ -35,6 +40,12 @@ export interface Meetup {
   cidade: string
   /** Total de vagas de palestra do encontro. null = não controlado. */
   vagasDePalestra: number | null
+  /**
+   * Onde a inscrição acontece. provedor 'form' = formulário do próprio site;
+   * qualquer outro (ex: 'Startup Grind') esconde o formulário e o botão vai pra `url`.
+   * Ausente = form.
+   */
+  inscricoes?: Inscricoes | null
   agenda: ItemAgenda[]
   palestrantes: Palestrante[]
 }
@@ -75,6 +86,12 @@ export function call4papersAberto(m: Meetup | null): boolean {
   if (!m) return true
   const restantes = vagasDePalestraAbertas(m)
   return restantes === null || restantes > 0
+}
+
+/** Inscrição feita fora do site (parceiro com página própria). */
+export function inscricaoExterna(m: Meetup): Inscricoes | null {
+  const i = m.inscricoes
+  return i && i.provedor !== 'form' && i.url ? i : null
 }
 
 export function acharMeetup(slug: string): Meetup | undefined {

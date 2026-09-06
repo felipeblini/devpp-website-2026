@@ -1,5 +1,5 @@
 {
-  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle.",
+  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle. inscricoes.provedor: 'form' usa o formulario do proprio site (e-mail pra devpporg); qualquer outro valor (ex: 'Startup Grind') esconde o formulario e manda o botao pra inscricoes.url.",
   "meetups": [
     {
       "numero": 17,
@@ -15,6 +15,10 @@
       "mapa": "https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Inova+Prudente/@-22.1339797,-51.4500853,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f394b3df5d51:0xac050e5ae9c9ef!8m2!3d-22.1339847!4d-51.4475104!16s%2Fg%2F11c7140bpb!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": 4,
+      "inscricoes": {
+        "provedor": "Startup Grind",
+        "url": "https://www.startupgrind.com/events/details/startup-grind-presidente-prudente-presents-explorando-a-ia-inovacoes-praticas-para-pequenos-negocios/"
+      },
       "agenda": [
         {
           "hora": "18h",
@@ -90,6 +94,10 @@
       "mapa": null,
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
+      "inscricoes": {
+        "provedor": "form",
+        "url": null
+      },
       "agenda": [],
       "palestrantes": [
         {

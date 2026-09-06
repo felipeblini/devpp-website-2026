@@ -1,5 +1,5 @@
 <script setup lang="ts">
-withDefaults(
+const props = withDefaults(
   defineProps<{
     href?: string
     to?: string
@@ -10,6 +10,8 @@ withDefaults(
   { variante: 'primaria', type: 'button' },
 )
 
+const externo = computed(() => /^https?:\/\//.test(props.href ?? ''))
+
 const base =
   'inline-flex min-h-11 items-center justify-center gap-2 px-5 py-3 font-mono text-sm font-bold tracking-wide uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-60'
 const estilos = {
@@ -19,7 +21,13 @@ const estilos = {
 </script>
 
 <template>
-  <a v-if="href" :href="href" :class="[base, estilos[variante]]">
+  <a
+    v-if="href"
+    :href="href"
+    :target="externo ? '_blank' : undefined"
+    :rel="externo ? 'noopener' : undefined"
+    :class="[base, estilos[variante]]"
+  >
     <slot />
   </a>
   <NuxtLink v-else-if="to" :to="to" :class="[base, estilos[variante]]">
