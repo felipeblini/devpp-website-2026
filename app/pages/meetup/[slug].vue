@@ -162,21 +162,16 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
               :href="a.site ?? undefined"
               :target="a.site ? '_blank' : undefined"
               :rel="a.site ? 'noopener' : undefined"
-              class="group block"
+              :title="a.nome"
+              :aria-label="a.site ? `${a.nome} (abre o site)` : a.nome"
+              class="block h-24 bg-white p-1 transition-opacity hover:opacity-90"
             >
-              <span
-                class="flex h-24 w-48 items-center justify-center border border-primary bg-white p-1 transition-colors group-hover:border-primary-deep"
+              <img
+                :src="a.logo"
+                :alt="`Logo de ${a.nome}`"
+                loading="lazy"
+                class="h-full w-auto object-contain"
               >
-                <img
-                  :src="a.logo"
-                  :alt="`Logo de ${a.nome}`"
-                  loading="lazy"
-                  class="max-h-full max-w-full object-contain"
-                >
-              </span>
-              <span class="mt-2 block text-center font-mono text-xs text-fg-muted group-hover:text-primary">
-                {{ a.nome }}<template v-if="a.site"> ↗</template>
-              </span>
             </component>
           </li>
         </ul>
