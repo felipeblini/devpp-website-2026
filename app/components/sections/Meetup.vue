@@ -42,7 +42,6 @@ const detalhes: LinhaStatus[] = m && data
         v-if="m"
         comando="devpp --next"
         :titulo="m.titulo"
-        :descricao="m.chamada"
       />
 
       <!-- ---------- com encontro marcado ---------- -->

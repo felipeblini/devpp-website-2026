@@ -24,13 +24,21 @@ export interface Inscricoes {
   url: string | null
 }
 
+export interface Apoiador {
+  nome: string
+  /** caminho em /public (ex: /img/apoiadores/for-space.png) */
+  logo: string
+  site: string | null
+}
+
 export interface Meetup {
   numero: number
   slug: string
   status: string
   titulo: string
-  chamada: string
-  data: string
+  chamada: string | null
+  /** ISO (AAAA-MM-DD). null = encontro antigo sem registro da data. */
+  data: string | null
   horario: string | null
   horarioCurto: string | null
   local: string | null
@@ -48,9 +56,10 @@ export interface Meetup {
   inscricoes?: Inscricoes | null
   agenda: ItemAgenda[]
   palestrantes: Palestrante[]
+  apoiadores?: Apoiador[]
 }
 
-const todos = (dados.meetups as Meetup[]).slice().sort((a, b) => a.data.localeCompare(b.data))
+const todos = (dados.meetups as Meetup[]).slice().sort((a, b) => a.numero - b.numero)
 
 /** Data de hoje em ISO — fixada no build, porque as páginas são pré-renderizadas. */
 const hoje = new Date().toISOString().slice(0, 10)
@@ -60,7 +69,12 @@ const hoje = new Date().toISOString().slice(0, 10)
  * Sem encontro marcado o site entra em modo "loading...".
  */
 export const proximoMeetup: Meetup | null =
-  todos.find(m => m.status === 'confirmado' && m.data >= hoje) ?? null
+  todos.find(m => m.status === 'confirmado' && m.data !== null && m.data >= hoje) ?? null
+
+/** Encontro que já passou (ou tão antigo que nem a data ficou registrada). */
+export function jaAconteceu(m: Meetup): boolean {
+  return m.data === null || m.data < hoje
+}
 
 /** Número do encontro a anunciar — o confirmado, ou o próximo da fila. */
 export const proximoNumero: number = proximoMeetup
@@ -69,7 +83,7 @@ export const proximoNumero: number = proximoMeetup
 
 /** Edições já realizadas, da mais recente para a mais antiga. */
 export const meetupsAnteriores: Meetup[] = todos
-  .filter(m => m.status === 'confirmado' && m.data < hoje)
+  .filter(m => m.status === 'confirmado' && jaAconteceu(m))
   .reverse()
 
 /** Todos os encontros com página própria (usado no prerender). */

@@ -1,11 +1,519 @@
 {
-  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle. inscricoes.provedor: 'form' usa o formulario do proprio site (e-mail pra devpporg); qualquer outro valor (ex: 'Startup Grind') esconde o formulario e manda o botao pra inscricoes.url.",
+  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle. inscricoes.provedor: 'form' usa o formulario do proprio site (e-mail pra devpporg); qualquer outro valor (ex: 'Startup Grind') esconde o formulario e manda o botao pra inscricoes.url. data null = encontro antigo sem registro da data (aparece na lista, sem dia). apoiadores: nome, logo (em /public/img/apoiadores) e site; aparecem no fim da pagina do encontro.",
   "meetups": [
+    {
+      "numero": 1,
+      "slug": "1",
+      "status": "confirmado",
+      "titulo": "DEV-PP #1: O início",
+      "chamada": "O primeiro encontro da comunidade: seis palestras, cerveja e a galera de Prudente se conhecendo.",
+      "data": "2017-12-13",
+      "horario": "a partir das 18h45",
+      "horarioCurto": "18h45",
+      "local": "Foregon",
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [
+        {
+          "hora": "18h45",
+          "titulo": "Abertura",
+          "detalhe": "Agradecimentos, apresentação dos palestrantes e a proposta do meetup. Com Alessandro Altino."
+        },
+        {
+          "hora": "19h",
+          "titulo": "Palestras",
+          "detalhe": "Cinco palestras de meia hora, uma atrás da outra."
+        },
+        {
+          "hora": "21h30",
+          "titulo": "Fechamento e confraternização",
+          "detalhe": "Agradecimentos, (mais) cerveja e networking. Com Alessandro Altino."
+        }
+      ],
+      "palestrantes": [
+        {
+          "nome": "João Cunha",
+          "cargo": "Desenvolvedor · joaocunha.net",
+          "foto": null,
+          "bio": "“Como você foi parar em Dubai?” é uma pergunta recorrente quando ele se apresenta em eventos de tecnologia. Conta a trajetória e como algumas escolhas o levaram a quase 30 países.",
+          "formato": "talk",
+          "palestra": "Trabalho remoto e carreira internacional",
+          "hora": "19h"
+        },
+        {
+          "nome": "Felipe Blini",
+          "cargo": "Desenvolvedor · idealizador do DEV-PP",
+          "foto": null,
+          "bio": "O Firebase permite criar apps web, Android e iOS sem se preocupar com infraestrutura, autenticação e upload de arquivos. Um CRUD com a REST API e depois um chat com o Realtime Database.",
+          "formato": "talk",
+          "palestra": "Banco de dados realtime com Firebase",
+          "hora": "19h30"
+        },
+        {
+          "nome": "Renan Pupin",
+          "cargo": "Desenvolvedor mobile",
+          "foto": null,
+          "bio": "O React Native se destacou no desenvolvimento mobile, mas quais as vantagens? Conceitos, diferenciais e a demonstração de uma aplicação sendo construída.",
+          "formato": "talk",
+          "palestra": "React Native: produtividade e eficiência no desenvolvimento mobile",
+          "hora": "20h"
+        },
+        {
+          "nome": "Deyvisson Pinheiro",
+          "cargo": "Empreendedor",
+          "foto": null,
+          "bio": "O Business Model Canvas é uma ferramenta simples e visual usada por startups na criação do modelo de negócio, com 9 blocos interligados. Como construir cada bloco e pra que ele existe.",
+          "formato": "talk",
+          "palestra": "Business Model Canvas",
+          "hora": "20h30"
+        },
+        {
+          "nome": "Luiz Stangarlin",
+          "cargo": "Desenvolvedor",
+          "foto": null,
+          "bio": "Programação funcional trata a computação como avaliação de funções matemáticas e evita estado mutável. Os benefícios do paradigma e as diferenças pra programação imperativa e orientada a objetos.",
+          "formato": "talk",
+          "palestra": "Programação funcional",
+          "hora": "21h"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "slug": "2",
+      "status": "confirmado",
+      "titulo": "DEV-PP #2",
+      "chamada": "Uma semana depois do primeiro, mais seis palestras: de Indústria 4.0 a Bitcoin com Node.js.",
+      "data": "2017-12-20",
+      "horario": "a partir das 18h45",
+      "horarioCurto": "18h45",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [
+        {
+          "hora": "18h45",
+          "titulo": "Abertura",
+          "detalhe": "Agradecimentos, apresentação dos palestrantes e a proposta do meetup. Com João Cunha."
+        },
+        {
+          "hora": "19h",
+          "titulo": "Palestras",
+          "detalhe": "Cinco palestras de meia hora, uma atrás da outra."
+        },
+        {
+          "hora": "21h30",
+          "titulo": "Fechamento e confraternização",
+          "detalhe": "Agradecimentos, (mais) cerveja e networking. Com Alessandro Altino."
+        }
+      ],
+      "palestrantes": [
+        {
+          "nome": "Alessandro Altino",
+          "cargo": "Organizador do DEV-PP",
+          "foto": null,
+          "bio": "A 4ª Revolução Industrial não vem em ondas suaves, vem como tsunami: IoT, nanotecnologia, IA e novos materiais combinados. O mundo vai se dividir entre inovadores e não inovadores, e o capital do futuro é talento.",
+          "formato": "talk",
+          "palestra": "Indústria 4.0",
+          "hora": "19h"
+        },
+        {
+          "nome": "Lucas Azambuja",
+          "cargo": "Desenvolvedor",
+          "foto": null,
+          "bio": "Um case de como tornar uma aplicação escalável na AWS.",
+          "formato": "talk",
+          "palestra": "Infraestrutura com AWS",
+          "hora": "19h30"
+        },
+        {
+          "nome": "Murilo Ferreira",
+          "cargo": "Desenvolvedor front-end",
+          "foto": null,
+          "bio": "Como usar o template engine pug.js pra escrever HTML mais dinâmico e reutilizável.",
+          "formato": "talk",
+          "palestra": "HTML robusto e elegante com template engines",
+          "hora": "20h"
+        },
+        {
+          "nome": "Anderson Juhasc",
+          "cargo": "Consultor · bitcoinconsultoria.com",
+          "foto": null,
+          "bio": "Como gerar uma carteira e fazer transações pra receber e enviar criptomoedas programaticamente com Node.js.",
+          "formato": "talk",
+          "palestra": "Olá mundo Bitcoin",
+          "hora": "20h30"
+        },
+        {
+          "nome": "Felipe Almeida",
+          "cargo": "Desenvolvedor mobile",
+          "foto": null,
+          "bio": "Como integrar um app Ionic a uma API existente (no caso, a do Wakatime), gerar splash screen e ícones com o Ionic Resources e publicar e manter a atualização na Play Store.",
+          "formato": "talk",
+          "palestra": "Integração de app híbrido com o Wakatime e atualização na Play Store",
+          "hora": "21h"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "slug": "3",
+      "status": "confirmado",
+      "titulo": "DEV-PP #3",
+      "chamada": "E-commerce, Scrum, design pra devs, Webpack e comunicação em tempo real. O primeiro encontro de 2018.",
+      "data": "2018-01-30",
+      "horario": "a partir das 18h45",
+      "horarioCurto": "18h45",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [
+        {
+          "hora": "18h45",
+          "titulo": "Abertura",
+          "detalhe": "Agradecimentos, apresentação dos palestrantes e a proposta do meetup. Com João Cunha."
+        },
+        {
+          "hora": "19h",
+          "titulo": "Palestras",
+          "detalhe": "Cinco palestras de meia hora, uma atrás da outra."
+        },
+        {
+          "hora": "21h30",
+          "titulo": "Fechamento e confraternização",
+          "detalhe": "Agradecimentos, (mais) cerveja e networking. Com os organizadores."
+        }
+      ],
+      "palestrantes": [
+        {
+          "nome": "Fernando Lofrano",
+          "cargo": "Head de Tecnologia · 1pro · CIO · FutFanatics",
+          "foto": null,
+          "bio": "Especialista em cloud computing, criador da CIRRUS Cloud Backup e CIO do 3º maior e-commerce de material esportivo do Brasil. Experiência com comércio eletrônico no Brasil: processos, tecnologia e mercado.",
+          "formato": "talk",
+          "palestra": "E-commerce no Brasil",
+          "hora": "19h"
+        },
+        {
+          "nome": "Paulo Diniz",
+          "cargo": "Consultor e mentor em TI · CEO · DinizSoft",
+          "foto": null,
+          "bio": "Scrum é uma metodologia iterativa e incremental pra aumentar produtividade e eliminar desperdício em projetos difíceis de gerenciar, como quase todo projeto de software.",
+          "formato": "talk",
+          "palestra": "Scrum: produzindo mais com menos tempo",
+          "hora": "19h30"
+        },
+        {
+          "nome": "Paulo Carneiro",
+          "cargo": "Designer · Foregon.com",
+          "foto": null,
+          "bio": "Ferramentas que ajudam a chegar num design profissa sem precisar entender as premissas da criação de elementos de UI e UX.",
+          "formato": "talk",
+          "palestra": "Design para devs: ferramentas para design rápido e prototipação",
+          "hora": "20h"
+        },
+        {
+          "nome": "Felipe Blini",
+          "cargo": "Desenvolvedor · idealizador do DEV-PP",
+          "foto": null,
+          "bio": "O site do DEV-PP tinha acabado de ser lançado. Como foi construído o workflow de desenvolvimento com o Webpack e por que vale conhecer a ferramenta.",
+          "formato": "talk",
+          "palestra": "Webpack: case do site do DEV-PP",
+          "hora": "20h30"
+        },
+        {
+          "nome": "Weslley Ceresa",
+          "cargo": "Desenvolvedor web · fundador · Five's Development & ProDental",
+          "foto": null,
+          "bio": "O socket como base da internet e como usá-lo pra criar um protocolo próprio de comunicação entre dois ou mais pontos. Os protocolos atuais baseados em socket e como aplicá-los.",
+          "formato": "talk",
+          "palestra": "Sistemas de comunicação em tempo real",
+          "hora": "21h"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "slug": "4",
+      "status": "confirmado",
+      "titulo": "DEV-PP #4",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 5,
+      "slug": "5",
+      "status": "confirmado",
+      "titulo": "DEV-PP #5",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 6,
+      "slug": "6",
+      "status": "confirmado",
+      "titulo": "DEV-PP #6",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 7,
+      "slug": "7",
+      "status": "confirmado",
+      "titulo": "DEV-PP #7",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 8,
+      "slug": "8",
+      "status": "confirmado",
+      "titulo": "DEV-PP #8",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 9,
+      "slug": "9",
+      "status": "confirmado",
+      "titulo": "DEV-PP #9",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 10,
+      "slug": "10",
+      "status": "confirmado",
+      "titulo": "DEV-PP #10",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 11,
+      "slug": "11",
+      "status": "confirmado",
+      "titulo": "DEV-PP #11",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 12,
+      "slug": "12",
+      "status": "confirmado",
+      "titulo": "DEV-PP #12",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 13,
+      "slug": "13",
+      "status": "confirmado",
+      "titulo": "DEV-PP #13",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 14,
+      "slug": "14",
+      "status": "confirmado",
+      "titulo": "DEV-PP #14",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 15,
+      "slug": "15",
+      "status": "confirmado",
+      "titulo": "DEV-PP #15: The Conference",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
+    {
+      "numero": 16,
+      "slug": "16",
+      "status": "confirmado",
+      "titulo": "DEV-PP #16",
+      "chamada": null,
+      "data": null,
+      "horario": null,
+      "horarioCurto": null,
+      "local": null,
+      "localSite": null,
+      "mapa": null,
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": []
+    },
     {
       "numero": 17,
       "slug": "17",
       "status": "confirmado",
-      "titulo": "DEVPP #17",
+      "titulo": "DEV-PP #17: O Retorno",
       "chamada": "Uma noite de palestra, papo técnico e networking com a galera que escreve código na região.",
       "data": "2026-09-24",
       "horario": "a partir das 18h",
@@ -78,35 +586,12 @@
           "palestra": "IA & Marketing: hype ou escala de verdade na sua operação",
           "hora": "20h30"
         }
-      ]
-    },
-    {
-      "numero": 16,
-      "slug": "16",
-      "status": "confirmado",
-      "titulo": "DEVPP #16",
-      "chamada": "Uma linha sobre o que rolou nesse encontro.",
-      "data": "2021-08-12",
-      "horario": "a partir das 19h",
-      "horarioCurto": "19h",
-      "local": "Nome do local",
-      "localSite": null,
-      "mapa": null,
-      "cidade": "Presidente Prudente — SP",
-      "vagasDePalestra": null,
-      "inscricoes": {
-        "provedor": "form",
-        "url": null
-      },
-      "agenda": [],
-      "palestrantes": [
+      ],
+      "apoiadores": [
         {
-          "nome": "Nome da pessoa",
-          "cargo": "Cargo · Empresa",
-          "foto": null,
-          "bio": "Uma ou duas linhas.",
-          "palestra": "Título da palestra",
-          "hora": "19h30"
+          "nome": "Inova Prudente",
+          "logo": "/img/apoiadores/Logo_Inova_Prudente.png",
+          "site": "https://inovaprudente.com.br/"
         }
       ]
     }

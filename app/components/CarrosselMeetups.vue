@@ -56,7 +56,8 @@ function rolar(direcao: 1 | -1) {
           class="group flex h-full flex-col border border-line bg-bg p-5 transition-colors hover:border-primary"
         >
           <p class="flex items-center justify-between gap-2 font-mono text-xs text-accent">
-            <span>{{ partesDaData(m.data).curta }}</span>
+            <span v-if="m.data">{{ partesDaData(m.data).curta }}</span>
+            <span v-else class="text-fg-dim">data não registrada</span>
             <span v-if="m.slug === atual" class="pixel text-[0.5rem] text-primary">atual</span>
           </p>
           <p class="mt-2 font-mono text-lg font-bold group-hover:text-primary">
@@ -66,7 +67,7 @@ function rolar(direcao: 1 | -1) {
             {{ m.local }}
           </p>
           <p class="mt-3 flex-1 text-sm text-fg-muted">
-            {{ m.chamada }}
+            {{ m.chamada ?? 'Encontro dos tempos antigos. O registro se perdeu; a memória, não.' }}
           </p>
           <p class="mt-4 font-mono text-xs text-fg-dim">
             <span v-if="m.palestrantes.length">

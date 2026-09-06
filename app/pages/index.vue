@@ -56,7 +56,7 @@ const schema = m && data
       'description': 'Comunidade de desenvolvedores de Presidente Prudente e região.',
       'url': siteUrl,
       'email': 'devpporg@gmail.com',
-      'foundingDate': '2019',
+      'foundingDate': '2017',
       'areaServed': 'Presidente Prudente e região, SP, Brasil',
     }
 

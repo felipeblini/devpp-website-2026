@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { Meetup } from '#shared/meetups'
-import { proximoMeetup, partesDaData, inscricaoExterna } from '#shared/meetups'
+import { proximoMeetup, partesDaData, inscricaoExterna, jaAconteceu } from '#shared/meetups'
 
 // Vive na página do encontro; sem prop, cai no próximo encontro confirmado.
 const props = defineProps<{ meetup?: Meetup | null }>()
 
 const m = computed(() => props.meetup ?? proximoMeetup)
-const data = computed(() => (m.value ? partesDaData(m.value.data) : null))
+const data = computed(() => (m.value?.data && !jaAconteceu(m.value) ? partesDaData(m.value.data) : null))
 const externa = computed(() => (m.value ? inscricaoExterna(m.value) : null))
 </script>
 
@@ -26,7 +26,7 @@ const externa = computed(() => (m.value ? inscricaoExterna(m.value) : null))
     <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-12 lg:gap-16 lg:py-24">
       <div class="min-w-0 lg:col-span-6 lg:pt-4">
         <p class="font-mono text-[0.72rem] text-fg-muted">
-          <UiPrompt />{{ ' ' }}devpp inscrever
+          <UiPrompt />{{ ' ' }}devpp inscrever --meetup {{ m.numero }}
         </p>
         <h2 class="mt-4 text-[2rem] leading-[1.08] sm:text-4xl">
           Garanta a sua <span class="text-primary glow">vaga</span>

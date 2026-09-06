@@ -2,7 +2,7 @@
 import { meetupsAnteriores } from '#shared/meetups'
 
 const numeros = [
-  { valor: '2019', rotulo: 'desde o primeiro meetup' },
+  { valor: '2017', rotulo: 'desde o primeiro meetup' },
   { valor: String(meetupsAnteriores.length), rotulo: meetupsAnteriores.length === 1 ? 'meetup realizado' : 'meetups realizados' },
   { valor: '100%', rotulo: 'das demos ao vivo deram problema' },
 ]

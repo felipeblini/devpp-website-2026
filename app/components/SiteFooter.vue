@@ -26,7 +26,7 @@ const ano = new Date().getFullYear()
           </p>
           <p class="mt-4 max-w-xs font-mono text-sm text-fg-muted">
             Comunidade de desenvolvedores de Presidente Prudente e região.
-            Desde 2019.
+            Desde 2017.
           </p>
           <a
             href="mailto:devpporg@gmail.com"

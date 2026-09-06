@@ -47,7 +47,7 @@ const status: LinhaStatus[] = [
         </div>
 
         <p class="mt-5 font-mono text-xs text-fg-dim">
-          gratuito · sem fins lucrativos · organizado pela própria comunidade desde 2019
+          gratuito · sem fins lucrativos · organizado pela própria comunidade desde 2017
         </p>
       </div>
 
