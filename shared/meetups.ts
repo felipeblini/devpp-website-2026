@@ -19,6 +19,8 @@ export interface Palestrante {
   palestra: string | null
   /** null = ainda não encaixado na grade */
   hora: string | null
+  /** gravação da palestra (YouTube). null = sem vídeo */
+  video?: string | null
 }
 
 export interface Inscricoes {

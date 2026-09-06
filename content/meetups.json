@@ -1,5 +1,5 @@
 {
-  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle. inscricoes.provedor: 'form' usa o formulario do proprio site (e-mail pra devpporg); qualquer outro valor (ex: 'Startup Grind') esconde o formulario e manda o botao pra inscricoes.url. data null = encontro antigo sem registro da data (aparece na lista, sem dia). apoiadores: nome, logo (em /public/img/apoiadores) e site; aparecem no fim da pagina do encontro.",
+  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle. inscricoes.provedor: 'form' usa o formulario do proprio site (e-mail pra devpporg); qualquer outro valor (ex: 'Startup Grind') esconde o formulario e manda o botao pra inscricoes.url. data null = encontro antigo sem registro da data (aparece na lista, sem dia). apoiadores: nome, logo (em /public/img/apoiadores) e site; aparecem no fim da pagina do encontro. palestrantes[].video: link do YouTube da palestra (opcional).",
   "meetups": [
     {
       "numero": 1,
@@ -41,7 +41,8 @@
           "bio": "“Como você foi parar em Dubai?” é uma pergunta recorrente quando ele se apresenta em eventos de tecnologia. Conta a trajetória e como algumas escolhas o levaram a quase 30 países.",
           "formato": "talk",
           "palestra": "Trabalho remoto e carreira internacional",
-          "hora": "19h"
+          "hora": "19h",
+          "video": "https://www.youtube.com/watch?v=mKjWcPHXYH8"
         },
         {
           "nome": "Felipe Blini",
@@ -50,7 +51,8 @@
           "bio": "O Firebase permite criar apps web, Android e iOS sem se preocupar com infraestrutura, autenticação e upload de arquivos. Um CRUD com a REST API e depois um chat com o Realtime Database.",
           "formato": "talk",
           "palestra": "Banco de dados realtime com Firebase",
-          "hora": "19h30"
+          "hora": "19h30",
+          "video": null
         },
         {
           "nome": "Renan Pupin",
@@ -59,7 +61,8 @@
           "bio": "O React Native se destacou no desenvolvimento mobile, mas quais as vantagens? Conceitos, diferenciais e a demonstração de uma aplicação sendo construída.",
           "formato": "talk",
           "palestra": "React Native: produtividade e eficiência no desenvolvimento mobile",
-          "hora": "20h"
+          "hora": "20h",
+          "video": null
         },
         {
           "nome": "Deyvisson Pinheiro",
@@ -68,7 +71,8 @@
           "bio": "O Business Model Canvas é uma ferramenta simples e visual usada por startups na criação do modelo de negócio, com 9 blocos interligados. Como construir cada bloco e pra que ele existe.",
           "formato": "talk",
           "palestra": "Business Model Canvas",
-          "hora": "20h30"
+          "hora": "20h30",
+          "video": null
         },
         {
           "nome": "Luiz Stangarlin",
@@ -77,7 +81,8 @@
           "bio": "Programação funcional trata a computação como avaliação de funções matemáticas e evita estado mutável. Os benefícios do paradigma e as diferenças pra programação imperativa e orientada a objetos.",
           "formato": "talk",
           "palestra": "Programação funcional",
-          "hora": "21h"
+          "hora": "21h",
+          "video": "https://www.youtube.com/watch?v=rLav0FU8hgo"
         }
       ],
       "apoiadores": [
@@ -128,7 +133,8 @@
           "bio": "A 4ª Revolução Industrial não vem em ondas suaves, vem como tsunami: IoT, nanotecnologia, IA e novos materiais combinados. O mundo vai se dividir entre inovadores e não inovadores, e o capital do futuro é talento.",
           "formato": "talk",
           "palestra": "Indústria 4.0",
-          "hora": "19h"
+          "hora": "19h",
+          "video": null
         },
         {
           "nome": "Lucas Azambuja",
@@ -137,7 +143,8 @@
           "bio": "Um case de como tornar uma aplicação escalável na AWS.",
           "formato": "talk",
           "palestra": "Infraestrutura com AWS",
-          "hora": "19h30"
+          "hora": "19h30",
+          "video": null
         },
         {
           "nome": "Murilo Ferreira",
@@ -146,16 +153,18 @@
           "bio": "Como usar o template engine pug.js pra escrever HTML mais dinâmico e reutilizável.",
           "formato": "talk",
           "palestra": "HTML robusto e elegante com template engines",
-          "hora": "20h"
+          "hora": "20h",
+          "video": null
         },
         {
           "nome": "Anderson Juhasc",
           "cargo": "Consultor · bitcoinconsultoria.com",
-          "foto": null,
+          "foto": "/img/palestrantes/anderson-juhasc.jpg",
           "bio": "Como gerar uma carteira e fazer transações pra receber e enviar criptomoedas programaticamente com Node.js.",
           "formato": "talk",
           "palestra": "Olá mundo Bitcoin",
-          "hora": "20h30"
+          "hora": "20h30",
+          "video": null
         },
         {
           "nome": "Felipe Almeida",
@@ -164,7 +173,8 @@
           "bio": "Como integrar um app Ionic a uma API existente (no caso, a do Wakatime), gerar splash screen e ícones com o Ionic Resources e publicar e manter a atualização na Play Store.",
           "formato": "talk",
           "palestra": "Integração de app híbrido com o Wakatime e atualização na Play Store",
-          "hora": "21h"
+          "hora": "21h",
+          "video": null
         }
       ],
       "apoiadores": [
@@ -215,7 +225,8 @@
           "bio": "Especialista em cloud computing, criador da CIRRUS Cloud Backup e CIO do 3º maior e-commerce de material esportivo do Brasil. Experiência com comércio eletrônico no Brasil: processos, tecnologia e mercado.",
           "formato": "talk",
           "palestra": "E-commerce no Brasil",
-          "hora": "19h"
+          "hora": "19h",
+          "video": null
         },
         {
           "nome": "Paulo Diniz",
@@ -224,7 +235,8 @@
           "bio": "Scrum é uma metodologia iterativa e incremental pra aumentar produtividade e eliminar desperdício em projetos difíceis de gerenciar, como quase todo projeto de software.",
           "formato": "talk",
           "palestra": "Scrum: produzindo mais com menos tempo",
-          "hora": "19h30"
+          "hora": "19h30",
+          "video": null
         },
         {
           "nome": "Paulo Carneiro",
@@ -233,7 +245,8 @@
           "bio": "Ferramentas que ajudam a chegar num design profissa sem precisar entender as premissas da criação de elementos de UI e UX.",
           "formato": "talk",
           "palestra": "Design para devs: ferramentas para design rápido e prototipação",
-          "hora": "20h"
+          "hora": "20h",
+          "video": null
         },
         {
           "nome": "Felipe Blini",
@@ -242,7 +255,8 @@
           "bio": "O site do DEV-PP tinha acabado de ser lançado. Como foi construído o workflow de desenvolvimento com o Webpack e por que vale conhecer a ferramenta.",
           "formato": "talk",
           "palestra": "Webpack: case do site do DEV-PP",
-          "hora": "20h30"
+          "hora": "20h30",
+          "video": null
         },
         {
           "nome": "Weslley Ceresa",
@@ -251,7 +265,8 @@
           "bio": "O socket como base da internet e como usá-lo pra criar um protocolo próprio de comunicação entre dois ou mais pontos. Os protocolos atuais baseados em socket e como aplicá-los.",
           "formato": "talk",
           "palestra": "Sistemas de comunicação em tempo real",
-          "hora": "21h"
+          "hora": "21h",
+          "video": null
         }
       ],
       "apoiadores": [
@@ -267,209 +282,753 @@
       "slug": "4",
       "status": "confirmado",
       "titulo": "DEV-PP #4",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "A treta dos frameworks: React, Angular e Vue na mesma noite, mais pivotagem e SEO.",
+      "data": "2018-02-20",
+      "horario": "a partir das 18h45",
+      "horarioCurto": "18h45",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Felipe Albuquerque de Almeida",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Angular",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=LZ_8O9eOPrQ"
+        },
+        {
+          "nome": "João Maiorchini",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "React",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=sGGJ4h6MwYQ"
+        },
+        {
+          "nome": "Felipe Blini",
+          "cargo": "Desenvolvedor · idealizador do DEV-PP",
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Vue.js: introdução",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=OmQ04LmnNpI"
+        },
+        {
+          "nome": "Gustavo Marquini",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Pivotar: a importância das mudanças",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=KjllKKiTwH8"
+        },
+        {
+          "nome": "J. Valderio Santos",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "SEO para devs",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=fEfjcVMHHXM"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 5,
       "slug": "5",
       "status": "confirmado",
       "titulo": "DEV-PP #5",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "PWA, criptografia, acessibilidade e aprendizagem criativa. Numa segunda-feira, pra variar.",
+      "data": "2018-03-05",
+      "horario": "a partir das 18h45",
+      "horarioCurto": "18h45",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Valério Filhote",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "PWA",
+          "hora": "19h",
+          "video": null
+        },
+        {
+          "nome": "Kelvin Ferri Brancalhão",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Criptografia",
+          "hora": "19h30",
+          "video": null
+        },
+        {
+          "nome": "Murilo Siqueira Ferreira",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Acessibilidade na web",
+          "hora": "20h",
+          "video": null
+        },
+        {
+          "nome": "Leandro Barbosa",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Aprendizagem criativa",
+          "hora": "20h30",
+          "video": null
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 6,
       "slug": "6",
       "status": "confirmado",
       "titulo": "DEV-PP #6",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "Magento, visão sistêmica, blockchain e um sistema de sorteio feito em Vue.js com a API do meetup.com.",
+      "data": "2018-03-27",
+      "horario": "a partir das 18h45",
+      "horarioCurto": "18h45",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
-      "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "agenda": [
+        {
+          "hora": "18h45",
+          "titulo": "Recepção e abertura",
+          "detalhe": "Chegada, café e os avisos da noite."
+        },
+        {
+          "hora": "19h",
+          "titulo": "Palestras",
+          "detalhe": "Quatro palestras de meia hora."
+        },
+        {
+          "hora": "21h",
+          "titulo": "Encerramento e networking",
+          "detalhe": "Agradecimento aos patrocinadores, (mais) cerveja e networking."
+        }
+      ],
+      "palestrantes": [
+        {
+          "nome": "Igor Ludgero",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Magento: e-commerce open source e altamente escalável",
+          "hora": "19h",
+          "video": null
+        },
+        {
+          "nome": "Vânia Cristina",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "DG: a importância da visão sistêmica para o seu negócio",
+          "hora": "19h30",
+          "video": null
+        },
+        {
+          "nome": "Gabriel Branquinho",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "As possibilidades da blockchain",
+          "hora": "20h",
+          "video": null
+        },
+        {
+          "nome": "Felipe Blini",
+          "cargo": "Desenvolvedor · idealizador do DEV-PP",
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Criando um sistema de sorteio com Vue.js e a API do meetup.com",
+          "hora": "20h30",
+          "video": null
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 7,
       "slug": "7",
       "status": "confirmado",
       "titulo": "DEV-PP #7",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "IPv6, Offline First e um workshop pra validar uma ideia em 25 minutos sem programar.",
+      "data": "2018-04-17",
+      "horario": "a partir das 19h15",
+      "horarioCurto": "19h15",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Marcelo Santoro",
+          "cargo": "WePass",
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "IPv6 para desenvolvedores",
+          "hora": "19h30",
+          "video": "https://www.youtube.com/watch?v=Wv7TzBWnaz8"
+        },
+        {
+          "nome": "Thiago Calistro",
+          "cargo": "Makeplace",
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "A metodologia Offline First",
+          "hora": "20h",
+          "video": "https://www.youtube.com/watch?v=gPYQj1yYWT0"
+        },
+        {
+          "nome": "João Cunha",
+          "cargo": "Lila",
+          "foto": null,
+          "bio": null,
+          "formato": "workshop",
+          "palestra": "Workshop: validando uma ideia em 25 minutos sem precisar programar",
+          "hora": "20h30",
+          "video": "https://www.youtube.com/watch?v=ELuLGGNf13g"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 8,
       "slug": "8",
       "status": "confirmado",
       "titulo": "DEV-PP #8",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "Elasticsearch, Arduino, Ionic com Firebase e a primeira aula de pronúncia de termos em inglês.",
+      "data": "2018-06-06",
+      "horario": "a partir das 19h",
+      "horarioCurto": "19h",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Carolina Chaves",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Análise de big data com Elasticsearch",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=aXPUEwjS9NI"
+        },
+        {
+          "nome": "Adael Oliveira",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Arduino na prática",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=3IrXn8Mme6s"
+        },
+        {
+          "nome": "Kelvin Brancalhão",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "App realtime com Ionic e Firebase",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=9AyYd0pjd48"
+        },
+        {
+          "nome": "Allan Albuquerque",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Pronunciando termos em inglês",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=Mtc38MUBg-I"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 9,
       "slug": "9",
       "status": "confirmado",
       "titulo": "DEV-PP #9",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "Edição junina: empreendedorismo, autenticação com Facebook, bandeirinhas em CSS e design pra resolver problemas. Com quentão no final.",
+      "data": "2018-07-24",
+      "horario": "a partir das 19h",
+      "horarioCurto": "19h",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Guilherme Rodrigues",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Empreendedorismo, parcerias e startups",
+          "hora": "19h15",
+          "video": "https://www.youtube.com/watch?v=eEc3mCPrY4s"
+        },
+        {
+          "nome": "Felipe Albuquerque de Almeida",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Autenticação com Facebook e Angular",
+          "hora": "19h45",
+          "video": "https://www.youtube.com/watch?v=g0Xyik-H5lE"
+        },
+        {
+          "nome": "Felipe Blini",
+          "cargo": "Desenvolvedor · idealizador do DEV-PP",
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Fazendo bandeirinhas de festa junina com CSS e JS",
+          "hora": "20h15",
+          "video": "https://www.youtube.com/watch?v=JC-KV5IXXVU"
+        },
+        {
+          "nome": "Júlia Yuri",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Projetar para solucionar: como resolver problemas de forma criativa",
+          "hora": "20h45",
+          "video": "https://www.youtube.com/watch?v=lfcaUtUXjbM"
+        },
+        {
+          "nome": "José Pascoal Vernilo",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Quer empreender? Programe-se",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=dzJGWR9-8CU"
+        },
+        {
+          "nome": "Allan Albuquerque",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Pronunciando termos de programação em inglês II",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=M0fc-e_VKYc"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 10,
       "slug": "10",
       "status": "confirmado",
       "titulo": "DEV-PP #10",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "Estreia do formato lightning talk: AMP, APIs com Node, testes com Cypress e smart contracts.",
+      "data": "2018-09-18",
+      "horario": "a partir das 19h",
+      "horarioCurto": "19h",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Murilo Siqueira",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Criando componentes interativos em páginas AMP com amp-bind",
+          "hora": null,
+          "video": null
+        },
+        {
+          "nome": "Eduardo Lopes",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Construindo APIs com NodeJS",
+          "hora": null,
+          "video": null
+        },
+        {
+          "nome": "Vitor Veronezi",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Automatizando testes end-to-end no JavaScript com Cypress.io",
+          "hora": null,
+          "video": null
+        },
+        {
+          "nome": "Gabriel Branquinho",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Smart contracts na blockchain: o que são, onde vivem e o que comem?",
+          "hora": null,
+          "video": null
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 11,
       "slug": "11",
       "status": "confirmado",
       "titulo": "DEV-PP #11",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "Soft skills, Flexbox em 10 minutos, React Native e MongoDB em escala.",
+      "data": "2018-11-20",
+      "horario": "a partir das 18h45",
+      "horarioCurto": "18h45",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
-      "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "agenda": [
+        {
+          "hora": "19h",
+          "titulo": "Choque de tecnologia",
+          "detalhe": "Resumo das últimas quatro weeklys."
+        },
+        {
+          "hora": "19h05",
+          "titulo": "Palestras",
+          "detalhe": "Três palestras e uma lightning talk."
+        }
+      ],
+      "palestrantes": [
+        {
+          "nome": "Tatti Maeda",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Habilidades do futuro: soft skills",
+          "hora": "19h05",
+          "video": null
+        },
+        {
+          "nome": "Guilherme Cavichioli",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Flexbox em 10 min",
+          "hora": "19h35",
+          "video": null
+        },
+        {
+          "nome": "Carlos Adriano Miranda",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Desenvolvedor Android ou iOS? Por que não os dois com React Native?",
+          "hora": "19h50",
+          "video": null
+        },
+        {
+          "nome": "Weslley Ceresa",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Escalabilidade, big data e relatórios com MongoDB",
+          "hora": "20h20",
+          "video": null
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 12,
       "slug": "12",
       "status": "confirmado",
       "titulo": "DEV-PP #12",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "PWA no e-commerce, hierarquia em design de interface, Instant Apps e inteligência artificial.",
+      "data": "2019-02-19",
+      "horario": "a partir das 19h30",
+      "horarioCurto": "19h30",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
-      "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "agenda": [
+        {
+          "hora": "19h30",
+          "titulo": "Check-in",
+          "detalhe": "Chegada e café."
+        },
+        {
+          "hora": "20h",
+          "titulo": "PWA: otimizando performance no e-commerce",
+          "detalhe": "Um exemplo com Magento e Vue.js."
+        },
+        {
+          "hora": "20h30",
+          "titulo": "Design de interface: hierarquização",
+          "detalhe": "Lightning talk."
+        },
+        {
+          "hora": "20h45",
+          "titulo": "Instant Apps",
+          "detalhe": "Apps que rodam sem instalar, com Luiz Stangarlin."
+        },
+        {
+          "hora": "21h",
+          "titulo": "Inteligência artificial: o futuro que se faz presente hoje",
+          "detalhe": "Lightning talk com Felipe Panizza Embersisc."
+        },
+        {
+          "hora": "21h15",
+          "titulo": "Networking com breja",
+          "detalhe": "A parte que ninguém pula."
+        }
+      ],
+      "palestrantes": [
+        {
+          "nome": "Luiz Stangarlin",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Instant Apps",
+          "hora": "20h45",
+          "video": "https://www.youtube.com/watch?v=GByd4A1HdXg"
+        },
+        {
+          "nome": "Felipe Panizza Embersisc",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Inteligência artificial: o futuro que se faz presente hoje",
+          "hora": "21h",
+          "video": "https://www.youtube.com/watch?v=8N-3Jvy_3bE"
+        },
+        {
+          "nome": "Allan Albuquerque",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Pronunciando termos de programação em inglês III",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=2kPgI0YuPkk"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 13,
       "slug": "13",
       "status": "confirmado",
       "titulo": "DEV-PP #13",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "Bate-papo sobre tecnologia XIII, com campanha de alimentos pras famílias refugiadas da Venezuela recém-chegadas a Prudente.",
+      "data": "2019-05-07",
+      "horario": "a partir das 19h30",
+      "horarioCurto": "19h30",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
       "palestrantes": [],
-      "apoiadores": []
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 14,
       "slug": "14",
       "status": "confirmado",
       "titulo": "DEV-PP #14",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "Data science, aprendizado em TI, Ionic e o trabalho de um designer de produtos digitais.",
+      "data": "2019-09-24",
+      "horario": "a partir das 19h45",
+      "horarioCurto": "19h45",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Matheus Rocha",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Desmistificando data science",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=va7Co5qQJVo"
+        },
+        {
+          "nome": "Felipe Albuquerque de Almeida",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Simplificando a complexidade do aprendizado de TI",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=Br_TOYOuqfg"
+        },
+        {
+          "nome": "Flaviano Redressa",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Ionic: por que e como utilizar",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=nHvG34DbyHc"
+        },
+        {
+          "nome": "Phillipe de Morais Sant'Ana",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Mas afinal, o que faz um designer de produtos digitais?",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=gDeYZT-Dpo0"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        }
+      ]
     },
     {
       "numero": 15,
@@ -478,8 +1037,8 @@
       "titulo": "DEV-PP #15: The Conference",
       "chamada": "A maior edição da primeira fase: keynote do PokemaoBR no auditório do Inova Prudente, mais três palestras e uma lightning talk.",
       "data": "2019-10-15",
-      "horario": null,
-      "horarioCurto": null,
+      "horario": "a partir das 18h30",
+      "horarioCurto": "18h30",
       "local": "Fundação Inova Prudente",
       "localSite": "https://inovaprudente.com.br/",
       "mapa": "https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Inova+Prudente/@-22.1339797,-51.4500853,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f394b3df5d51:0xac050e5ae9c9ef!8m2!3d-22.1339847!4d-51.4475104!16s%2Fg%2F11c7140bpb!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
@@ -491,11 +1050,12 @@
         {
           "nome": "Rodrigo PokemaoBR",
           "cargo": "Keynote da noite",
-          "foto": null,
+          "foto": "/img/palestrantes/rodrigo-pokemaobr.png",
           "bio": null,
           "formato": "talk",
           "palestra": null,
-          "hora": null
+          "hora": null,
+          "video": null
         },
         {
           "nome": "Marcela Maciel",
@@ -504,7 +1064,8 @@
           "bio": null,
           "formato": "talk",
           "palestra": null,
-          "hora": null
+          "hora": null,
+          "video": null
         },
         {
           "nome": "Leonardo Dias",
@@ -513,7 +1074,8 @@
           "bio": null,
           "formato": "talk",
           "palestra": null,
-          "hora": null
+          "hora": null,
+          "video": null
         },
         {
           "nome": "Marcelo Santoro",
@@ -521,8 +1083,9 @@
           "foto": null,
           "bio": null,
           "formato": "talk",
-          "palestra": null,
-          "hora": null
+          "palestra": "Monitoramento de serviços com Zabbix + Grafana + Python",
+          "hora": null,
+          "video": "https://www.youtube.com/watch?v=crEI4ZdPdT4"
         },
         {
           "nome": "Felipe Blini",
@@ -531,7 +1094,8 @@
           "bio": null,
           "formato": "lightning talk",
           "palestra": "Desvendando o async/await",
-          "hora": null
+          "hora": null,
+          "video": null
         }
       ],
       "apoiadores": [
@@ -562,11 +1126,12 @@
         {
           "nome": "Cesar Augusto",
           "cargo": null,
-          "foto": null,
+          "foto": "/img/palestrantes/cesar-augusto.jpg",
           "bio": null,
           "formato": "talk",
           "palestra": "Deck de ferramentas para startups: tudo que você precisa saber para começar bem",
-          "hora": "20h"
+          "hora": "20h",
+          "video": null
         },
         {
           "nome": "Jorge Rafael Lopes Soares",
@@ -575,16 +1140,18 @@
           "bio": null,
           "formato": "talk",
           "palestra": "Convenções de código: como trabalhar com elas e seus benefícios",
-          "hora": "20h50"
+          "hora": "20h50",
+          "video": null
         },
         {
           "nome": "Anderson Juhasc",
           "cargo": "Consultor · bitcoinconsultoria.com",
-          "foto": null,
+          "foto": "/img/palestrantes/anderson-juhasc.jpg",
           "bio": null,
           "formato": "talk",
           "palestra": "Torne-se um desenvolvedor Bitcoin",
-          "hora": "21h30"
+          "hora": "21h30",
+          "video": null
         }
       ],
       "apoiadores": [
@@ -615,7 +1182,7 @@
       "slug": "17",
       "status": "confirmado",
       "titulo": "DEV-PP #17: O Retorno",
-      "chamada": "Uma noite de palestra, papo técnico e networking com a galera que escreve código na região.",
+      "chamada": "O #17 estava marcado pra 17 de março de 2020. A pandemia adiou por seis anos. Uma noite de palestra, papo técnico e networking com a galera que escreve código na região.",
       "data": "2026-09-24",
       "horario": "a partir das 18h",
       "horarioCurto": "18h",
@@ -658,7 +1225,8 @@
           "bio": "Programador full-stack há 23 anos e recentemente decidiu parar de escrever código e se autopromoveu a AI Tech Lead — cargo que ele mesmo inventou, se ofertou, aprovou e assinou — e hoje se limita a delegar e revisar código da equipe de IA dele que não dorme, não reclama e não pede aumento.",
           "formato": "talk",
           "palestra": "Crie software dormindo",
-          "hora": "19h"
+          "hora": "19h",
+          "video": null
         },
         {
           "nome": "Sérgio Bearare",
@@ -667,7 +1235,8 @@
           "bio": "3º lugar em concurso de criação de agentes de IA — sem escrever uma linha de código à mão. Intraempreendedor que orquestra IAs no dia a dia.",
           "formato": "talk",
           "palestra": "Intraempreendedorismo & Inteligência Artificial",
-          "hora": "19h30"
+          "hora": "19h30",
+          "video": null
         },
         {
           "nome": "Jorge Rafael Lopes Soares",
@@ -676,7 +1245,8 @@
           "bio": "Engenheiro de software e empreendedor de tecnologia, com experiência em produtos digitais e sistemas distribuídos de alta escala. Fala sobre IA, desenvolvimento e acessibilidade.",
           "formato": "talk",
           "palestra": "3h17 — O agente está de plantão: como agentes e MCP estão mudando a forma como investigamos e operamos sistemas",
-          "hora": "20h"
+          "hora": "20h",
+          "video": null
         },
         {
           "nome": "Ederson Matos",
@@ -685,7 +1255,8 @@
           "bio": "Especialista em marketing, e-commerce, estratégias de crescimento e otimização de presença online para pequenas e médias empresas.",
           "formato": "talk",
           "palestra": "IA & Marketing: hype ou escala de verdade na sua operação",
-          "hora": "20h30"
+          "hora": "20h30",
+          "video": null
         }
       ],
       "apoiadores": [

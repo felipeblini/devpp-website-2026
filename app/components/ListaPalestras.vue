@@ -53,6 +53,14 @@ function iniciais(nome: string) {
           </div>
 
           <p v-if="pal.bio" class="mt-3 text-sm text-fg-muted">{{ pal.bio }}</p>
+          <p v-if="pal.video" class="mt-3 font-mono text-xs">
+            <a
+              :href="pal.video"
+              target="_blank"
+              rel="noopener"
+              class="text-primary underline underline-offset-4"
+            >▶ assistir no YouTube ↗</a>
+          </p>
         </div>
       </li>
     </ul>
