@@ -10,9 +10,9 @@
       "data": "2017-12-13",
       "horario": "a partir das 18h45",
       "horarioCurto": "18h45",
-      "local": "Foregon",
-      "localSite": null,
-      "mapa": null,
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
@@ -541,7 +541,7 @@
         {
           "hora": null,
           "titulo": "Palestras 💬",
-          "detalhe": "Gente da comunidade e convidados de fora. A chamada segue aberta."
+          "detalhe": "Hora de aprender coisa nova com quem tem o que compartilhar. Não espere slide profissional nem demo que funcione: o importante é participar e fazer perguntas."
         },
         {
           "hora": null,
