@@ -12,7 +12,7 @@ const vias = [
   },
   {
     cmd: 'apoio',
-    titulo: 'Banca o café ou manda brinde',
+    titulo: 'Banca o café, a breja ou manda brinde',
     texto: 'Coffee break e brindes de sorteio no fim do encontro saem de empresas da região. Custa pouco e a',
     destaque: 'sua marca aparece pra comunidade inteira',
   },
@@ -27,12 +27,13 @@ const vias = [
           Ajude-nos a construir <span class="text-primary">os próximos</span>
         </template>
         <template #descricao>
-          Encontro não cai do céu. Ele acontece quando três coisas se juntam:
+          Encontro não cai do céu. Ele acontece quando algumas coisas se juntam:
           <strong class="font-semibold text-fg">gente pra palestrar</strong>,
-          <strong class="font-semibold text-fg">um lugar pra receber</strong> e
-          <strong class="font-semibold text-fg">alguém que banca o café e brindes pra
-            galera</strong>.
-          Qualquer uma das três já destrava.
+          <strong class="font-semibold text-fg">um lugar pra receber</strong>,
+          <strong class="font-semibold text-fg">um projetor, caixa de som e microfones</strong> e
+          <strong class="font-semibold text-fg">alguém que banca o café, brindes pra
+            galera e a breja no final</strong>.
+          Qualquer uma delas já destrava.
         </template>
       </UiSectionHead>
 

@@ -29,10 +29,10 @@ useHead({ link: [{ rel: 'canonical', href: url }] })
     <section class="border-b border-line-soft">
       <div class="mx-auto max-w-4xl px-5 py-16 lg:py-20">
         <p class="font-mono text-sm">
-          <UiIcone nome="seta-esquerda" class="inline-block text-fg-dim" />{{ ' ' }}<UiPrompt />{{ ' ' }}<NuxtLink
+          <NuxtLink
             to="/"
-            class="text-fg-muted underline underline-offset-4 transition-colors hover:text-primary"
-          >cd ..</NuxtLink>
+            class="group inline-flex items-center gap-2 text-fg-muted transition-colors hover:text-primary"
+          ><UiIcone nome="seta-esquerda" class="inline-block text-fg-dim transition-colors group-hover:text-primary" /><UiPrompt /><span class="underline underline-offset-4">cd ..</span></NuxtLink>
         </p>
 
         <p class="pixel mt-8 text-[0.62rem] text-accent">

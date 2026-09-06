@@ -12,6 +12,8 @@ export interface Palestrante {
   /** URL da foto (avatar). null = mostra as iniciais. */
   foto: string | null
   bio: string
+  /** talk, lightning talk, demo, workshop… null = não informado */
+  formato?: string | null
   palestra: string
   /** null = ainda não encaixado na grade */
   hora: string | null
@@ -66,6 +68,13 @@ export const meetupsComPagina: Meetup[] = todos.filter(m => m.status === 'confir
 export function vagasDePalestraAbertas(m: Meetup): number | null {
   if (m.vagasDePalestra == null) return null
   return Math.max(0, m.vagasDePalestra - m.palestrantes.length)
+}
+
+/** Estado da chamada de palestras: sem controle de vagas ela fica sempre aberta. */
+export function call4papersAberto(m: Meetup | null): boolean {
+  if (!m) return true
+  const restantes = vagasDePalestraAbertas(m)
+  return restantes === null || restantes > 0
 }
 
 export function acharMeetup(slug: string): Meetup | undefined {

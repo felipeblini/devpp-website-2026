@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { meetupsAnteriores } from '#shared/meetups'
+
 const numeros = [
   { valor: '2019', rotulo: 'desde o primeiro meetup' },
-  { valor: '#32', rotulo: 'o próximo encontro' },
-  { valor: 'R$ 0', rotulo: 'pra participar, sempre' },
+  { valor: String(meetupsAnteriores.length), rotulo: meetupsAnteriores.length === 1 ? 'meetup realizado' : 'meetups realizados' },
+  { valor: '100%', rotulo: 'das demos ao vivo deram problema' },
 ]
 </script>
 

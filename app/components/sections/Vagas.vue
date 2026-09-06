@@ -33,14 +33,10 @@ Crie uma <a
               target="_blank"
               rel="noopener"
               class="text-primary underline underline-offset-4"
-            >nova issue</a> no nosso board de vagas ou manda pra gente que a gente
-            divulga no meetup, nas redes, nos nossos grupos e pra a lista de e-mails —
-            de graça, como sempre foi.
+            >nova issue</a> no nosso board de vagas que a gente divulga no meetup, nas
+            redes, nos nossos grupos, comunidade e pra a lista de e-mails de
+            interessados — de graça, como sempre foi.
           </p>
-          <a
-            href="mailto:devpporg@gmail.com?subject=Vaga%20para%20divulgar%20no%20DEV-PP"
-            class="mt-3 inline-block font-mono text-sm text-primary underline underline-offset-4"
-          >devpporg@gmail.com</a>
         </div>
       </div>
     </div>

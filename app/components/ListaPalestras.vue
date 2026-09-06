@@ -25,7 +25,8 @@ function iniciais(nome: string) {
           {{ pal.hora ?? '—' }}
         </p>
         <div class="mt-2 min-w-0 sm:mt-0">
-          <p class="font-mono text-lg font-bold">{{ pal.palestra }}</p>
+          <p v-if="pal.formato" class="pixel text-[0.55rem] text-fg-dim uppercase">{{ pal.formato }}</p>
+          <p class="font-mono text-lg font-bold" :class="pal.formato && 'mt-1.5'">{{ pal.palestra }}</p>
 
           <div class="mt-3 flex items-center gap-3">
             <img

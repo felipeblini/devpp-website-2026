@@ -3,11 +3,11 @@
   "canais": [
     {
       "id": "whatsapp",
-      "nome": "Grupo do WhatsApp",
+      "nome": "Comunidade no WhatsApp",
       "descricao": "Onde a conversa acontece no dia a dia: dúvida técnica, vaga, aviso de encontro.",
-      "acao": "entrar no grupo",
-      "url": null,
-      "pendente": "COLAR AQUI o link de convite do grupo (WhatsApp > Dados do grupo > Convidar via link)."
+      "acao": "entrar na comunidade",
+      "url": "https://chat.whatsapp.com/BkpkejerEhnJImXbDcTsKL",
+      "pendente": null
     },
     {
       "id": "facebook",

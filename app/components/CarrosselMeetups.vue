@@ -2,7 +2,7 @@
 import type { Meetup } from '#shared/meetups'
 import { partesDaData } from '#shared/meetups'
 
-defineProps<{ meetups: Meetup[] }>()
+defineProps<{ meetups: Meetup[]; atual?: string }>()
 
 const trilho = ref<HTMLElement | null>(null)
 
@@ -55,8 +55,9 @@ function rolar(direcao: 1 | -1) {
           :to="`/meetup/${m.slug}`"
           class="group flex h-full flex-col border border-line bg-bg p-5 transition-colors hover:border-primary"
         >
-          <p class="font-mono text-xs text-accent">
-            {{ partesDaData(m.data).curta }}
+          <p class="flex items-center justify-between gap-2 font-mono text-xs text-accent">
+            <span>{{ partesDaData(m.data).curta }}</span>
+            <span v-if="m.slug === atual" class="pixel text-[0.5rem] text-primary">atual</span>
           </p>
           <p class="mt-2 font-mono text-lg font-bold group-hover:text-primary">
             {{ m.titulo }}

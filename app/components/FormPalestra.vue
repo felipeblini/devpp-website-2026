@@ -6,7 +6,7 @@ const titulo = ref('')
 const formato = ref('talk (20–40 min)')
 const resumo = ref('')
 
-const formatos = ['talk (20–40 min)', 'lightning talk (10 min)', 'demo', 'workshop', 'ainda não sei']
+const formatos = ['talk (20–40 min)', 'lightning talk (10–15 min)', 'demo', 'workshop', 'ainda não sei']
 
 const emailOk = computed(() => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()))
 const valido = computed(

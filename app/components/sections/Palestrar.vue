@@ -16,8 +16,8 @@ const preSelecao = usePreSelecaoAjuda()
           <div class="mt-6 space-y-4 text-fg-muted">
             <p>
               E sempre sobra espaço pra você. Se você resolveu um problema estranho no
-              trabalho, montou algo que ninguém pediu, apanhou de um deploy ou estuda um
-              assunto que ninguém da região comenta:
+              trabalho, montou algo que ninguém pediu, apanhou de um deploy ou está estudando e
+              testando algum assunto interessante que ninguém da região comenta:
               <strong class="font-semibold text-fg">isso já é uma palestra.</strong>
             </p>
             <p>
@@ -27,7 +27,7 @@ const preSelecao = usePreSelecaoAjuda()
           </div>
 
           <ul class="mt-7 space-y-2 font-mono text-sm text-fg-muted">
-            <li><span class="text-primary">✓</span> 20 a 40 minutos, ou lightning talk de 10</li>
+            <li><span class="text-primary">✓</span> 20 a 40 min, ou lightning talk de 10 a 15 min</li>
             <li><span class="text-primary">✓</span> qualquer stack, qualquer nível</li>
             <li><span class="text-primary">✓</span> presencial, em Presidente Prudente e região</li>
             <li><span class="text-primary">✓</span> a proposta vale mesmo sem data marcada</li>

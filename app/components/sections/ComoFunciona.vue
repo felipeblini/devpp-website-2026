@@ -17,10 +17,14 @@ const passos = [
     args: ' --watch',
   },
   {
-    cmd: 'chamar',
+    cmd: 'convidar',
     titulo: 'Chame a galera',
     texto: 'Chame seu pai, sua avó, seu cachorro, sua tia, seu chefe… ou seu colega dev chupa bit que tá em casa sem tomar banho há 3 semanas. Meetup bom é meetup cheio.',
-    saida: '✓ convite enviado pra quem você marcou',
+    saida: [
+      { texto: 'enviando convite...', tom: 'espera' },
+      { texto: 'done in 1.337s', tom: 'espera' },
+      '✓ o convite foi enviado pra todo mundo',
+    ],
     tom: 'ok',
     args: ' --todos',
   },
@@ -36,7 +40,7 @@ const passos = [
     cmd: 'colaborar',
     titulo: 'Colabore',
     texto: 'Palestre, indique alguém, ofereça um espaço ou banque o café. É assim que o próximo encontro nasce.',
-    saida: '✓ obrigado! commitado direto na main, sem review',
+    saida: '✓ obrigado! commit e push feito em produção, sem testes e sem review',
     tom: 'ok',
     args: ' --palestra --local --apoio',
   },
@@ -56,6 +60,12 @@ const tons: Record<string, string> = {
 }
 
 const numero = (i: number) => String(i + 1).padStart(2, '0')
+
+type Linha = string | { texto: string; tom: string }
+
+/** A saída pode ser uma linha só ou várias; cada uma pode ter o próprio tom. */
+const linhas = (saida: Linha | Linha[]) =>
+  [saida].flat().map(l => (typeof l === 'string' ? { texto: l, tom: undefined } : l))
 </script>
 
 <template>
@@ -89,7 +99,12 @@ const numero = (i: number) => String(i + 1).padStart(2, '0')
               <p class="whitespace-nowrap">
                 <UiPrompt />{{ ' ' }}<span class="text-fg">devpp {{ p.cmd }}{{ p.args }}</span>
               </p>
-              <p class="whitespace-nowrap" :class="tons[p.tom]">{{ p.saida }}</p>
+              <p
+                v-for="linha in linhas(p.saida)"
+                :key="linha.texto"
+                class="whitespace-nowrap"
+                :class="tons[linha.tom ?? p.tom]"
+              >{{ linha.texto }}</p>
             </div>
           </div>
         </UiTerminalWindow>
