@@ -46,7 +46,7 @@
         {
           "nome": "Felipe Blini",
           "cargo": "Desenvolvedor · idealizador do DEV-PP",
-          "foto": null,
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
           "bio": "O Firebase permite criar apps web, Android e iOS sem se preocupar com infraestrutura, autenticação e upload de arquivos. Um CRUD com a REST API e depois um chat com o Realtime Database.",
           "formato": "talk",
           "palestra": "Banco de dados realtime com Firebase",
@@ -238,7 +238,7 @@
         {
           "nome": "Felipe Blini",
           "cargo": "Desenvolvedor · idealizador do DEV-PP",
-          "foto": null,
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
           "bio": "O site do DEV-PP tinha acabado de ser lançado. Como foi construído o workflow de desenvolvimento com o Webpack e por que vale conhecer a ferramenta.",
           "formato": "talk",
           "palestra": "Webpack: case do site do DEV-PP",
