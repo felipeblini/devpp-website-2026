@@ -476,38 +476,139 @@
       "slug": "15",
       "status": "confirmado",
       "titulo": "DEV-PP #15: The Conference",
-      "chamada": null,
-      "data": null,
+      "chamada": "A maior edição da primeira fase: keynote do PokemaoBR no auditório do Inova Prudente, mais três palestras e uma lightning talk.",
+      "data": "2019-10-15",
       "horario": null,
       "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "local": "Fundação Inova Prudente",
+      "localSite": "https://inovaprudente.com.br/",
+      "mapa": "https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Inova+Prudente/@-22.1339797,-51.4500853,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f394b3df5d51:0xac050e5ae9c9ef!8m2!3d-22.1339847!4d-51.4475104!16s%2Fg%2F11c7140bpb!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Rodrigo PokemaoBR",
+          "cargo": "Keynote da noite",
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": null,
+          "hora": null
+        },
+        {
+          "nome": "Marcela Maciel",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": null,
+          "hora": null
+        },
+        {
+          "nome": "Leonardo Dias",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": null,
+          "hora": null
+        },
+        {
+          "nome": "Marcelo Santoro",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": null,
+          "hora": null
+        },
+        {
+          "nome": "Felipe Blini",
+          "cargo": "Desenvolvedor · idealizador do DEV-PP",
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
+          "bio": null,
+          "formato": "lightning talk",
+          "palestra": "Desvendando o async/await",
+          "hora": null
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "Inova Prudente",
+          "logo": "/img/apoiadores/Logo_Inova_Prudente.png",
+          "site": "https://inovaprudente.com.br/"
+        }
+      ]
     },
     {
       "numero": 16,
       "slug": "16",
       "status": "confirmado",
       "titulo": "DEV-PP #16",
-      "chamada": null,
-      "data": null,
-      "horario": null,
-      "horarioCurto": null,
-      "local": null,
-      "localSite": null,
-      "mapa": null,
+      "chamada": "O último encontro antes da pausa: ferramentas pra startup, convenções de código e Bitcoin, na Foregon.",
+      "data": "2019-12-03",
+      "horario": "a partir das 19h30",
+      "horarioCurto": "19h30",
+      "local": "Foregon",
+      "localSite": "https://www.foregon.com/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
       "cidade": "Presidente Prudente — SP",
       "vagasDePalestra": null,
       "inscricoes": null,
       "agenda": [],
-      "palestrantes": [],
-      "apoiadores": []
+      "palestrantes": [
+        {
+          "nome": "Cesar Augusto",
+          "cargo": null,
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Deck de ferramentas para startups: tudo que você precisa saber para começar bem",
+          "hora": "20h"
+        },
+        {
+          "nome": "Jorge Rafael Lopes Soares",
+          "cargo": "Cofundador & CTO · Hotina · Tech Lead de IA · Lina OpenX",
+          "foto": "/img/palestrantes/dev-pp-24-set--jorge-soares.png",
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Convenções de código: como trabalhar com elas e seus benefícios",
+          "hora": "20h50"
+        },
+        {
+          "nome": "Anderson Juhasc",
+          "cargo": "Consultor · bitcoinconsultoria.com",
+          "foto": null,
+          "bio": null,
+          "formato": "talk",
+          "palestra": "Torne-se um desenvolvedor Bitcoin",
+          "hora": "21h30"
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "Foregon",
+          "logo": "/img/apoiadores/foregon.png",
+          "site": "https://www.foregon.com/"
+        },
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
+        },
+        {
+          "nome": "Rock Burguer",
+          "logo": "/img/apoiadores/rockburguer.jpg",
+          "site": "http://instagram.com/rockburguerprudente/"
+        },
+        {
+          "nome": "RG Mídia",
+          "logo": "/img/apoiadores/rg-media.png",
+          "site": "https://rgmidia.com.br/"
+        }
+      ]
     },
     {
       "numero": 17,

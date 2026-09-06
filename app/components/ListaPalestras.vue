@@ -26,7 +26,9 @@ function iniciais(nome: string) {
         </p>
         <div class="mt-2 min-w-0 sm:mt-0">
           <p v-if="pal.formato" class="pixel text-[0.55rem] text-fg-dim uppercase">{{ pal.formato }}</p>
-          <p class="font-mono text-lg font-bold" :class="pal.formato && 'mt-1.5'">{{ pal.palestra }}</p>
+          <p class="font-mono text-lg font-bold" :class="[pal.formato && 'mt-1.5', !pal.palestra && 'text-fg-dim']">
+            {{ pal.palestra ?? 'título não registrado' }}
+          </p>
 
           <div class="mt-3 flex items-center gap-3">
             <img
@@ -46,11 +48,11 @@ function iniciais(nome: string) {
 
             <div class="min-w-0">
               <p class="font-mono text-sm text-primary">{{ pal.nome }}</p>
-              <p class="font-mono text-xs text-fg-dim">{{ pal.cargo }}</p>
+              <p v-if="pal.cargo" class="font-mono text-xs text-fg-dim">{{ pal.cargo }}</p>
             </div>
           </div>
 
-          <p class="mt-3 text-sm text-fg-muted">{{ pal.bio }}</p>
+          <p v-if="pal.bio" class="mt-3 text-sm text-fg-muted">{{ pal.bio }}</p>
         </div>
       </li>
     </ul>

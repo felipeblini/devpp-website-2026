@@ -8,13 +8,15 @@ export interface ItemAgenda {
 
 export interface Palestrante {
   nome: string
-  cargo: string
+  /** null = não registrado (encontros antigos) */
+  cargo: string | null
   /** URL da foto (avatar). null = mostra as iniciais. */
   foto: string | null
-  bio: string
+  bio: string | null
   /** talk, lightning talk, demo, workshop… null = não informado */
   formato?: string | null
-  palestra: string
+  /** null = título não registrado */
+  palestra: string | null
   /** null = ainda não encaixado na grade */
   hora: string | null
 }
