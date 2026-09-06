@@ -59,6 +59,7 @@ function rolar(direcao: 1 | -1) {
             <span v-if="m.data">{{ partesDaData(m.data).curta }}</span>
             <span v-else class="text-fg-dim">data não registrada</span>
             <span v-if="m.slug === atual" class="pixel text-[0.5rem] text-primary">atual</span>
+            <span v-else-if="m.numero === null" class="pixel text-[0.5rem] text-fg-dim">especial</span>
           </p>
           <p class="mt-2 font-mono text-lg font-bold group-hover:text-primary">
             {{ m.titulo }}

@@ -1,5 +1,5 @@
 {
-  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle. inscricoes.provedor: 'form' usa o formulario do proprio site (e-mail pra devpporg); qualquer outro valor (ex: 'Startup Grind') esconde o formulario e manda o botao pra inscricoes.url. data null = encontro antigo sem registro da data (aparece na lista, sem dia). apoiadores: nome, logo (em /public/img/apoiadores) e site; aparecem no fim da pagina do encontro. palestrantes[].video: link do YouTube da palestra (opcional).",
+  "_leia": "Fonte de verdade dos encontros. slug e o numero do encontro (vira a URL /meetup/<slug>). status: 'confirmado' aparece no site; qualquer outro valor deixa o site em modo 'loading...' (sem data marcada). Campos com null aparecem como 'a definir'. localSite e opcional: com URL o nome do local vira link, sem URL fica texto puro. vagasDePalestra e o total de palestras do encontro: enquanto sobrar vaga, o site anuncia a chamada aberta; ao completar, a grade aparece como fechada. null desliga o controle. inscricoes.provedor: 'form' usa o formulario do proprio site (e-mail pra devpporg); qualquer outro valor (ex: 'Startup Grind') esconde o formulario e manda o botao pra inscricoes.url. data null = encontro antigo sem registro da data (aparece na lista, sem dia). apoiadores: nome, logo (em /public/img/apoiadores) e site; aparecem no fim da pagina do encontro. palestrantes[].video: link do YouTube da palestra (opcional). numero null = edicao especial fora da numeracao (slug proprio).",
   "meetups": [
     {
       "numero": 1,
@@ -1182,7 +1182,7 @@
       "slug": "17",
       "status": "confirmado",
       "titulo": "DEV-PP #17: O Retorno",
-      "chamada": "O #17 estava marcado pra 17 de março de 2020. A pandemia adiou por seis anos. Uma noite de palestra, papo técnico e networking com a galera que escreve código na região.",
+      "chamada": "Uma noite de palestra, papo técnico e networking com a galera que escreve código na região.",
       "data": "2026-09-24",
       "horario": "a partir das 18h",
       "horarioCurto": "18h",
@@ -1264,6 +1264,113 @@
           "nome": "Inova Prudente",
           "logo": "/img/apoiadores/Logo_Inova_Prudente.png",
           "site": "https://inovaprudente.com.br/"
+        }
+      ]
+    },
+    {
+      "numero": null,
+      "slug": "semana-de-inovacao-2018",
+      "status": "confirmado",
+      "titulo": "DEV-PP Especial: Semana de Inovação",
+      "chamada": "Edição especial dentro da Semana de Inovação do Inova Prudente: um painel sobre dev nutella e dev raiz, mais quatro palestras.",
+      "data": "2018-10-18",
+      "horario": "a partir das 19h",
+      "horarioCurto": "19h",
+      "local": "Fundação Inova Prudente",
+      "localSite": "https://inovaprudente.com.br/",
+      "mapa": "https://www.google.com/maps/place/Funda%C3%A7%C3%A3o+Inova+Prudente/@-22.1339797,-51.4500853,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f394b3df5d51:0xac050e5ae9c9ef!8m2!3d-22.1339847!4d-51.4475104!16s%2Fg%2F11c7140bpb!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [
+        {
+          "hora": "19h",
+          "titulo": "Check-in",
+          "detalhe": "Não se atrase."
+        },
+        {
+          "hora": "19h30",
+          "titulo": "Painel: Dev Nutella e Dev Raiz",
+          "detalhe": "Alfredo de Moraes Sene Júnior (34 anos de Caixa Econômica Federal, da escrituração à automação com microcomputadores), José Pascoal Vernilo, João Cunha e João Maiorchini."
+        },
+        {
+          "hora": "20h20",
+          "titulo": "Palestras",
+          "detalhe": "Uma lightning talk e três palestras."
+        }
+      ],
+      "palestrantes": [
+        {
+          "nome": "Felipe Blini",
+          "cargo": "Desenvolvedor web · idealizador do DEV-PP",
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
+          "bio": "O fluxo do JavaScript é quase todo assíncrono: ele não espera por ninguém. Como a linguagem lida com isso e como usar async/await de verdade.",
+          "formato": "lightning talk",
+          "palestra": "Async/await no JavaScript: entendendo de uma vez por todas",
+          "hora": "20h20",
+          "video": null
+        },
+        {
+          "nome": "Matheus Azambuja",
+          "cargo": "Desenvolvedor · Sistemas para Internet (Unoeste)",
+          "foto": null,
+          "bio": "Apps desktop multiplataforma com interface amigável usando tecnologias web: JavaScript, HTML e CSS.",
+          "formato": "talk",
+          "palestra": "ElectronJS: construindo aplicações desktop cross-platform",
+          "hora": "20h35",
+          "video": null
+        },
+        {
+          "nome": "Natália Favareto",
+          "cargo": "Full-stack developer · Foregon.com",
+          "foto": null,
+          "bio": "Um bloco condicional posicionado estrategicamente pra ligar e desligar recursos. Os principais casos de uso, inclusive os que você ainda não considerou.",
+          "formato": "talk",
+          "palestra": "Feature flag: roll out & roll back without deployment",
+          "hora": "21h05",
+          "video": null
+        },
+        {
+          "nome": "Julia Goya",
+          "cargo": "Designer · mestranda em Ergonomia Organizacional (UNESP)",
+          "foto": null,
+          "bio": "Antes dos smartphones já éramos seres biológicos e sociais. O que está por trás da experiência do usuário que dá origem às reações diante das interfaces.",
+          "formato": "talk",
+          "palestra": "A vida antes da experiência do usuário",
+          "hora": "21h20",
+          "video": null
+        }
+      ],
+      "apoiadores": [
+        {
+          "nome": "Inova Prudente",
+          "logo": "/img/apoiadores/Logo_Inova_Prudente.png",
+          "site": "https://inovaprudente.com.br/"
+        }
+      ]
+    },
+    {
+      "numero": null,
+      "slug": "aniversario-2018",
+      "status": "confirmado",
+      "titulo": "DEV-PP Especial: Aniversário de 1 ano",
+      "chamada": "Um ano de comunidade. Sem palestra: só a galera, cerveja e a comemoração do jeito certo.",
+      "data": "2018-12-19",
+      "horario": "a partir das 19h30",
+      "horarioCurto": "19h30",
+      "local": "For Space",
+      "localSite": "https://www.forspace.com.br/",
+      "mapa": "https://www.google.com/maps/place/R.+Nicolau+Cacciatori,+489+-+Jardim+dos+Pioneiros,+Pres.+Prudente+-+SP,+19050-340/@-22.1401574,-51.4098351,17z/data=!3m1!4b1!4m6!3m5!1s0x9493f45f075448f1:0x1793e48189b9be42!8m2!3d-22.1401624!4d-51.4072602!16s%2Fg%2F11c1cy5sg6!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D",
+      "cidade": "Presidente Prudente — SP",
+      "vagasDePalestra": null,
+      "inscricoes": null,
+      "agenda": [],
+      "palestrantes": [],
+      "apoiadores": [
+        {
+          "nome": "For Space",
+          "logo": "/img/apoiadores/for-space.png",
+          "site": "https://www.forspace.com.br/"
         }
       ]
     }

@@ -36,7 +36,8 @@ export interface Apoiador {
 }
 
 export interface Meetup {
-  numero: number
+  /** null = edição especial, fora da numeração */
+  numero: number | null
   slug: string
   status: string
   titulo: string
@@ -63,7 +64,9 @@ export interface Meetup {
   apoiadores?: Apoiador[]
 }
 
-const todos = (dados.meetups as Meetup[]).slice().sort((a, b) => a.numero - b.numero)
+const todos = (dados.meetups as Meetup[])
+  .slice()
+  .sort((a, b) => (a.data ?? '').localeCompare(b.data ?? '') || (a.numero ?? 0) - (b.numero ?? 0))
 
 /** Data de hoje em ISO — fixada no build, porque as páginas são pré-renderizadas. */
 const hoje = new Date().toISOString().slice(0, 10)
@@ -83,12 +86,15 @@ export function jaAconteceu(m: Meetup): boolean {
 /** Número do encontro a anunciar — o confirmado, ou o próximo da fila. */
 export const proximoNumero: number = proximoMeetup
   ? proximoMeetup.numero
-  : Math.max(0, ...todos.map(m => m.numero)) + 1
+  : Math.max(0, ...todos.map(m => m.numero ?? 0)) + 1
 
 /** Edições já realizadas, da mais recente para a mais antiga. */
 export const meetupsAnteriores: Meetup[] = todos
   .filter(m => m.status === 'confirmado' && jaAconteceu(m))
   .reverse()
+
+/** Edições numeradas já realizadas (as especiais ficam fora da conta). */
+export const meetupsNumeradosRealizados: number = meetupsAnteriores.filter(m => m.numero !== null).length
 
 /** Todos os encontros com página própria (usado no prerender). */
 export const meetupsComPagina: Meetup[] = todos.filter(m => m.status === 'confirmado')

@@ -5,7 +5,7 @@ const { public: { siteUrl } } = useRuntimeConfig()
 const data = m ? partesDaData(m.data) : null
 
 const descricao = m && data
-  ? `Comunidade de desenvolvedores de Presidente Prudente e região. Meetup #${m.numero} gratuito em ${data.extenso}${m.horarioCurto ? `, às ${m.horarioCurto}` : ''}${m.local ? `, no ${m.local}` : ''}: palestras, papo técnico e networking.`
+  ? `Comunidade de desenvolvedores de Presidente Prudente e região. ${m.titulo} gratuito em ${data.extenso}${m.horarioCurto ? `, às ${m.horarioCurto}` : ''}${m.local ? `, no ${m.local}` : ''}: palestras, papo técnico e networking.`
   : 'Comunidade de desenvolvedores de Presidente Prudente e região. Meetups gratuitos com palestras, papo técnico e networking. A chamada de palestras está sempre aberta.'
 
 useSeoMeta({
@@ -25,7 +25,7 @@ const schema = m && data
   ? {
       '@context': 'https://schema.org',
       '@type': 'Event',
-      'name': `DEV-PP #${m.numero} — ${m.titulo}`,
+      'name': m.titulo,
       'startDate': m.horarioCurto ? `${m.data}T18:00:00-03:00` : m.data,
       'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
       'eventStatus': 'https://schema.org/EventScheduled',

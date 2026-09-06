@@ -10,7 +10,7 @@ import { inscricaoExterna } from '#shared/meetups'
 const props = defineProps<{ meetup: Meetup }>()
 
 const externa = computed(() => inscricaoExterna(props.meetup))
-const comando = computed(() => `devpp inscrever --meetup #${props.meetup.numero}`)
+const comando = computed(() => `devpp inscrever --meetup ${props.meetup.numero !== null ? `#${props.meetup.numero}` : props.meetup.slug}`)
 
 const nome = ref('')
 const email = ref('')
@@ -96,7 +96,7 @@ function limpar() {
     </template>
 
     <template #sucesso>
-      Sua vaga no <strong class="text-fg">meetup #{{ meetup.numero }}</strong> está garantida.
+      Sua vaga no <strong class="text-fg">{{ meetup.titulo }}</strong> está garantida.
       Agora é só não dar merge na sexta e aparecer. Se mudar alguma coisa de última
       hora, a gente te avisa por e-mail.
     </template>
