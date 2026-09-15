@@ -14,7 +14,12 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ['@nuxt/fonts', '@nuxt/image', '@vueuse/motion/nuxt'],
+  modules: ['@nuxt/fonts', '@nuxt/image', '@vueuse/motion/nuxt', 'nuxt-gtag', '@vercel/analytics/nuxt'],
+
+  // GA4 — o ID vem do .env (NUXT_PUBLIC_GTAG_ID). Sem ID, o módulo fica desligado.
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GTAG_ID,
+  },
 
   css: ['~/assets/css/tailwind.css'],
   vite: { plugins: [tailwindcss()] },
