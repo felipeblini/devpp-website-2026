@@ -16,9 +16,9 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/fonts', '@nuxt/image', '@vueuse/motion/nuxt', 'nuxt-gtag', '@vercel/analytics/nuxt'],
 
-  // GA4 — o ID vem do .env (NUXT_PUBLIC_GTAG_ID). Sem ID, o módulo fica desligado.
+  // Google Analytics 4
   gtag: {
-    id: process.env.NUXT_PUBLIC_GTAG_ID,
+    id: 'G-DKJZSF3TV1',
   },
 
   css: ['~/assets/css/tailwind.css'],
