@@ -1264,6 +1264,11 @@
           "nome": "Inova Prudente",
           "logo": "/img/apoiadores/Logo_Inova_Prudente.png",
           "site": "https://inovaprudente.com.br/"
+        },
+        {
+          "nome": "Startup Grind Presidente Prudente",
+          "logo": "/img/apoiadores/startupgrind-presidente-prudente.jpg",
+          "site": "https://www.startupgrind.com/presidente-prudente/"
         }
       ]
     },
