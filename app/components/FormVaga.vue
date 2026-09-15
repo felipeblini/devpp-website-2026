@@ -54,7 +54,7 @@ function limpar() {
 
       <AppButton :href="externa.url!" class="w-full">
         <UiIcone nome="commit" />
-        garantir minha vaga ↗
+        reservar minha vaga ↗
       </AppButton>
 
       <p class="font-mono text-[0.68rem] text-fg-dim">
@@ -68,7 +68,7 @@ function limpar() {
     v-else
     arquivo="inscricao.sh"
     :comando="comando"
-    rotulo="garantir minha vaga"
+    rotulo="reservar minha vaga"
     titulo-sucesso="Tá valendo. Te vemos lá."
     :valido="valido"
     :montar="montar"

@@ -47,12 +47,6 @@ const perguntas: { q: string; a: string[] }[] = [
     q: 'Isso é IA ou é de verdade?',
     a: ['Sim.'],
   },
-  {
-    q: 'Por que "Comunidade de desenvolvedores" e não "de Pessoas Desenvolvedoras"?',
-    a: [
-      '"Desenvolvedores" é mais curto e cabe todo mundo do mesmo jeito. E tem coisa mais importante pra vc se preocupar, tipo aquele merge na *main* que tá te esperando há 3 dias.',
-    ],
-  },
 ]
 </script>
 

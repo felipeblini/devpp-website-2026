@@ -56,7 +56,7 @@ const detalhes: LinhaStatus[] = m && data
         <div class="mt-8">
           <AppButton :to="`/meetup/${m.slug}#inscricao`" class="w-full">
             <UiIcone nome="commit" />
-            garantir minha vaga
+            reservar minha vaga
           </AppButton>
           <p class="mt-3 text-center font-mono text-[0.68rem] text-fg-dim">
             entrada livre — se inscreva e garanta sua vaga
