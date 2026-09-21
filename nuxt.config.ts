@@ -41,6 +41,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
     '/codigo-de-conduta': { prerender: true },
+    '/links': { prerender: true },
     '/meetup/**': { prerender: true },
   },
 

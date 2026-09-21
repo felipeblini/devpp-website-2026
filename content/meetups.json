@@ -1219,23 +1219,13 @@
       ],
       "palestrantes": [
         {
-          "nome": "Felipe Blini",
-          "cargo": "AI Tech Lead",
-          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
-          "bio": "Programador full-stack há 23 anos e recentemente decidiu parar de escrever código e se autopromoveu a AI Tech Lead — cargo que ele mesmo inventou, se ofertou, aprovou e assinou — e hoje se limita a delegar e revisar código da equipe de IA dele que não dorme, não reclama e não pede aumento.",
-          "formato": "talk",
-          "palestra": "Crie software dormindo",
-          "hora": "19h",
-          "video": null
-        },
-        {
           "nome": "Sérgio Bearare",
           "cargo": "Gestor comercial · Bacharel em Direito",
           "foto": "/img/palestrantes/dev-pp-24-set--sergio-bearare.png",
           "bio": "3º lugar em concurso de criação de agentes de IA — sem escrever uma linha de código à mão. Intraempreendedor que orquestra IAs no dia a dia.",
           "formato": "talk",
           "palestra": "Intraempreendedorismo & Inteligência Artificial",
-          "hora": "19h30",
+          "hora": "19h",
           "video": null
         },
         {
@@ -1245,7 +1235,7 @@
           "bio": "Engenheiro de software e empreendedor de tecnologia, com experiência em produtos digitais e sistemas distribuídos de alta escala. Fala sobre IA, desenvolvimento e acessibilidade.",
           "formato": "talk",
           "palestra": "3h17 — O agente está de plantão: como agentes e MCP estão mudando a forma como investigamos e operamos sistemas",
-          "hora": "20h",
+          "hora": "19h30",
           "video": null
         },
         {
@@ -1255,6 +1245,16 @@
           "bio": "Especialista em marketing, e-commerce, estratégias de crescimento e otimização de presença online para pequenas e médias empresas.",
           "formato": "talk",
           "palestra": "IA & Marketing: hype ou escala de verdade na sua operação",
+          "hora": "20h",
+          "video": null
+        },
+        {
+          "nome": "Felipe Blini",
+          "cargo": "AI Tech Lead",
+          "foto": "/img/palestrantes/dev-pp-24-set--felipe-blini.png",
+          "bio": "Programador full-stack há 23 anos e recentemente decidiu parar de escrever código e se autopromoveu a AI Tech Lead — cargo que ele mesmo inventou, se ofertou, aprovou e assinou — e hoje se limita a delegar e revisar código da equipe de IA dele que não dorme, não reclama e não pede aumento.",
+          "formato": "talk",
+          "palestra": "Crie software dormindo",
           "hora": "20h30",
           "video": null
         }
@@ -1269,6 +1269,11 @@
           "nome": "Startup Grind Presidente Prudente",
           "logo": "/img/apoiadores/startupgrind-presidente-prudente.jpg",
           "site": "https://www.startupgrind.com/presidente-prudente/"
+        },
+        {
+          "nome": "Ratos de IA",
+          "logo": "/img/apoiadores/ratos-de-ia.png",
+          "site": "https://ratosdeia.com.br/"
         }
       ]
     },
