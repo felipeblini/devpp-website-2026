@@ -113,9 +113,15 @@ const acaoClasse = 'mt-4 font-mono text-sm font-bold tracking-wide text-primary 
         </li>
       </ul>
 
-      <p class="mt-10 text-center font-mono text-xs text-fg-dim">
-        feito pela comunidade, pra comunidade
-      </p>
     </div>
   </article>
+
+  <footer class="mx-auto max-w-md px-5 py-8 text-center font-mono text-xs text-fg-dim">
+    <p>DEV-PP · desde 2017 · feito pela comunidade, pra comunidade</p>
+    <p class="mt-2">
+      <a href="mailto:devpporg@gmail.com" class="underline underline-offset-4 hover:text-primary">devpporg@gmail.com</a>
+      <span class="mx-2">·</span>
+      <NuxtLink to="/codigo-de-conduta" class="underline underline-offset-4 hover:text-primary">código de conduta</NuxtLink>
+    </p>
+  </footer>
 </template>
